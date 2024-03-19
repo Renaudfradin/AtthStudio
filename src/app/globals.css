@@ -1,33 +1,119 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+@import url('https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,600;1,600&display=swap');
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0%;
+  padding: 0%;
+  width: 100% !important;
+  background-color: #FBEFDF;
+  font-size: 20px;
+  font-family: "Mohave", sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.homePage{
+  height: 95vh;
+}
+
+.homeMain{
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.homeMain div div{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* .homeMain div p{
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32.88px;
+  color: black;
+  margin: 0%;
+} */
+
+.titleHome{
+  color: #0123FF;
+  font-size: 150px;
+  font-weight: 600;
+  margin: 0%;
+}
+
+.titleUi{
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 140px;
+  color: black;
+  margin: 0%;
+}
+
+.titleHumour{
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32.88px;
+  color: black;
+}
+
+.workPage {
+  height: 95vh;
+  /* background-image: url("./assets/img/background.svg"); */
+}
+
+.aboutPage {
+  height: 95vh;
+  margin: 40px 45px;
+}
+
+.navbar{
+  margin-top: 65px;
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.navbar a{
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 45px;
+  font-size: 24px;
+  font-optical-sizing: auto;
+}
+
+.aboutMain{
+  display: flex;
+  padding-left: 45px;
+}
+
+.footerAboot{
+  display: flex;
+  padding-left: 45px;
+}
+
+.footerAboot p{
+  margin-right: 15px;
+}
+
+.experienceTab,
+.degreeTab{
+  display: flex;
+}
+
+.experienceTab ul,
+.degreeTab ul{
+  display: flex;
+}
+
+.experienceLink,
+.degreeTab{
+  margin-right: 20px;
+  width: 250px;
 }
