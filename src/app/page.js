@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import logo1 from "./assets/img/logo1.svg";
 import logo2 from "./assets/img/logo2.svg";
+import background from "./assets/img/background.svg";
 
 export default function Home() {
   return (
@@ -31,11 +32,13 @@ export default function Home() {
         
       </div>
       <div className="workPage" id="workPage">
-        <p>441</p>
-        {/* <Image
-          src={}
-          href={}
-        ></Image> */}
+        <Image
+          src={background}
+          className="imgBackground"
+          alt="background img"
+          layout="fill"
+          objectFit="cover"
+        ></Image>
       </div>
       <div className="aboutPage" id="aboutPage">
         <p className="">About me</p>
