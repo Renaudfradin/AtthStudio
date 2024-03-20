@@ -212,19 +212,27 @@ html{
   line-height: 25px;
 }
 
-@media (max-width: 425px) {
-  .imgBackground {
-    display: none;
+/*mobile*/
+@media (max-width: 320px) {
+.homeMain div div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1vh;
+    flex-wrap: wrap;
+    align-content: center;
   }
+    .titleUi {
+      font-size: 30px !important;
+    }
 
-  .listProject {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-  }
+    .titleHome {
+      font-size: 90px !important;
+    }
+}
 
+@media (max-width: 430px) {
   .homePage {
     height: auto;
     width: auto;
@@ -236,24 +244,175 @@ html{
     align-items: center;
   }
 
+  .flexMain {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  } 
+
+  .homeMain {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .homeMain img {
+    margin-right: 0%;
+  }
+
+  .homeMain div div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 1vh;
+  }
+
+  .titleHome {
+    color: #0123FF;
+    font-size: 100px;
+    font-weight: 600;
+    margin: 0%;
+  }
+
+  .titleUi {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 140px;
+    margin: 0%;
+  }
+
+  .titleHumour {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 32.88px;
+  }
+
   .workPage {
     height: auto;
-    /* background-image: url("./assets/img/background.svg"); */
+  }
+
+  .imgBackground {
+    display: none;
+  }
+
+  .listProject {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0%;
+    padding-left: 0%;
+    align-content: center;
+    margin-top: 30px;
+    padding: 10px;
+  }
+
+  .listProject div{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .project1,
+  .project2,
+  .project3,
+  .project4,
+  .project5{
+    margin: 0%;
+    padding: 0%;
+  }
+
+  .project1 a img,
+  .project2 a img,
+  .project3 a img,
+  .project4 a img,
+  .project5 a img {
+    width: 100%;
+  }
+
+  .project4 p {
+    margin-left: 0%;
   }
 
   .aboutPage {
     height: auto;
     display: flex;
-    margin: 10px 15px;
+    margin: 0%;
+    padding: 15px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
   }
 
   .aboutMain {
     display: flex;
-    padding-left: 5%;
+    padding-left: 0;
+    justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    align-content: center;
     align-items: center;
+  }
+
+  .aboutMain img{
+    width: 100%;
+  }
+
+  .experienceTab,
+  .degreeTab{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .experienceTab ul,
+  .degreeTab ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+  }
+
+  .experienceTab h3,
+  .degreeTab h3 {
+    width: auto;
+  }
+
+  .skillLink,
+  .degreeLink,
+  .experienceLink {
+    margin-right: 0px;
+    width: auto;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+
+  .footerAboot {
+    display: flex;
+    padding-left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-content: center;
+  }
+
+  .footerAboot p {
+    margin: 0%;
   }
 }
 

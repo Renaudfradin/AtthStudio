@@ -50,7 +50,9 @@ export default function Home() {
               href={'/project/1'}>
               <p className='titleProject'>001-KATJO</p>
               <Image
-                src={katjo}></Image>
+                src={katjo}
+                alt='project 1'
+              ></Image>
             </Link>
           </div>
           <div className='project2'>
@@ -58,7 +60,9 @@ export default function Home() {
               href={'/project/2'}>
               <p className='titleProject'>002-PL@NET</p>
               <Image
-              src={katjo1}></Image>
+                src={katjo1}
+                alt='project 2'
+              ></Image>
             </Link>
           </div>
           <div className='project4'>
@@ -66,7 +70,9 @@ export default function Home() {
               href={'/project/4'}>
               <p className='titleProject'>004-MARCOVASCO</p>
               <Image
-              src={katjo2}></Image>
+                src={katjo2}
+                alt='project 4'
+              ></Image>
             </Link>
           </div>
           <div className='project3'>
@@ -74,7 +80,9 @@ export default function Home() {
               href={'/project/3'}>
               <p className='titleProject'>003 - HESTIA</p>
               <Image
-              src={katjo3}></Image>
+                src={katjo3}
+                alt='project 3'
+              ></Image>
             </Link>
           </div>
           <div className='project5'>
@@ -82,7 +90,8 @@ export default function Home() {
               href={'/project/5'}>
               <p className='titleProject'>005- Brand Design</p>
               <Image
-              src={katjo4}></Image>
+                src={katjo4}
+                alt='project 5'></Image>
             </Link>
           </div>
         </div>
@@ -90,7 +99,7 @@ export default function Home() {
         </div>
       </div>
       <div className='aboutPage' id='aboutPage'>
-        <p className=''>About me</p>
+        <p>About me</p>
         <div className='aboutMain'>
           <div>
             <h2>Annie Tran </h2>
