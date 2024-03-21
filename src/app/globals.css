@@ -521,7 +521,7 @@ html{
   .project3 a img,
   .project4 a img,
   .project5 a img {
-    width: auto;
+    width: 100%;
   }
 
   .project4 p {
