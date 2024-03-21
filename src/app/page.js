@@ -155,7 +155,7 @@ export default function Home() {
         <div className='footerAboot'>
           <p>ACCEPTING PROJECT FOR 2024</p>
           <p>or</p>
-          <p>ACCEPTING PROJECT FOR 2024</p>
+          <p>LOOKING FOR JOBS</p>
         </div>
       </div>
     </main>
