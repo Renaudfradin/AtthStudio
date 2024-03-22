@@ -1,5 +1,8 @@
+<div align="center">
+  <img alt="Logo" src="./src/app/assets/img/logo1.svg" width="100" />
+</div>
 <h1 align="center">
-  At Studio
+  ATTH Studio
 </h1>
 
 ![folio](src/app/assets/img/portfolio.png)

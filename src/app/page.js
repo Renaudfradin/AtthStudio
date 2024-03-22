@@ -2,12 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import logo1 from './assets/img/logo1.svg';
 import logo2 from './assets/img/logo2.svg';
-import background from './assets/img/background.svg';
+import background from './assets/img/background/pathback.svg';
+import backgroundMobile from './assets/img/background/backgroundMobile.svg';
 import katjo from './assets/img/project/KATJO.svg';
 import katjo1 from './assets/img/project/KATJO1.svg';
 import katjo2 from './assets/img/project/KATJO2.svg';
 import katjo3 from './assets/img/project/KATJO3.svg';
-import katjo4 from './assets/img/project/KATJO4.svg';
+import katjo4 from './assets/img/project/logo3.svg';
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
         <div className='navbar'>
           <Link href='#homePage'>HOME</Link>
           <Link href='#workPage'>WORKS</Link>
-          <Link href='#aboutPage'>CONTACTS</Link>
+          <Link href='#aboutPage'>ABOUT ME</Link>
         </div>
         <div className='flexMain'>
           <div className='homeMain'>
@@ -40,6 +41,13 @@ export default function Home() {
           src={background}
           className='imgBackground'
           alt='background img'
+          layout='fill'
+          objectFit='cover'
+        ></Image>
+        <Image
+          src={backgroundMobile}
+          className='imgBackgroundMobile'
+          alt='background img mobile'
           layout='fill'
           objectFit='cover'
         ></Image>
@@ -98,7 +106,6 @@ export default function Home() {
         </div>
       </div>
       <div className='aboutPage' id='aboutPage'>
-        <p>About me</p>
         <div className='aboutMain'>
           <div>
             <h2>Annie Tran </h2>
@@ -152,9 +159,8 @@ export default function Home() {
           ></Image>
         </div>
         <div className='footerAboot'>
-          <p>ACCEPTING PROJECT FOR 2024</p>
-          <p>or</p>
-          <p>LOOKING FOR JOBS</p>
+          <Link href={'/'}>ACCEPTING PROJECT FOR 2024</Link>
+          <Link href={'/'}>LOOKING FOR JOBS</Link>
         </div>
       </div>
     </main>

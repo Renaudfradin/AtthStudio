@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,600;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,300..700;1,300..700&display=swap');
 
 body {
   margin: 0%;
@@ -36,7 +36,7 @@ html{
   margin-right: 8%;
 }
 
-.homeMain div div{
+.homeMain div div {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -80,18 +80,24 @@ html{
 
 .imgBackground{
   color: transparent !important;
-  height: 100vh !important;
+  height: auto !important;
   width: 100% !important;
+  left: -1;
   position: absolute !important;
   object-fit: cover !important;
   top: 100vh !important;
   z-index: -1 !important;
 }
 
+.imgBackgroundMobile{
+  display: none;
+}
+
 .aboutPage {
   height: 100vh;
   display: block;
   padding: 40px 45px;
+  margin-top: 8%;
 }
 
 .navbar{
@@ -123,14 +129,18 @@ html{
   align-items: center;
 }
 
+.aboutMain div{
+  width: 70%;
+}
+
 .listProject{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-start;
-  padding-top: 6%;
-  padding-left: 3%;
+  padding-top: 9%;
+  padding-left: 2%;
 }
 
 .listProject div{
@@ -168,10 +178,11 @@ html{
 
 .footerAboot{
   display: flex;
-  padding-left: 45px;
+  padding-left: 5%;
 }
 
-.footerAboot p{
+.footerAboot a{
+  color: black;
   margin-right: 15px;
 }
 
@@ -183,6 +194,7 @@ html{
   align-content: center;
   justify-content: flex-start;
   align-items: center;
+  width: 100% !important;
 }
 
 .experienceTab h3,
@@ -215,28 +227,26 @@ html{
 /*mobile*/
 @media (max-width: 320px) {
   .homeMain div div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 1vh;
-      flex-wrap: wrap;
-      align-content: center;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1vh;
+    flex-wrap: wrap;
+    align-content: center;
+  }
 
   .titleUi {
     font-size: 30px !important;
   }
 
   .titleHome {
-    font-size: 90px !important;
+    font-size: 40px !important;
   }
 }
 
 @media (max-width: 430px) {
   .homePage {
-    height: auto;
-    width: auto;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -268,32 +278,49 @@ html{
     margin-right: 0%;
   }
 
+  .homeMain div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 20px;
+  }
+
   .homeMain div div {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: column;
     height: 1vh;
+    flex-wrap: nowrap;
   }
 
   .titleHome {
     color: #0123FF;
-    font-size: 100px;
+    font-size: 55px;
     font-weight: 600;
     margin: 0%;
   }
 
-  .titleUi {
-    font-size: 40px;
+  .titleNumber {
+    font-size: 15px;
     font-weight: 400;
-    line-height: 140px;
+    line-height: 20px;
+    color: black;
+    margin: 0%;
+  }
+
+  .titleUi {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 39px;
     margin: 0%;
   }
 
   .titleHumour {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 32.88px;
+    line-height: 19px;
   }
 
   .workPage {
@@ -304,17 +331,19 @@ html{
     display: none;
   }
 
+  .imgBackgroundMobile {
+    display: block;
+    height: 160% !important;
+    -o-object-fit: cover !important;
+    object-fit: cover !important;
+    top: 100vh !important;
+    z-index: -1 !important;
+    width: 10% !important;
+    left: 45% !important;
+  }
+
   .listProject {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-top: 0%;
-    padding-left: 0%;
-    align-content: center;
-    margin-top: 30px;
-    padding: 15px;
+    padding: 0px 40px;
   }
 
   .listProject div{
@@ -337,6 +366,17 @@ html{
   .project4 a img,
   .project5 a img {
     width: 100%;
+    height: auto;
+  }
+
+  .project1 a,
+  .project2 a,
+  .project3 a,
+  .project4 a,
+  .project5 a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
   }
 
   .project4 p {
@@ -347,7 +387,7 @@ html{
     height: auto;
     display: flex;
     margin: 0%;
-    padding: 15px;
+    padding: 30px;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
@@ -358,7 +398,7 @@ html{
     display: flex;
     padding-left: 0;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
     align-content: center;
     align-items: center;
@@ -369,22 +409,20 @@ html{
   }
 
   .experienceTab,
-  .degreeTab{
+  .degreeTab {
     display: flex;
-    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
   }
 
   .experienceTab ul,
   .degreeTab ul {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: stretch;
     width: 100%;
-    margin: 0%;
+    margin-left: 10%;
     padding: 0%;
+    flex-wrap: wrap;
   }
 
   .experienceTab h3,
@@ -416,12 +454,14 @@ html{
   .footerAboot p {
     margin: 0%;
   }
+
+  .aboutMain div {
+    width: 100%;
+  }
 }
 
-@media (max-width: 768px) {
+@media (min-width:431px) and (max-width: 768px) {
   .homePage {
-    height: auto;
-    width: auto;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -453,32 +493,49 @@ html{
     margin-right: 0%;
   }
 
+  .homeMain div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 20px;
+  }
+
   .homeMain div div {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: column;
     height: 1vh;
+    flex-wrap: nowrap;
   }
 
   .titleHome {
     color: #0123FF;
-    font-size: 100px;
+    font-size: 55px;
     font-weight: 600;
     margin: 0%;
   }
 
-  .titleUi {
-    font-size: 40px;
+  .titleNumber {
+    font-size: 15px;
     font-weight: 400;
-    line-height: 140px;
+    line-height: 20px;
+    color: black;
+    margin: 0%;
+  }
+
+  .titleUi {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 39px;
     margin: 0%;
   }
 
   .titleHumour {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 32.88px;
+    line-height: 19px;
   }
 
   .workPage {
@@ -489,17 +546,19 @@ html{
     display: none;
   }
 
+  .imgBackgroundMobile {
+    display: block;
+    height: 160% !important;
+    -o-object-fit: cover !important;
+    object-fit: cover !important;
+    top: 100vh !important;
+    z-index: -1 !important;
+    width: 10% !important;
+    left: 45% !important;
+  }
+
   .listProject {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-top: 0%;
-    padding-left: 0%;
-    align-content: center;
-    margin-top: 30px;
-    padding: 15px;
+    padding: 0px 40px;
   }
 
   .listProject div {
@@ -522,6 +581,17 @@ html{
   .project4 a img,
   .project5 a img {
     width: 100%;
+    height: auto;
+  }
+
+  .project1 a,
+  .project2 a,
+  .project3 a,
+  .project4 a,
+  .project5 a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
   }
 
   .project4 p {
@@ -532,7 +602,7 @@ html{
     height: auto;
     display: flex;
     margin: 0%;
-    padding: 15px;
+    padding: 30px;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
@@ -543,10 +613,14 @@ html{
     display: flex;
     padding-left: 0;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
     align-content: center;
     align-items: center;
+  }
+
+  .aboutMain div {
+    width: 100%;
   }
 
   .aboutMain img {
@@ -556,20 +630,18 @@ html{
   .experienceTab,
   .degreeTab {
     display: flex;
-    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
   }
 
   .experienceTab ul,
   .degreeTab ul {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: stretch;
     width: 100%;
-    margin: 0%;
+    margin-left: 10%;
     padding: 0%;
+    flex-wrap: wrap;
   }
 
   .experienceTab h3,
@@ -590,17 +662,17 @@ html{
 
   .footerAboot {
     display: flex;
-    padding-left: 0;
+    padding-left: 0%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    margin-top: 15px;
     align-content: center;
   }
 
   .footerAboot p {
-    margin-left: 10px;
+    margin: 0%;
+    padding: 0%;
   }
 }
 
@@ -677,6 +749,10 @@ html{
     align-content: center;
   }
 
+  .aboutMain div {
+    width: 100%;
+  }
+
   .footerAboot {
     display: flex;
     padding-left: 0px;
@@ -685,7 +761,6 @@ html{
     align-items: center;
   }
 }
-
 
 @media (min-width: 1025px) and (max-width: 1440px) {
   .homeMain {
