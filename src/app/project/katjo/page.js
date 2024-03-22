@@ -17,8 +17,8 @@ import designMobile from '@/app/assets/img/project/katjo/designMobile.svg'
 import '../project.css';
  
 export const metadata = {
-    title: 'KatJo',
-    description: 'Portfolio Annie Tran ATTH Studio KatJo',
+  title: 'KatJo',
+  description: 'Portfolio Annie Tran ATTH Studio KatJo',
 };
 
 export default function project() {    
@@ -28,7 +28,7 @@ export default function project() {
       <div className="section">
         <Image src={projectImg1}></Image>
         <div className="content">
-          <h3>KatJo catches JO Paris 2024</h3>
+          <h3 className='titleDesign'>KatJo catches JO Paris 2024</h3>
           <p>Application mobile - Design sprint </p>
           <div className='pitch'>
             <div>
@@ -43,29 +43,29 @@ export default function project() {
             </div>
           </div>
           <Image src={hugJo} alt='hug'></Image>
-          <h3>Objectifs</h3>
+          <h3 className='titleDesign'>Objectifs</h3>
           <div className='objectif'>
             <div><p>virtual map</p></div>
             <div><p>information</p></div>
             <div><p>app</p></div>
           </div>
-          <h3>Design Sprint</h3>
+          <h3 className='titleDesign'>Design Sprint</h3>
           <div className='sprint'>
             <Image src={sprint1}></Image>
             <Image src={sprint2}></Image>
             <Image src={sprint3}></Image>
             <Image src={sprint4}></Image>
           </div>
-          <h3>Concept</h3>
+          <h3 className='titleDesign'>Concept</h3>
           
-          <h3>Wireframe</h3>
+          <h3 className='titleDesign'>Wireframe</h3>
           <div className='wireframe'>
             <Image src={billet}></Image>
             <Image src={conseil1}></Image>
             <Image src={conseil2}></Image>
             <Image src={conseil3}></Image>
           </div>
-          <h3>Design</h3>
+          <h3 className='titleDesign'>Design</h3>
           <Image src={design}></Image>
         </div>
       </div>
