@@ -1,0 +1,56 @@
+h3{
+    font-size: 90px;
+    font-weight: 600;
+    line-height: 123px;
+    text-align: left;
+    margin: 0%;
+    margin-left: 10px;
+}
+
+.main{
+    padding: 40px;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section{
+    padding-top: 20px;
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content{
+    background-color: #F9F0F0;
+    padding: 30px;
+}
+
+.sprint{
+    display: grid;
+    grid-template-columns: repeat(2, 47%);
+    grid-template-rows: repeat(2, 50%);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.wireframe {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.wireframe img{
+    margin-right: 20px;
+}
