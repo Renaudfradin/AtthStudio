@@ -1,5 +1,5 @@
-import "./globals.css";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from '@vercel/analytics/react';
+import './globals.css';
 
 export const metadata = {
   title: "ATTH Studio",

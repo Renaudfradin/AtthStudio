@@ -4,11 +4,11 @@ import Link from 'next/link';
 import './navbar.css';
 
 export default function navbar() {
-    return (
-        <div className='navbar'>
-            {items.map(({ url, label }) => (
-                <Link href={url} key={url}>{label}</Link>
-            ))}
-        </div>
-    )
+  return (
+    <div className='navbar'>
+      {items.map(({ url, label }) => (
+        <Link href={url} key={url}>{label}</Link>
+      ))}
+    </div>
+  )
 }
