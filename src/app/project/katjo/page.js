@@ -4,6 +4,7 @@ import projectImgMobile from '@/app/assets/img/project/katjo/project1mobile.svg'
 import hugJo from '@/app/assets/img/project/katjo/hugJo.svg';
 import Image from 'next/image';
 import Top from '@/app/components/top/top';
+import concept from '@/app/assets/img/project/katjo/conpcet.svg';
 import sprint1 from '@/app/assets/img/project/katjo/sprint/sprint1.svg';
 import sprint2 from '@/app/assets/img/project/katjo/sprint/sprint2.svg';
 import sprint3 from '@/app/assets/img/project/katjo/sprint/sprint3.svg';
@@ -116,7 +117,14 @@ export default function project() {
             ></Image>
           </div>
           <h3 className='titleDesign'>Concept</h3>
-          
+          <div className='concept'>
+            <h4>KatJO</h4>
+            <Image
+              className='conceptImg'
+              src={concept}
+              alt='concept'
+            ></Image>
+          </div>
           <h3 className='titleDesign'>Wireframe</h3>
           <div className='wireframe'>
             <Image
