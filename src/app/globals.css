@@ -113,7 +113,7 @@ html{
   align-items: center;
 }
 
-.aboutMain div{
+.blockExperience{
   width: 70%;
 }
 
@@ -125,6 +125,26 @@ html{
 .footerAboot a{
   color: black;
   margin-right: 15px;
+}
+
+.blockAbout{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.blockAbout div{
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.blockAbout div a{
+  color: black;
+  margin-right: 8%;
 }
 
 @media (max-width: 320px) {

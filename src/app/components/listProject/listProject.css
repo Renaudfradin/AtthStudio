@@ -19,6 +19,17 @@
   font-weight: 400;
 }
 
+.listProjectMobile{
+  display: none;
+}
+
+.listProjectMobile div a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  font-weight: 400;
+}
+
 .titleProject {
   margin: 0%;
   width: auto;
@@ -42,11 +53,29 @@
 }
 
 @media (max-width: 430px) {
+  .listProject{
+    display: none;
+  }
+  
   .listProject {
     padding: 0px 40px;
   }
 
   .listProject div {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .listProjectMobile {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding: 0px 40px;
+  }
+
+  .listProjectMobile div{
     width: 100%;
     margin-bottom: 30px;
   }

@@ -49,15 +49,22 @@ export default function Home() {
       </div>
       <div className='aboutPage' id='aboutPage'>
         <div className='aboutMain'>
-          <div>
+          <div className='blockExperience'>
             <h2>Annie Tran </h2>
             <h2>Product designer & Creative Freelance based in Paris</h2>
             <ListExperience />
           </div>
-          <Image
-            src={logo2}
-            alt='logo ATTH Studio'
-          ></Image>
+          <div className='blockAbout'>
+            <Image
+              src={logo2}
+              alt='logo ATTH Studio'
+            ></Image>
+            <div>
+              <Link href={'/'}>RESUME</Link>
+              <Link href={'/'}>INSTAGRAM</Link>
+              <Link href={'/'}>BENTO</Link>
+            </div>
+          </div>
         </div>
         <div className='footerAboot'>
           <Link href={'/'}>ACCEPTING PROJECT FOR 2024</Link>
