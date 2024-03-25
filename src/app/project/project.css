@@ -12,6 +12,14 @@
   padding: 40px;
 }
 
+.titleDesign1{
+  display: block;
+  font-size: 90px;
+  font-weight: 600;
+  line-height: 123px;
+  margin: 0%;
+}
+
 .top {
   display: flex;
   flex-direction: row;
@@ -71,6 +79,11 @@
 .imgDesignMobile,
 .imgTopProjectMobile{
   display: none;
+}
+
+.wireframeimg{
+  height: auto;
+  width: 100%;
 }
 
 .wireframe img {
@@ -166,7 +179,7 @@
 }
 
 .numberObjectif{
-font-size: 30px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 53px;
   letter-spacing: -0.03em;
@@ -182,7 +195,44 @@ font-size: 30px;
   letter-spacing: -0.03em;
 }
 
-.objectif{
+.numberObjectifHestia{
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 53px;
+  letter-spacing: -0.03em;
+  margin: 0%;
+  padding: 0px 20px;
+  border-radius: 50px;
+  background-color: #5552EF;
+  gap: 10.81px;
+  border-radius: 37.84px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 53px;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+}
+
+.detailObjectifHestia{
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 43px;
+  letter-spacing: -0.03em;
+}
+
+.objectifHestia div{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+}
+
+.objectif,
+.objectifHestia{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -201,7 +251,8 @@ font-size: 30px;
   align-items: center;
 }
 
-.objectif div h5{
+.objectif div h5,
+.objectifHestia div h5{
   font-size: 36px;
   font-weight: 700;
   line-height: 49.18px;
@@ -244,6 +295,11 @@ font-size: 30px;
     display: none;
   }
 
+  .wireframeimg {
+    height: auto;
+    width: 100%;
+  }
+
   .imgDesignMobile{
     width: 100%;
     height: auto;
@@ -252,6 +308,18 @@ font-size: 30px;
 
   .numberObjectif {
     padding: 10px 20px;
+  }
+
+  .objectifHestia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .objectifHestia div {
+    width: 100%;
   }
 
   .conceptImg{
@@ -386,6 +454,11 @@ font-size: 30px;
 
   .imgTopProject {
     display: none;
+  }
+
+  .wireframeimg {
+    height: auto;
+    width: 100%;
   }
 
   .imgTopProjectMobile {
