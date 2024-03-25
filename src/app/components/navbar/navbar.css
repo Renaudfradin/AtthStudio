@@ -1,0 +1,18 @@
+.navbar {
+  display: flex;
+  align-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 45px;
+  font-size: 24px;
+  font-optical-sizing: auto;
+}

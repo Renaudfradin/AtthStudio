@@ -1,33 +1,555 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,300..700;1,300..700&display=swap');
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  margin: 0%;
+  padding: 0%;
+  width: 100% !important;
+  background-color: #FBEFDF;
+  font-size: 20px;
+  font-family: "Mohave", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+html{
+  scroll-behavior: smooth;
+}
+
+.homePage{
+  height: 100vh;
+  width: auto;
+  display: block;
+  padding-top: 65px;
+}
+
+.homeMain{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexMain{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.homeMain img{
+  margin-right: 8%;
+}
+
+.homeMain div div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60px;
+  margin-top: -40px;
+}
+
+.titleNumber{
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32.88px;
+  color: black;
+  margin: 0%;
+  display: block;
+  margin-bottom: -30px;
+}
+
+.titleHome{
+  color: #0123FF;
+  font-size: 160px;
+  font-weight: 600;
+  margin: 0%;
+}
+
+.titleUi{
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 140px;
+  color: black;
+  margin: 0%;
+}
+
+.titleHumour{
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32.88px;
+  color: black;
+}
+
+.workPage {
+  height: 100vh;
+}
+
+.imgBackground{
+  color: transparent !important;
+  height: auto !important;
+  width: 100% !important;
+  left: -1;
+  position: absolute !important;
+  object-fit: cover !important;
+  top: 100vh !important;
+  z-index: -1 !important;
+}
+
+.imgBackgroundMobile{
+  display: none;
+}
+
+.aboutPage {
+  height: 100vh;
+  display: block;
+  padding: 40px 45px;
+  margin-top: 8%;
+}
+
+.aboutMain{
+  display: flex;
+  padding-left: 5%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.aboutMain div{
+  width: 70%;
+}
+
+.footerAboot{
+  display: flex;
+  padding-left: 5%;
+}
+
+.footerAboot a{
+  color: black;
+  margin-right: 15px;
+}
+
+@media (max-width: 320px) {
+  .homeMain div div {
+    display: flex;
+    flex-direction: column;
+    height: 1vh;
+    flex-wrap: nowrap;
+    margin-top: 0px !important;
+  }
+
+  .titleUi {
+    font-size: 30px !important;
+  }
+
+  .titleHome {
+    font-size: 40px !important;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@media (max-width: 430px) {
+  .homePage {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flexMain {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  } 
+
+  .homeMain {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .homeMain img {
+    margin-right: 0%;
+  }
+
+  .homeMain div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 20px;
+  }
+
+  .homeMain div div {
+    display: flex;
+    flex-direction: column;
+    height: 1vh;
+    flex-wrap: nowrap;
+    margin-top: 0px !important;
+  }
+
+  .titleHome {
+    color: #0123FF;
+    font-size: 55px;
+    font-weight: 600;
+    margin: 0%;
+  }
+
+  .titleNumber {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: black;
+    margin: 0%;
+  }
+
+  .titleUi {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 39px;
+    margin: 0%;
+  }
+
+  .titleHumour {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+  }
+
+  .workPage {
+    height: auto;
+  }
+
+  .imgBackground {
+    display: none;
+  }
+
+  .imgBackgroundMobile {
+    display: block;
+    height: 160% !important;
+    -o-object-fit: cover !important;
+    object-fit: cover !important;
+    top: 100vh !important;
+    z-index: -1 !important;
+    width: 10% !important;
+    left: 45% !important;
+  }
+
+  .aboutPage {
+    height: auto;
+    display: flex;
+    margin: 0%;
+    padding: 30px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+  }
+
+  .aboutMain {
+    display: flex;
+    padding-left: 0;
+    justify-content: center;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+  }
+
+  .aboutMain img{
+    width: 100%;
+  }
+
+  .footerAboot {
+    display: flex;
+    padding-left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-content: center;
+  }
+
+  .footerAboot p {
+    margin: 0%;
+  }
+
+  .aboutMain div {
+    width: 100%;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@media (min-width:431px) and (max-width: 768px) {
+  .homePage {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flexMain {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .homeMain {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .homeMain img {
+    margin-right: 0%;
+  }
+
+  .homeMain div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 20px;
+  }
+
+  .homeMain div div {
+    display: flex;
+    flex-direction: column;
+    height: 1vh;
+    flex-wrap: nowrap;
+    margin-top: 0px !important;
+  }
+
+  .titleHome {
+    color: #0123FF;
+    font-size: 55px;
+    font-weight: 600;
+    margin: 0%;
+  }
+
+  .titleNumber {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: black;
+    margin: 0%;
+  }
+
+  .titleUi {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 39px;
+    margin: 0%;
+  }
+
+  .titleHumour {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+  }
+
+  .workPage {
+    height: auto;
+  }
+
+  .imgBackground {
+    display: none;
+  }
+
+  .imgBackgroundMobile {
+    display: block;
+    height: 250% !important;
+    -o-object-fit: cover !important;
+    object-fit: cover !important;
+    top: 100vh !important;
+    z-index: -1 !important;
+    width: 10% !important;
+    left: 45% !important;
+  }
+
+  .aboutPage {
+    height: auto;
+    display: flex;
+    margin: 0%;
+    padding: 30px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+  }
+
+  .aboutMain {
+    display: flex;
+    padding-left: 0;
+    justify-content: center;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+  }
+
+  .aboutMain div {
+    width: 100%;
+  }
+
+  .aboutMain img {
+    width: 100%;
+  }
+
+  .footerAboot {
+    display: flex;
+    padding-left: 0%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-content: center;
+  }
+
+  .footerAboot p {
+    margin: 0%;
+    padding: 0%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .homePage {
+    height: 100vh;
+    width: auto;
+    display: block;
+  }
+
+  .homeMain {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+  }
+
+  .homeMain img {
+    margin-right: 2%;
+  }
+
+  .homeMain div div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 1vh;
+    margin-top: -20px !important;
+  }
+
+  .titleHome {
+    color: #0123FF;
+    font-size: 100px;
+    font-weight: 600;
+    margin: 0%;
+  }
+
+  .titleUi {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 140px;
+    margin: 0%;
+  }
+
+  .titleHumour {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 32.88px;
+  }
+
+  .aboutMain {
+    display: flex;
+    padding-left: 5%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .aboutMain div {
+    width: 100%;
+  }
+
+  .footerAboot {
+    display: flex;
+    padding-left: 0px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .homeMain {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+  }
+
+  .homeMain img {
+    margin-right: 2%;
+  }
+
+  .homeMain div div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 1vh;
+    margin-top: -0px !important;
+  }
+
+  .titleHome {
+    color: #0123FF;
+    font-size: 110px;
+    font-weight: 600;
+    margin: 0%;
+  }
+}
+
+@media (min-width: 2500px) {
+  .aboutMain {
+    display: flex;
+    padding-left: 5%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footerAboot {
+    display: flex;
+    padding-left: 45px;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
   }
 }
