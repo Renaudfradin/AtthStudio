@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,300..700;1,300..700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   margin: 0%;
   padding: 0%;
   width: 100% !important;
-  background-color: #FBEFDF;
-  font-size: 20px;
-  font-family: "Mohave", sans-serif;
+  background-color: #FBEFDF !important;
+  font-size: 20px !important;
+  font-family: "Mohave", sans-serif !important;
 }
 
 html{
@@ -125,6 +128,7 @@ html{
 .footerAboot a{
   color: black;
   margin-right: 15px;
+  text-decoration: underline;
 }
 
 .blockAbout{
@@ -145,6 +149,7 @@ html{
 .blockAbout div a{
   color: black;
   margin-right: 8%;
+  text-decoration: underline;
 }
 
 @media (max-width: 320px) {
@@ -173,6 +178,7 @@ html{
     align-content: center;
     justify-content: center;
     align-items: center;
+    padding-top: 0%;
   }
 
   .flexMain {
