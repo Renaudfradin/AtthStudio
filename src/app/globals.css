@@ -516,7 +516,7 @@ html{
 
   .aboutMain {
     display: flex;
-    padding-left: 5%;
+    padding-left: 0%;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
@@ -526,6 +526,12 @@ html{
 
   .aboutMain div {
     width: 100%;
+  }
+
+  .blockAbout div {
+    text-align: start;
+    width: 100%;
+    margin-top: 20px;
   }
 
   .footerAboot {
@@ -586,5 +592,17 @@ html{
     flex-wrap: wrap;
     align-content: center;
     align-items: center;
+  }
+
+  .aboutPage {
+    margin-top: 20%;
+  }
+
+  .blockAbout {
+    width: 30%;
+  }
+
+  .blockAbout div {
+    text-align: start;
   }
 }

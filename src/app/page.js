@@ -37,14 +37,14 @@ export default function Home() {
           src={background}
           className='imgBackground'
           alt='background img'
-          layout='fill'
+          fill
           objectFit='cover'
         ></Image>
         <Image
           src={backgroundMobile}
           className='imgBackgroundMobile'
           alt='background img mobile'
-          layout='fill'
+          fill
           objectFit='cover'
         ></Image>
         <ListProject />

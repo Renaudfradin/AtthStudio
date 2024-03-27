@@ -95,8 +95,32 @@
     line-height: 25px;
     margin-bottom: 10px;
   }
+
+  .experienceTab,
+  .degreeTab {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+  }
+
+  .experienceTab h3,
+  .degreeTab h3 {
+    width: 100%;
+  }
+
+  .experienceTab ul,
+  .degreeTab ul {
+    list-style: disc;
+    margin: 2%;
+    padding: 1px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    
+
 }
