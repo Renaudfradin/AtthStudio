@@ -120,6 +120,14 @@ html{
   width: 70%;
 }
 
+.blockExperience h2{
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 45px;
+  color: black;
+  margin-bottom: 10px;
+}
+
 .footerAboot{
   display: flex;
   padding-left: 5%;
@@ -175,8 +183,6 @@ html{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
     align-items: center;
     padding-top: 0%;
   }

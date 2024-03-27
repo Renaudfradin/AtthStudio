@@ -5,34 +5,29 @@ import { items } from './data';
 import Link from 'next/link';
 import './navbar.css';
 
-export default function navbar() {
-    const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
+export default function Navbar() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    // <div className='navbar'>
-    //   {items.map(({ url, label }) => (
-    //     <Link href={url} key={url}>{label}</Link>
-    //   ))}
-    // </div>
     <div className="flex items-center justify-center">
       <nav>
         <section className="MOBILE-MENU flex lg:hidden">
           <div
-            className="HAMBURGER-ICON space-y-2"
+            className="HAMBURGER-ICON space-y-2 burgerMenuIcon"
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
-            <span className="block h-0.5 w-8 animate-pulse bg-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-600"></span>
+            <span className="block h-0.5 w-7 bg-700 burgerMenuSpan"></span>
+            <span className="block h-0.5 w-7 bg-700 burgerMenuSpan"></span>
+            <span className="block h-0.5 w-7 bg-700 burgerMenuSpan"></span>
           </div>
 
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
             <div
               className="CROSS-ICON absolute top-0 right-0 px-8 py-8"
-              onClick={() => setIsNavOpen(false)} // change isNavOpen state to false to close the menu
+              onClick={() => setIsNavOpen(false)}
             >
               <svg
-                className="h-8 w-8 text-gray-600"
+                className="h-8 w-8 text-gray-700 iconBurgerMenu"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -45,41 +40,22 @@ export default function navbar() {
               </svg>
             </div>
             <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
-              {items.map(({ url, label }) => (
-                <li className="border-b border-gray-400 my-8 uppercase">
-                  <Link href={url} key={url}>{label}</Link>
+              {items.map(({ url, label, id }) => (
+                <li className="my-8 uppercase" key={id}>
+                  <Link href={url}>{label}</Link>
                 </li>
                 ))}
             </ul>
           </div>
         </section>
         <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
-          {items.map(({ url, label }) => (
-            <li>
-              <Link href={url} key={url}>{label}</Link>
+          {items.map(({ url, label, id }) => (
+            <li key={id}>
+              <Link href={url}>{label}</Link>
             </li>
           ))}
         </ul>
       </nav>
-      <style>{`
-      .hideMenuNav {
-        display: none;
-      }
-      .showMenuNav {
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        background: white;
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-      }
-    `}</style>
     </div>
   )
 }

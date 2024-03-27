@@ -12,11 +12,24 @@
 .experienceTab h3,
 .degreeTab h3 {
   width: 10%;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 34px;
 }
 
 .experienceTab ul,
 .degreeTab ul {
   display: flex;
+  list-style: disc;
+  margin: 2%;
+  padding: 1px;
+}
+
+.experienceTab ul li,
+.degreeTab ul li{
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 25px;
 }
 
 .experienceLink,

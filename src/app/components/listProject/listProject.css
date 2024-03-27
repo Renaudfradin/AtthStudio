@@ -6,6 +6,7 @@
   align-items: flex-start;
   padding-top: 6%;
   padding-left: 2%;
+  margin-top: 3%;
 }
 
 .listProject div {
@@ -73,6 +74,7 @@
     justify-content: center;
     flex-wrap: nowrap;
     padding: 0px 40px;
+    margin-top: 25px;
   }
 
   .listProjectMobile div{
@@ -115,10 +117,29 @@
 
 @media (min-width:431px) and (max-width: 768px) {
   .listProject {
+    display: none;
+  }
+
+  .listProject {
     padding: 0px 40px;
   }
 
   .listProject div {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .listProjectMobile {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding: 0px 40px;
+    margin-top: 25px;
+  }
+
+  .listProjectMobile div {
     width: 100%;
     margin-bottom: 30px;
   }
