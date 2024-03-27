@@ -12,7 +12,9 @@ export default function Home() {
   return (
     <main>
       <div className='homePage' id='homePage'>
-        <Navbar />
+        <div className='navbarPage'>
+          <Navbar />
+        </div>
         <div className='flexMain'>
           <div className='homeMain'>
             <Image

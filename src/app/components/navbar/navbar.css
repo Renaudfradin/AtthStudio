@@ -6,11 +6,6 @@
   justify-content: center;
 }
 
-.MOBILE-MENU{
-  display: flex;
-  padding-top: 30px;
-}
-
 .DESKTOP-MENU li a{
   text-decoration: none;
   color: #000;
@@ -61,4 +56,24 @@
 
 .iconBurgerMenu{
   color: white;
+}
+
+@media (max-width: 430px) {
+  .navbarPage{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-top: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width:431px) and (max-width: 768px) {
+  .navbarPage {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-top: 30px;
+    padding-right: 30px;
+  }
 }

@@ -195,6 +195,7 @@ html{
     justify-content: center;
     align-items: center;
     padding: 15px;
+    margin-top: 25%;
   } 
 
   .homeMain {
@@ -325,8 +326,9 @@ html{
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding-top: 0%;
   }
 
   .flexMain {
@@ -337,6 +339,7 @@ html{
     justify-content: center;
     align-items: center;
     padding: 15px;
+    margin-top: 10%;
   }
 
   .homeMain {
