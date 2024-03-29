@@ -77,3 +77,13 @@
     padding-right: 30px;
   }
 }
+
+@media (min-width:769px) and (max-width: 1016px) {
+  .navbarPage {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-top: 30px;
+    padding-right: 30px;
+  }
+}

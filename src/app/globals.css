@@ -311,12 +311,12 @@ html{
     align-content: center;
   }
 
-  .footerAboot p {
-    margin: 0%;
-  }
-
   .aboutMain div {
     width: 100%;
+  }
+
+  .footerAboot a {
+    margin-bottom: 10px;
   }
 }
 
@@ -459,9 +459,8 @@ html{
     align-content: center;
   }
 
-  .footerAboot p {
-    margin: 0%;
-    padding: 0%;
+  .footerAboot a {
+    margin-bottom: 10px;
   }
 }
 

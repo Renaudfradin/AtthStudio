@@ -42,7 +42,7 @@ export default function Navbar() {
             <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
               {items.map(({ url, label, id }) => (
                 <li className="my-8 uppercase" key={id}>
-                  <Link href={url}>{label}</Link>
+                  <Link href={url} onClick={() => setIsNavOpen((prev) => !prev)}>{label}</Link>
                 </li>
                 ))}
             </ul>

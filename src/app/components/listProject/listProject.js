@@ -23,11 +23,11 @@ export default function listProject() {
         ))}
       </div>
       <div className='listProjectMobile'>
-        {itemsMobile.map(({ id, title, img, slug }) => (
+        {itemsMobile.map(({ id, titleid, title, img, slug }) => (
             <div className={`project${id}`} key={id}>
               <Link
                   href={`/project/${slug}`}>
-                <p className='titleProject'>{title}</p>
+                <p className='titleProject'>{titleid}<br />{title}</p>
                 <Image
                     src={img}
                     alt={`project ${slug}`}
