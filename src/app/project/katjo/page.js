@@ -23,7 +23,7 @@ export const metadata = {
   description: 'Portfolio Annie Tran ATTH Studio KatJo',
 };
 
-export default function project() {    
+export default function Project() {    
   return (
     <div className="main">
       <Top />
@@ -33,6 +33,8 @@ export default function project() {
           src={projectImg1}
           alt='imgTopProject'
         ></Image>
+        <p className='titleDesignMobileid'>001-KATJO</p>
+        <h3 className='titleDesignMobile'>KatJo catches JO Paris 2024</h3>
         <Image
           className='imgTopProjectMobile'
           src={projectImgMobile}

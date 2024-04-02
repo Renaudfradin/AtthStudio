@@ -12,7 +12,9 @@ export default function Home() {
   return (
     <main>
       <div className='homePage' id='homePage'>
-        <Navbar />
+        <div className='navbarPage'>
+          <Navbar />
+        </div>
         <div className='flexMain'>
           <div className='homeMain'>
             <Image
@@ -35,29 +37,37 @@ export default function Home() {
           src={background}
           className='imgBackground'
           alt='background img'
-          layout='fill'
+          fill
           objectFit='cover'
         ></Image>
         <Image
           src={backgroundMobile}
           className='imgBackgroundMobile'
           alt='background img mobile'
-          layout='fill'
+          fill
           objectFit='cover'
         ></Image>
         <ListProject />
       </div>
       <div className='aboutPage' id='aboutPage'>
         <div className='aboutMain'>
-          <div>
+          <div className='blockExperience'>
             <h2>Annie Tran </h2>
             <h2>Product designer & Creative Freelance based in Paris</h2>
             <ListExperience />
           </div>
-          <Image
-            src={logo2}
-            alt='logo ATTH Studio'
-          ></Image>
+          <div className='blockAbout'>
+            <Image
+              className='logoatthstudio'
+              src={logo2}
+              alt='logo ATTH Studio'
+            ></Image>
+            <div>
+              <Link href={'/'}>RESUME</Link>
+              <Link href={'/'}>INSTAGRAM</Link>
+              <Link href={'/'}>BENTO</Link>
+            </div>
+          </div>
         </div>
         <div className='footerAboot'>
           <Link href={'/'}>ACCEPTING PROJECT FOR 2024</Link>

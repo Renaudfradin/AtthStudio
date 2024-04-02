@@ -7,7 +7,7 @@ export const metadata = {
   description: 'Portfolio Annie Tran ATTH Studio Marcovasco',
 };
 
-export default function project() {    
+export default function Project() {    
   return (
     <div className="main">
       <Top />

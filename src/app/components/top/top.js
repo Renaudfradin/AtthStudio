@@ -7,13 +7,13 @@ import lineTop from '@/app/assets/img/linetop.svg';
 export default function top() {
 	return (
     <div className="top">
-        <Image
-          src={logo3}
-          alt="logo ATTH Studio"
-        >
-        </Image>
-        <Navbar />
-        <p>2024</p>
+      <Image
+        src={logo3}
+        alt="logo ATTH Studio"
+      >
+      </Image>
+      <Navbar />
+      <p>2024</p>
 		</div>
 	)
 }

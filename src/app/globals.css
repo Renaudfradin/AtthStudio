@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,300..700;1,300..700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   margin: 0%;
   padding: 0%;
   width: 100% !important;
-  background-color: #FBEFDF;
-  font-size: 20px;
-  font-family: "Mohave", sans-serif;
+  background-color: #FBEFDF !important;
+  font-size: 20px !important;
+  font-family: "Mohave", sans-serif !important;
 }
 
 html{
@@ -113,8 +116,16 @@ html{
   align-items: center;
 }
 
-.aboutMain div{
+.blockExperience{
   width: 70%;
+}
+
+.blockExperience h2{
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 45px;
+  color: black;
+  margin-bottom: 10px;
 }
 
 .footerAboot{
@@ -125,6 +136,28 @@ html{
 .footerAboot a{
   color: black;
   margin-right: 15px;
+  text-decoration: underline;
+}
+
+.blockAbout{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.blockAbout div{
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.blockAbout div a{
+  color: black;
+  margin-right: 8%;
+  text-decoration: underline;
 }
 
 @media (max-width: 320px) {
@@ -143,6 +176,17 @@ html{
   .titleHome {
     font-size: 40px !important;
   }
+
+  .imgBackgroundMobile {
+    display: block;
+    height: 175% !important;
+    -o-object-fit: cover !important;
+    object-fit: cover !important;
+    top: 100vh !important;
+    z-index: -1 !important;
+    width: 10% !important;
+    left: 45% !important;
+  }
 }
 
 @media (max-width: 430px) {
@@ -150,9 +194,8 @@ html{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
     align-items: center;
+    padding-top: 0%;
   }
 
   .flexMain {
@@ -163,6 +206,7 @@ html{
     justify-content: center;
     align-items: center;
     padding: 15px;
+    margin-top: 25%;
   } 
 
   .homeMain {
@@ -234,7 +278,7 @@ html{
 
   .imgBackgroundMobile {
     display: block;
-    height: 160% !important;
+    height: 200% !important;
     -o-object-fit: cover !important;
     object-fit: cover !important;
     top: 100vh !important;
@@ -278,12 +322,17 @@ html{
     align-content: center;
   }
 
-  .footerAboot p {
-    margin: 0%;
-  }
-
   .aboutMain div {
     width: 100%;
+  }
+
+  .footerAboot a {
+    margin-bottom: 10px;
+  }
+
+  .logoatthstudio {
+    max-width: 100%;
+    height: revert-layer;
   }
 }
 
@@ -293,8 +342,9 @@ html{
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding-top: 0%;
   }
 
   .flexMain {
@@ -305,6 +355,7 @@ html{
     justify-content: center;
     align-items: center;
     padding: 15px;
+    margin-top: 10%;
   }
 
   .homeMain {
@@ -424,9 +475,8 @@ html{
     align-content: center;
   }
 
-  .footerAboot p {
-    margin: 0%;
-    padding: 0%;
+  .footerAboot a {
+    margin-bottom: 10px;
   }
 }
 
@@ -481,7 +531,7 @@ html{
 
   .aboutMain {
     display: flex;
-    padding-left: 5%;
+    padding-left: 0%;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
@@ -491,6 +541,12 @@ html{
 
   .aboutMain div {
     width: 100%;
+  }
+
+  .blockAbout div {
+    text-align: start;
+    width: 100%;
+    margin-top: 20px;
   }
 
   .footerAboot {
@@ -551,5 +607,17 @@ html{
     flex-wrap: wrap;
     align-content: center;
     align-items: center;
+  }
+
+  .aboutPage {
+    margin-top: 20%;
+  }
+
+  .blockAbout {
+    width: 30%;
+  }
+
+  .blockAbout div {
+    text-align: start;
   }
 }

@@ -12,11 +12,24 @@
 .experienceTab h3,
 .degreeTab h3 {
   width: 10%;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 34px;
 }
 
 .experienceTab ul,
 .degreeTab ul {
   display: flex;
+  list-style: disc;
+  margin: 2%;
+  padding: 1px;
+}
+
+.experienceTab ul li,
+.degreeTab ul li{
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 25px;
 }
 
 .experienceLink,
@@ -42,6 +55,8 @@
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
+    border-bottom: 1px solid #CCCCCC;
+    margin-top: 20px;
   }
 
   .experienceTab ul,
@@ -82,8 +97,32 @@
     line-height: 25px;
     margin-bottom: 10px;
   }
+
+  .experienceTab,
+  .degreeTab {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+  }
+
+  .experienceTab h3,
+  .degreeTab h3 {
+    width: 100%;
+  }
+
+  .experienceTab ul,
+  .degreeTab ul {
+    list-style: disc;
+    margin: 2%;
+    padding: 1px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    
+
 }
