@@ -58,6 +58,7 @@ export default function Home() {
           </div>
           <div className='blockAbout'>
             <Image
+              className='logoatthstudio'
               src={logo2}
               alt='logo ATTH Studio'
             ></Image>

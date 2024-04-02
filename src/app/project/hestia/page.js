@@ -26,6 +26,8 @@ export default function Project() {
           src={projectImg1}
           alt='imgTopProject'
         ></Image>
+        <p className='titleDesignMobileid'>003-Hestia</p>
+        <h3 className='titleDesignMobile'>Achetez en confiance, vendez rapidemant</h3>
         <Image
           className='imgTopProjectMobile'
           src={projectImgMobile}

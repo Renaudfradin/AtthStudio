@@ -33,6 +33,8 @@ export default function Project() {
           src={projectImg1}
           alt='imgTopProject'
         ></Image>
+        <p className='titleDesignMobileid'>001-KATJO</p>
+        <h3 className='titleDesignMobile'>KatJo catches JO Paris 2024</h3>
         <Image
           className='imgTopProjectMobile'
           src={projectImgMobile}

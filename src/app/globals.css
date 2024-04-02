@@ -176,6 +176,17 @@ html{
   .titleHome {
     font-size: 40px !important;
   }
+
+  .imgBackgroundMobile {
+    display: block;
+    height: 175% !important;
+    -o-object-fit: cover !important;
+    object-fit: cover !important;
+    top: 100vh !important;
+    z-index: -1 !important;
+    width: 10% !important;
+    left: 45% !important;
+  }
 }
 
 @media (max-width: 430px) {
@@ -267,7 +278,7 @@ html{
 
   .imgBackgroundMobile {
     display: block;
-    height: 160% !important;
+    height: 200% !important;
     -o-object-fit: cover !important;
     object-fit: cover !important;
     top: 100vh !important;
@@ -317,6 +328,11 @@ html{
 
   .footerAboot a {
     margin-bottom: 10px;
+  }
+
+  .logoatthstudio {
+    max-width: 100%;
+    height: revert-layer;
   }
 }
 

@@ -20,6 +20,11 @@
   margin: 0%;
 }
 
+.titleDesignMobileid,
+.titleDesignMobile{
+  display: none;
+}
+
 .top {
   display: flex;
   flex-direction: row;
@@ -38,7 +43,7 @@
 
 .section{
   padding-top: 20px;
-  width: 90%;
+  width: 82%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -100,7 +105,6 @@
 }
 
 .content{
-  background-color: #F9F0F0;
   padding: 30px;
   padding-bottom: 0px;
 }
@@ -269,6 +273,10 @@
   list-style-type: none;
 }
 
+.matrice{
+  display: flex;
+}
+
 @media (max-width: 430px){
   .main {
     padding: 30px;
@@ -285,6 +293,7 @@
   }
 
   .section {
+    background-color: #F9F0F0;
     padding-top: 20px;
     width: 100%;
     margin-left: auto;
@@ -314,6 +323,23 @@
     width: 100%;
     height: auto;
     display: block;
+  }
+
+  .titleDesignMobileid,
+  .titleDesignMobile {
+    display: block;
+  }
+
+  .titleDesignMobileid{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33px;
+  }
+
+  .titleDesignMobile{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 45px;
   }
 
   .numberObjectif {
@@ -470,6 +496,23 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 32.78px;
+  }
+
+  .titleDesignMobileid,
+  .titleDesignMobile {
+    display: block;
+  }
+
+  .titleDesignMobileid {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33px;
+  }
+
+  .titleDesignMobile {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 45px;
   }
 
   .imgTopProject {
