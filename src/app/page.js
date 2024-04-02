@@ -17,7 +17,7 @@ export default function Home() {
           <div className='homeMain'>
             <Image
               width={320}
-              height={500}
+              height={315}
               priority
               src="/asset/logo1.svg"
               alt='logo ATTH Studio'
@@ -60,7 +60,7 @@ export default function Home() {
           <div className='blockAbout'>
             <Image
               width={500}
-              height={500}
+              height={713}
               className='logoatthstudio'
               src="/asset/logo2.svg"
               alt='logo ATTH Studio'
