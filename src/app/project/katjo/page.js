@@ -1,6 +1,6 @@
 import React from 'react';
-import projectImg1 from '@/app/assets/img/project/katjo/project1img.svg';
-import projectImgMobile from '@/app/assets/img/project/katjo/project1mobile.svg';
+//import projectImg1 from '@/app/assets/img/project/katjo/project1img.svg';
+//import projectImgMobile from '@/app/assets/img/project/katjo/project1mobile.svg';
 import hugJo from '@/app/assets/img/project/katjo/hugJo.svg';
 import Image from 'next/image';
 import Top from '@/app/components/top/top';
@@ -30,14 +30,20 @@ export default function Project() {
       <div className="section">
         <Image
           className='imgTopProject'
-          src={projectImg1}
+          width={320}
+          height={500}
+          priority
+          src="/asset/img/katjo/project1img.svg"
           alt='imgTopProject'
         ></Image>
         <p className='titleDesignMobileid'>001-KATJO</p>
         <h3 className='titleDesignMobile'>KatJo catches JO Paris 2024</h3>
         <Image
           className='imgTopProjectMobile'
-          src={projectImgMobile}
+          width={320}
+          height={500}
+          priority
+          src="/asset/img/katjo/project1mobile.svg"
           alt='projectImgMobile'
         ></Image>
         <div className="content">

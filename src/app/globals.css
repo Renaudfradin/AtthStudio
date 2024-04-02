@@ -160,6 +160,10 @@ html{
   text-decoration: underline;
 }
 
+.logo1{
+ width: 100%;
+}
+
 @media (max-width: 320px) {
   .homeMain div div {
     display: flex;
