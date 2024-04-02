@@ -324,6 +324,7 @@ html{
     align-items: center;
     flex-wrap: nowrap;
     align-content: center;
+    margin-top: 20px;
   }
 
   .aboutMain div {
@@ -337,6 +338,10 @@ html{
   .logoatthstudio {
     max-width: 100%;
     height: revert-layer;
+  }
+
+  .blockAbout div{
+    margin-bottom: 20px;
   }
 }
 

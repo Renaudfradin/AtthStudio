@@ -61,7 +61,6 @@ export default function Home() {
             <Image
               width={500}
               height={500}
-              priority
               className='logoatthstudio'
               src="/asset/logo2.svg"
               alt='logo ATTH Studio'

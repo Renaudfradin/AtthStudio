@@ -10,7 +10,7 @@ export default function top() {
         height={500}
         priority
         src="/asset/logo3.svg"
-        alt="logo ATTH Studio"
+        alt="logo ATTH Studio Navbar"
       >
       </Image>
       <Navbar />

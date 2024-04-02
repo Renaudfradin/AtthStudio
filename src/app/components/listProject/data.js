@@ -20,10 +20,10 @@ export const items = [
     category: 'application',
   },
   {
-    id: 4,
-    title: '004-MARCOVASCO',
-    slug: 'marcovasco',
-    img: katjo2,
+    id: 5,
+    title: '004-Brand Design',
+    slug: 'branddesign',
+    img: katjo4,
     category: 'application',
   },
   {
@@ -34,10 +34,10 @@ export const items = [
     category: 'application',
   },
   {
-    id: 5,
-    title: '005-Brand Design',
-    slug: 'branddesign',
-    img: katjo4,
+    id: 4,
+    title: '005-SUPERMOOD',
+    slug: 'supermood',
+    img: katjo2,
     category: 'application',
   },
 ]

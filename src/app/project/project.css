@@ -105,6 +105,7 @@
 }
 
 .content{
+  background-color: #F9F0F0;
   padding: 30px;
   padding-bottom: 0px;
 }
@@ -253,6 +254,7 @@
   align-content: center;
   justify-content: center;
   align-items: center;
+  width: 25%;
 }
 
 .objectif div h5,
