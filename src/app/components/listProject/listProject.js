@@ -12,10 +12,14 @@ export default function listProject() {
         {items.map(({ id, title, img, slug }) => (
             <div className={`project${id}`} key={id}>
               <Link
-                  href={`/project/${slug}`}>
-                <p className='titleProject'>{title}</p>
-                <Image
+                href={`/project/${slug}`}
+              >
+                  <p className={`titleProject${id}`}>{title}</p>
+                  <Image
+                    className={`projectimg${id}`}
                     src={img}
+                    width={320}
+                    height={200}
                     alt={`project ${slug}`}
                 ></Image>
               </Link>
@@ -26,10 +30,13 @@ export default function listProject() {
         {itemsMobile.map(({ id, titleid, title, img, slug }) => (
             <div className={`project${id}`} key={id}>
               <Link
-                  href={`/project/${slug}`}>
+                href={`/project/${slug}`}
+              >
                 <p className='titleProject'>{titleid}<br />{title}</p>
                 <Image
                     src={img}
+                    width={336}
+                    height={240}
                     alt={`project ${slug}`}
                 ></Image>
               </Link>

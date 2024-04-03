@@ -1,16 +1,10 @@
-import katjo from '@/app/assets/img/project/KATJO.svg';
-import katjo1 from '@/app/assets/img/project/KATJO1.svg';
-import katjo2 from '@/app/assets/img/project/KATJO2.svg';
-import katjo3 from '@/app/assets/img/project/KATJO3.svg';
-import katjo4 from '@/app/assets/img/project/logo3.svg';
-
 export const itemsMobile = [
   {
     id: 1,
     titleid: '001',
     title: 'KATJO',
     slug: 'katjo',
-    img: katjo,
+    img: "/asset/img/KATJO.svg",
     category: 'application',
   },
   {
@@ -18,7 +12,7 @@ export const itemsMobile = [
     titleid: '002',
     title: 'PL@NET',
     slug: 'pl@net',
-    img: katjo1,
+    img: "/asset/img/KATJO1.svg",
     category: 'application',
   },
   {
@@ -26,7 +20,7 @@ export const itemsMobile = [
     titleid: '003',
     title: 'HESTIA',
     slug: 'hestia',
-    img: katjo3,
+    img: "/asset/img/KATJO3.svg",
     category: 'application',
   },
   {
@@ -34,7 +28,8 @@ export const itemsMobile = [
     titleid: '004',
     title: 'Brand Design',
     slug: 'branddesign',
-    img: katjo4,
+    
+    img: "/asset/img/KATJO4.svg",
     category: 'application',
   },
   {
@@ -42,7 +37,8 @@ export const itemsMobile = [
     titleid: '005',
     title: 'SUPERMOOD',
     slug: 'supermood',
-    img: katjo2,
+    
+    img: "/asset/img/KATJO2.svg",
     category: 'application',
   },
 ]

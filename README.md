@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="./src/app/assets/img/logo1.svg" width="100" />
+  <img alt="logo ATTH Studio" src="./src/app/assets/img/logo.svg" width="100" />
 </div>
 <h1 align="center">
   ATTH Studio

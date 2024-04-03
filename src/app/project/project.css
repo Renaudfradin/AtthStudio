@@ -1,11 +1,13 @@
 .titleDesign{
   font-size: 90px;
+  font-family: Manrope;
   font-weight: 600;
-  line-height: 123px;
+  line-height: 122px;
   text-align: left;
   margin: 0%;
   margin-left: 10px;
   margin-top: 5%;
+  margin-bottom: 30px;
 }
 
 .main{
@@ -14,10 +16,15 @@
 
 .titleDesign1{
   display: block;
+  font-family: Manrope;
   font-size: 90px;
   font-weight: 600;
-  line-height: 123px;
+  line-height: 122px;
   margin: 0%;
+}
+
+.titletype{
+  margin: 40px 0px;
 }
 
 .titleDesignMobileid,
@@ -115,6 +122,7 @@
 
 .separationBar{
   width: 100%;
+  margin-top: 5%;
 }
 
 .ojectifImg{
@@ -223,16 +231,17 @@
   line-height: 53px;
   letter-spacing: -0.03em;
   margin: 0%;
-  padding: 0px 20px;
+  padding: 8px 20px;
   border-radius: 50px;
   background-color: #5552EF;
-  gap: 10.81px;
-  border-radius: 37.84px;
+  gap: 11px;
+  border-radius: 38px;
   font-size: 30px;
   font-weight: 700;
   line-height: 53px;
   letter-spacing: -0.03em;
   color: #FFFFFF;
+  width: auto !important;
 }
 
 .detailObjectifHestia{
@@ -240,6 +249,7 @@
   font-weight: 400;
   line-height: 43px;
   letter-spacing: -0.03em;
+  border-bottom: none !important;
 }
 
 .objectifHestia div{
@@ -318,6 +328,10 @@
   .top img,
   .top p{
     display: none;
+  }
+
+  .titletype{
+    margin: 15px 0px;
   }
 
   .section {
@@ -547,12 +561,16 @@
     display: none;
   }
 
+  .titletype {
+    margin: 20px 0px;
+  }
+
   .content p {
     font-size: 24px;
     font-weight: 600;
     line-height: 32.78px;
     border-bottom: 1px solid #CCCCCC;
-    width: 100%;
+    width: auto;
     padding-bottom: 10px;
   }
 

@@ -1,5 +1,4 @@
 import React from 'react';
-//import projectImgMobile from '@/app/assets/img/project/katjo/project1mobile.svg';
 import hugJo from '@/app/assets/img/project/katjo/hugJo.svg';
 import Image from 'next/image';
 import Top from '@/app/components/top/top';
@@ -48,7 +47,7 @@ export default function Project() {
         <p className='btnAplication'>Application mobile</p>
         <div className="content">
           <h3 className='titleDesign1'>KatJo catches JO Paris 2024</h3>
-          <p>Application mobile - Design sprint </p>
+          <p className='titletype'>Application mobile - Design sprint </p>
           <div className='pitch'>
             <div className='pitchcontent'>
               <h5>Pitch</h5>
@@ -166,7 +165,8 @@ export default function Project() {
           <Link
             href={'https://www.behance.net/annietran8'}
             target="_blank"
-            className='behancelink'>Behance</Link>
+            className='behancelink'
+          >Behance</Link>
         </div>
       </div>
     </div>
