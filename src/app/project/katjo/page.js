@@ -1,5 +1,5 @@
 import React from 'react';
-import projectImgMobile from '@/app/assets/img/project/katjo/project1mobile.svg';
+//import projectImgMobile from '@/app/assets/img/project/katjo/project1mobile.svg';
 import hugJo from '@/app/assets/img/project/katjo/hugJo.svg';
 import Image from 'next/image';
 import Top from '@/app/components/top/top';
@@ -16,6 +16,7 @@ import design from '@/app/assets/img/project/katjo/design.svg';
 import object from '@/app/assets/img/project/katjo/objectif.svg';
 import designMobile from '@/app/assets/img/project/katjo/designMobile.svg'
 import '../project.css';
+import Link from 'next/link';
  
 export const metadata = {
   title: 'KatJo',
@@ -30,7 +31,7 @@ export default function Project() {
         <Image
           className='imgTopProject'
           width={320}
-          height={500}
+          height={867}
           priority
           src="/asset/img/katjo/project1img.svg"
           alt='imgTopProject'
@@ -39,9 +40,12 @@ export default function Project() {
         <h3 className='titleDesignMobile'>KatJo catches JO Paris 2024</h3>
         <Image
           className='imgTopProjectMobile'
-          src={projectImgMobile}
+          width={365}
+          height={489}
+          src="/asset/img/katjo/project1mobile.svg"
           alt='projectImgMobile'
         ></Image>
+        <p className='btnAplication'>Application mobile</p>
         <div className="content">
           <h3 className='titleDesign1'>KatJo catches JO Paris 2024</h3>
           <p>Application mobile - Design sprint </p>
@@ -159,8 +163,12 @@ export default function Project() {
             src={designMobile}
             alt='designMobile'
           ></Image>
+          <Link
+            href={'https://www.behance.net/annietran8'}
+            target="_blank"
+            className='behancelink'>Behance</Link>
         </div>
       </div>
     </div>
-    )
+  )
 }

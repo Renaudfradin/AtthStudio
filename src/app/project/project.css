@@ -25,6 +25,23 @@
   display: none;
 }
 
+.btnAplication {
+  text-align: center;
+  padding: 30px 10px;
+  border-radius: 20px;
+  border: 0.5px solid #151515;
+  width: 25%;
+  margin-left: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.015em;
+  color: #151515;
+  margin-top: -82px;
+}
+
 .top {
   display: flex;
   flex-direction: row;
@@ -279,6 +296,15 @@
   display: flex;
 }
 
+.behancelink{
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 55px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 @media (max-width: 430px){
   .main {
     padding: 30px;
@@ -306,10 +332,30 @@
     padding: 10px;
   }
 
+  .btnAplication {
+    text-align: center;
+    padding: 15px 10px;
+    border-radius: 20px;
+    border: 0.5px solid #151515;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: #151515;
+  }
+
   .content p{
     font-size: 24px;
     font-weight: 600;
     line-height: 32.78px;
+    border-bottom: 1px solid #CCCCCC;
+    width: 100%;
+    padding-bottom: 10px;
   }
 
   .imgTopProject{
@@ -346,18 +392,24 @@
 
   .numberObjectif {
     padding: 10px 20px;
+    width: auto !important;
   }
 
-  .objectifHestia{
+  .objectif,
+  .objectifHestia {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
     align-content: center;
+    justify-content: space-around;
+    margin-top: 8%;
   }
 
+  .objectif div,
   .objectifHestia div {
     width: 100%;
+    margin-bottom: 20px;
   }
 
   .conceptImg{
@@ -420,6 +472,7 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 32.78px;
+    margin: 10px 0px;
   }
 
   .pitchbotom ul {
@@ -498,6 +551,9 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 32.78px;
+    border-bottom: 1px solid #CCCCCC;
+    width: 100%;
+    padding-bottom: 10px;
   }
 
   .titleDesignMobileid,
@@ -515,6 +571,23 @@
     font-size: 32px;
     font-weight: 600;
     line-height: 45px;
+  }
+
+  .btnAplication {
+    text-align: center;
+    padding: 15px 10px;
+    border-radius: 20px;
+    border: 0.5px solid #151515;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: #151515;
   }
 
   .imgTopProject {
@@ -575,6 +648,8 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 32.78px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .pitchbotom ul {
@@ -643,6 +718,22 @@
     grid-column-gap: 0px;
     grid-row-gap: 20px;
   }
+
+  .btnAplication {
+    text-align: center;
+    padding: 16px 10px;
+    border-radius: 20px;
+    border: 0.5px solid #151515;
+    width: 25%;
+    margin-left: auto;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: #151515;
+    margin-top: -46px;
+  }
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
@@ -659,5 +750,21 @@
   .wireframe img{
     width: 80%;
     height: auto;
+  }
+
+  .btnAplication {
+    text-align: center;
+    padding: 16px 10px;
+    border-radius: 20px;
+    border: 0.5px solid #151515;
+    width: 25%;
+    margin-left: auto;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: #151515;
+    margin-top: -60px;
   }
 }
