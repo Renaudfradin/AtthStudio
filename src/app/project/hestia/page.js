@@ -95,7 +95,6 @@ export default function Project() {
             src="/asset/img/hestia/design.svg"
             width={1434}
             height={2752}
-            loading = 'lazy'
             alt='design'
           ></Image>
           <Image
