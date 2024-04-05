@@ -8,9 +8,9 @@ import { itemsMobile } from './dataMobile';
 import './listProject.css';
 
 export default function ListProject() {
-  const [hoveredItem, setHoveredItem] = useState(null);
+  const [hoveredItem, setHoveredItem] = useState(false);
   const handleMouseEnter = (id) =>  setHoveredItem(id);
-  const handleMouseLeave = () => setHoveredItem(null);
+  const handleMouseLeave = () => setHoveredItem(false);
 
   return (
     <>
