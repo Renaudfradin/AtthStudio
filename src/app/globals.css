@@ -107,11 +107,11 @@ html{
   display: block;
   padding: 40px 45px;
   margin-top: 8%;
+  padding-right: 10%;
 }
 
 .aboutMain{
   display: flex;
-  padding-left: 5%;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
@@ -119,7 +119,7 @@ html{
 }
 
 .blockExperience{
-  width: 70%;
+  width: 100%;
 }
 
 .blockExperience h2{
@@ -127,12 +127,11 @@ html{
   font-weight: 600;
   line-height: 45px;
   color: black;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .footerAboot{
   display: flex;
-  padding-left: 5%;
 }
 
 .footerAboot a{
@@ -237,7 +236,7 @@ html{
     justify-content: center;
     align-items: center;
     padding: 15px;
-    margin-top: 5%;
+    margin-top: 30%;
   } 
 
   .homeMain {
@@ -322,7 +321,7 @@ html{
     height: auto;
     display: flex;
     margin: 0%;
-    padding: 30px;
+    padding: 30px 40px;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
@@ -378,6 +377,10 @@ html{
     align-items: center;
     margin-top: 20%;
   }
+
+  .scrollingtext {
+    display: none;
+  }
 }
 
 @media (min-width:431px) and (max-width: 768px) {
@@ -408,7 +411,7 @@ html{
     justify-content: center;
     align-items: center;
     padding: 15px;
-    margin-top: 5%;
+    margin-top: 15%;
   }
 
   .homeMain {
@@ -493,7 +496,7 @@ html{
     height: auto;
     display: flex;
     margin: 0%;
-    padding: 30px;
+    padding: 30px 40px;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
@@ -530,6 +533,10 @@ html{
 
   .footerAboot a {
     margin-bottom: 10px;
+  }
+
+  .scrollingtext{
+    display: none;
   }
 }
 
@@ -620,6 +627,10 @@ html{
     align-items: center;
     margin-bottom: 20px;
   }
+
+  .aboutPage{
+    margin-top: 0%;
+  }
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
@@ -651,6 +662,28 @@ html{
     font-weight: 600;
     margin: 0%;
   }
+
+  .aboutPage {
+    height: auto;
+    display: flex;
+    margin: 0%;
+    padding: 3%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    padding-right: 7%;
+  }
+
+  .project4 {
+    margin-top: 5% !important;
+    padding-left: 1% !important;
+  }
+
+  .project3 {
+    padding-right: 10% !important;
+    margin-right: 10%;
+  }
 }
 
 @media (min-width: 2500px) {
@@ -675,6 +708,7 @@ html{
 
   .aboutPage {
     margin-top: 20%;
+    padding-right: 0%;
   }
 
   .blockAbout {

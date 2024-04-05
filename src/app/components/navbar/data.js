@@ -1,7 +1,7 @@
 export const items = [
   {
     id: 1,
-    url: "/",
+    url: "/#homePage",
     label: "HOME"
   },
   {

@@ -786,3 +786,21 @@
     margin-top: -60px;
   }
 }
+
+@media (min-width: 1441px) and (max-width: 1650px) {
+  .btnAplication {
+    text-align: center;
+    padding: 16px 10px;
+    border-radius: 20px;
+    border: 0.5px solid #151515;
+    width: 25%;
+    margin-left: auto;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: #151515;
+    margin-top: -60px;
+  }
+}
