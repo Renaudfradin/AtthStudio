@@ -76,7 +76,7 @@ export default function Home() {
                 target="_blank"
               >RESUME</Link>
               <Link
-                href={'https://www.instagram.com/_atthdesign/'}
+                href={'https://www.instagram.com/atth.studio'}
                 target="_blank"
               >INSTAGRAM</Link>
               <Link

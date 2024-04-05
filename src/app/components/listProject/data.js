@@ -4,6 +4,7 @@ export const items = [
     title: '001-KATJO',
     slug: 'katjo',
     img: "/asset/img/KATJO.svg",
+    imgnoir: "/asset/img/KATJOnoir.svg",
     category: 'application',
   },
   {
@@ -11,6 +12,7 @@ export const items = [
     title: '002-PL@NET',
     slug: 'pl@net',
     img: "/asset/img/KATJO1.svg",
+    imgnoir: "/asset/img/KATJO1noir.svg",
     category: 'application',
   },
   {
@@ -18,6 +20,7 @@ export const items = [
     title: '004-Brand Design',
     slug: 'branddesign',
     img: "/asset/img/KATJO4.svg",
+    imgnoir: "/asset/img/KATJO4noir.svg",
     category: 'application',
   },
   {
@@ -25,6 +28,7 @@ export const items = [
     title: '003-HESTIA',
     slug: 'hestia',
     img: "/asset/img/KATJO3.svg",
+    imgnoir: "/asset/img/KATJO3noir.svg",
     category: 'application',
   },
   {
@@ -32,6 +36,7 @@ export const items = [
     title: '005-SUPERMOOD',
     slug: 'supermood',
     img: "/asset/img/KATJO2.svg",
+    imgnoir: "/asset/img/KATJO2noir.svg",
     category: 'application',
   },
 ]

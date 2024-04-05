@@ -58,6 +58,13 @@
   color: white;
 }
 
+.navbarPage{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 @media (max-width: 430px) {
   .navbarPage{
     display: flex;
@@ -65,6 +72,7 @@
     width: 100%;
     padding-top: 30px;
     padding-right: 30px;
+    position: fixed;
   }
 }
 
@@ -75,6 +83,7 @@
     width: 100%;
     padding-top: 30px;
     padding-right: 30px;
+    position: fixed;
   }
 }
 
@@ -85,5 +94,6 @@
     width: 100%;
     padding-top: 30px;
     padding-right: 30px;
+    position: fixed;
   }
 }
