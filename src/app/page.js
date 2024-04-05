@@ -1,12 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import logo1 from './assets/img/logo1.svg';
-import logo2 from './assets/img/logo2.svg';
-import background from './assets/img/background/pathback.svg';
-import backgroundMobile from './assets/img/background/backgroundMobile.svg';
-import Navbar from './components/navbar/navbar.js';
-import ListProject from './components/listProject/listProject.js';
-import ListExperience from './components/listExperience/listExperience.js';
+import Navbar from '@/app/components/navbar/navbar.js';
+import ListProject from '@/app/components/listProject/listProject.js';
+import ListExperience from '@/app/components/listExperience/listExperience.js';
+import { HiArrowSmallDown } from "react-icons/hi2";
+
 
 export default function Home() {
   return (
@@ -18,7 +16,10 @@ export default function Home() {
         <div className='flexMain'>
           <div className='homeMain'>
             <Image
-              src={logo1}
+              width={320}
+              height={315}
+              priority
+              src="/asset/logo1.svg"
               alt='logo ATTH Studio'
             ></Image>
             <div>
@@ -31,47 +32,68 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className='scrooldiv'>
+          <p>Scroll<HiArrowSmallDown></HiArrowSmallDown></p>
+        </div>
       </div>
       <div className='workPage' id='workPage'>
         <Image
-          src={background}
+          src="/asset/img/background/pathback.svg"
           className='imgBackground'
-          alt='background img'
+          alt='background img desktop'
+          priority
           fill
           objectFit='cover'
         ></Image>
         <Image
-          src={backgroundMobile}
+          src="/asset/img/background/backgroundMobile.svg"
           className='imgBackgroundMobile'
           alt='background img mobile'
           fill
           objectFit='cover'
         ></Image>
         <ListProject />
+        <p className='scrollingtext'>KEEP SCROLLING</p>
       </div>
       <div className='aboutPage' id='aboutPage'>
         <div className='aboutMain'>
           <div className='blockExperience'>
-            <h2>Annie Tran </h2>
+            <h2>Annie Tran</h2>
             <h2>Product designer & Creative Freelance based in Paris</h2>
             <ListExperience />
           </div>
           <div className='blockAbout'>
             <Image
+              width={500}
+              height={713}
               className='logoatthstudio'
-              src={logo2}
+              src="/asset/logo2.svg"
               alt='logo ATTH Studio'
             ></Image>
             <div>
-              <Link href={'/'}>RESUME</Link>
-              <Link href={'/'}>INSTAGRAM</Link>
-              <Link href={'/'}>BENTO</Link>
+              <Link
+                href={'cv/cv_annie_tran.pdf'}
+                target="_blank"
+              >RESUME</Link>
+              <Link
+                href={'https://www.instagram.com/_atthdesign/'}
+                target="_blank"
+              >INSTAGRAM</Link>
+              <Link
+                href={'https://bento.me/annie-tran'}
+                target="_blank"
+              >BENTO</Link>
             </div>
           </div>
         </div>
         <div className='footerAboot'>
-          <Link href={'/'}>ACCEPTING PROJECT FOR 2024</Link>
-          <Link href={'/'}>LOOKING FOR JOBS</Link>
+          <Link
+            href={'mailto:annietth.pro@gmail.com'}
+          >ACCEPTING PROJECT FOR 2024</Link>
+          <Link
+            href={'https://www.malt.fr/profile/annietran'}
+            target="_blank"
+          >LOOKING FOR JOBS</Link>
         </div>
       </div>
     </main>

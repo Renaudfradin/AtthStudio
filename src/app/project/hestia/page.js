@@ -1,12 +1,9 @@
 import React from 'react';
-import projectImg1 from '@/app/assets/img/project/hestia/topProjetHestia.svg';
-import projectImgMobile from '@/app/assets/img/project/hestia/topProjectHestiaMobile.svg';
 import Image from 'next/image';
+import Link from 'next/link';
 import Top from '@/app/components/top/top';
 import wireframe from '@/app/assets/img/project/hestia/wireframe.svg';
 import umlPartcour from '@/app/assets/img/project/hestia/umlPartcour.svg';
-import design from '@/app/assets/img/project/hestia/design.svg';
-import home from '@/app/assets/img/project/hestia/Home.svg';
 import designMobile from '@/app/assets/img/project/hestia/designMobile.svg'
 import rectangle from '@/app/assets/img/project/hestia/rectangle.svg';
 import '../project.css';
@@ -23,19 +20,25 @@ export default function Project() {
       <div className="section">
         <Image
           className='imgTopProject'
-          src={projectImg1}
+          width={320}
+          height={867}
+          priority
+          src="/asset/img/hestia/topProjetHestia.svg"
           alt='imgTopProject'
         ></Image>
         <p className='titleDesignMobileid'>003-Hestia</p>
         <h3 className='titleDesignMobile'>Achetez en confiance, vendez rapidemant</h3>
         <Image
           className='imgTopProjectMobile'
-          src={projectImgMobile}
+          width={365}
+          height={489}
+          src="/asset/img/hestia/topProjectHestiaMobile.svg"
           alt='projectImgMobile'
         ></Image>
+        <p className='btnAplication'>Application mobile</p>
         <div className="content">
           <h3 className='titleDesign1'>Achetez en confiance, vendez rapidement</h3>
-          <p>Application mobile - site web</p>
+          <p className='titletype'>Application mobile - site web</p>
           <div className='pitch'>
             <div className='pitchcontent'>
               <h5>Pitch</h5>
@@ -89,19 +92,21 @@ export default function Project() {
           <h3 className='titleDesign'>Design</h3>
           <Image
             className='imgDesign'
-            src={design}
+            src="/asset/img/hestia/design.svg"
+            width={1434}
+            height={2752}
             alt='design'
           ></Image>
-          {/* <Image
-            className='imgDesign'
-            src={home}
-            alt='design'
-          ></Image> */}
           <Image
             className='imgDesignMobile'
             src={designMobile}
             alt='designMobile'
           ></Image>
+          <Link
+            href={'https://www.behance.net/annietran8'}
+            target="_blank"
+            className='behancelink'
+          >Behance</Link>
         </div>
       </div>
     </div>

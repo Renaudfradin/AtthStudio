@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Mohave:ital,wght@0,300..700;1,300..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -160,6 +162,35 @@ html{
   text-decoration: underline;
 }
 
+.logo1{
+ width: 100%;
+}
+
+.scrollingtext{
+  text-align: center;
+  margin-top: 2%;
+}
+
+.scrooldiv{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrooldiv p{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #0123FF;
+  color: #FBEFDF;
+  padding: 18px 22px;
+  border-radius: 50px;
+}
+
 @media (max-width: 320px) {
   .homeMain div div {
     display: flex;
@@ -206,7 +237,7 @@ html{
     justify-content: center;
     align-items: center;
     padding: 15px;
-    margin-top: 25%;
+    margin-top: 5%;
   } 
 
   .homeMain {
@@ -320,6 +351,7 @@ html{
     align-items: center;
     flex-wrap: nowrap;
     align-content: center;
+    margin-top: 20px;
   }
 
   .aboutMain div {
@@ -332,7 +364,19 @@ html{
 
   .logoatthstudio {
     max-width: 100%;
-    height: revert-layer;
+  }
+
+  .blockAbout div{
+    margin-bottom: 20px;
+  }
+
+  .scrooldiv {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
   }
 }
 
@@ -347,6 +391,15 @@ html{
     padding-top: 0%;
   }
 
+  .scrooldiv {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13%;
+  }
+
   .flexMain {
     display: flex;
     flex-direction: column;
@@ -355,7 +408,7 @@ html{
     justify-content: center;
     align-items: center;
     padding: 15px;
-    margin-top: 10%;
+    margin-top: 5%;
   }
 
   .homeMain {
@@ -427,7 +480,7 @@ html{
 
   .imgBackgroundMobile {
     display: block;
-    height: 250% !important;
+    height: 300% !important;
     -o-object-fit: cover !important;
     object-fit: cover !important;
     top: 100vh !important;
@@ -542,11 +595,21 @@ html{
   .aboutMain div {
     width: 100%;
   }
+  
+  .blockAbout{
+    text-align: center;
+  }
+
+  .logoatthstudio{
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   .blockAbout div {
-    text-align: start;
+    text-align: center;
     width: 100%;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .footerAboot {
@@ -555,6 +618,7 @@ html{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
   }
 }
 

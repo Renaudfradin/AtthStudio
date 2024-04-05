@@ -1,15 +1,16 @@
 import Image from 'next/image';
 import React from 'react';
-import Navbar from '../navbar/navbar.js';
-import logo3 from '@/app/assets/img/logo3.svg';
-import lineTop from '@/app/assets/img/linetop.svg';
+import Navbar from '@/app/components/navbar/navbar.js';
 
 export default function top() {
 	return (
     <div className="top">
       <Image
-        src={logo3}
-        alt="logo ATTH Studio"
+        width={100}
+        height={100}
+        priority
+        src="/asset/logo3.svg"
+        alt="logo ATTH Studio Navbar"
       >
       </Image>
       <Navbar />
