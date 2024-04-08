@@ -28,7 +28,7 @@ export default function Project() {
           width={320}
           height={867}
           priority
-          src="/asset/img/pl@net/topProjet.svg"
+          src="/asset/img/pl@net/topProjetItsComming.svg"
           alt='imgTopProject'
         ></Image>
         <p className='titleDesignMobileid'>002-Pl@nt.net</p>
