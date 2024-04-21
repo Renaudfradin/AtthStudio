@@ -209,10 +209,7 @@ html{
 
   .imgBackgroundMobile {
     display: block;
-    height: 175% !important;
-    -o-object-fit: cover !important;
-    object-fit: cover !important;
-    top: 100vh !important;
+    top: 800px !important;
     z-index: -1 !important;
     width: 10% !important;
     left: 45% !important;
@@ -226,6 +223,7 @@ html{
     flex-wrap: wrap;
     align-items: center;
     padding-top: 0%;
+    height: 100%;
   }
 
   .flexMain {
@@ -308,10 +306,8 @@ html{
 
   .imgBackgroundMobile {
     display: block;
-    height: 200% !important;
-    -o-object-fit: cover !important;
-    object-fit: cover !important;
-    top: 100vh !important;
+    height: 180% !important;
+    top: 800px !important;
     z-index: -1 !important;
     width: 10% !important;
     left: 45% !important;
@@ -392,6 +388,7 @@ html{
     justify-content: flex-start;
     align-items: center;
     padding-top: 0%;
+    height: 100%;
   }
 
   .scrooldiv {
@@ -486,7 +483,7 @@ html{
     height: 300% !important;
     -o-object-fit: cover !important;
     object-fit: cover !important;
-    top: 100vh !important;
+    top: 850px !important;
     z-index: -1 !important;
     width: 10% !important;
     left: 45% !important;

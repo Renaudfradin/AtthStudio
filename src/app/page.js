@@ -5,7 +5,6 @@ import ListProject from '@/app/components/listProject/listProject.js';
 import ListExperience from '@/app/components/listExperience/listExperience.js';
 import { HiArrowSmallDown } from "react-icons/hi2";
 
-
 export default function Home() {
   return (
     <main>
