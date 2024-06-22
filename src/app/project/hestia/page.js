@@ -7,6 +7,7 @@ import umlPartcour from '@/app/assets/img/project/hestia/umlPartcour.svg';
 import designMobile from '@/app/assets/img/project/hestia/designMobile.svg'
 import rectangle from '@/app/assets/img/project/hestia/rectangle.svg';
 import '../project.css';
+import './hestia.css';
 
 export const metadata = {
   title: 'Hestia',
@@ -15,15 +16,15 @@ export const metadata = {
 
 export default function Project() {    
   return (
-    <div className="main">
+    <div className='main'>
       <Top />
-      <div className="section">
+      <div className='section'>
         <Image
           className='imgTopProject'
           width={320}
           height={867}
           priority
-          src="/asset/img/hestia/topProjetHestia.svg"
+          src='/asset/img/hestia/topProjetHestia.svg'
           alt='imgTopProject'
         ></Image>
         <p className='titleDesignMobileid'>003-Hestia</p>
@@ -32,11 +33,11 @@ export default function Project() {
           className='imgTopProjectMobile'
           width={365}
           height={489}
-          src="/asset/img/hestia/topProjectHestiaMobile.svg"
+          src='/asset/img/hestia/topProjectHestiaMobile.svg'
           alt='projectImgMobile'
         ></Image>
         <p className='btnAplication'>Application mobile</p>
-        <div className="content">
+        <div className='content'>
           <h3 className='titleDesign1'>Achetez en confiance, vendez rapidement</h3>
           <p className='titletype'>Application mobile - site web</p>
           <div className='pitch'>
@@ -92,7 +93,7 @@ export default function Project() {
           <h3 className='titleDesign'>Design</h3>
           <Image
             className='imgDesign'
-            src="/asset/img/hestia/design.svg"
+            src='/asset/img/hestia/design.svg'
             width={1434}
             height={2752}
             alt='design'
@@ -104,7 +105,7 @@ export default function Project() {
           ></Image>
           <Link
             href={'https://www.behance.net/annietran8'}
-            target="_blank"
+            target='_blank'
             className='behancelink'
           >Behance</Link>
         </div>

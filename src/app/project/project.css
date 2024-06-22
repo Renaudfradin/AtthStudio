@@ -49,22 +49,6 @@
   margin-top: -82px;
 }
 
-.top {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.top p{
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 33.43px;
-  letter-spacing: -0.03em;
-}
-
 .section{
   padding-top: 20px;
   width: 82%;
@@ -320,16 +304,6 @@
     padding: 30px;
   }
 
-  .top{
-    display: flex;
-    justify-content: flex-end
-  }
-
-  .top img,
-  .top p{
-    display: none;
-  }
-
   .titletype{
     margin: 15px 0px;
   }
@@ -549,16 +523,6 @@
 
   .content {
     padding: 10px;
-  }
-
-  .top {
-    display: flex;
-    justify-content: flex-end
-  }
-
-  .top img,
-  .top p {
-    display: none;
   }
 
   .titletype {

@@ -1,16 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Navbar from '@/app/components/navbar/navbar.js';
+import Top from '@/app/components/top/top.js';
 import ListProject from '@/app/components/listProject/listProject.js';
 import ListExperience from '@/app/components/listExperience/listExperience.js';
-import { HiArrowSmallDown } from "react-icons/hi2";
+import { HiArrowSmallDown } from 'react-icons/hi2';
 
 export default function Home() {
   return (
     <main>
       <div className='homePage' id='homePage'>
         <div className='navbarPage'>
-          <Navbar />
+          <Top />
         </div>
         <div className='flexMain'>
           <div className='homeMain'>
@@ -18,7 +18,7 @@ export default function Home() {
               width={320}
               height={315}
               priority
-              src="/asset/logo1.svg"
+              src='/asset/logo1.svg'
               alt='logo ATTH Studio'
             ></Image>
             <div>
@@ -37,7 +37,7 @@ export default function Home() {
       </div>
       <div className='workPage' id='workPage'>
         <Image
-          src="/asset/img/background/pathback.svg"
+          src='/asset/img/background/pathback.svg'
           className='imgBackground'
           alt='background img desktop'
           priority
@@ -45,7 +45,7 @@ export default function Home() {
           objectFit='cover'
         ></Image>
         <Image
-          src="/asset/img/background/backgroundMobile.svg"
+          src='/asset/img/background/backgroundMobile.svg'
           className='imgBackgroundMobile'
           alt='background img mobile'
           fill
@@ -66,21 +66,21 @@ export default function Home() {
               width={500}
               height={713}
               className='logoatthstudio'
-              src="/asset/logo2.svg"
+              src='/asset/logo2.svg'
               alt='logo ATTH Studio'
             ></Image>
             <div>
               <Link
                 href={'cv/cv_annie_tran.pdf'}
-                target="_blank"
+                target='_blank'
               >RESUME</Link>
               <Link
                 href={'https://www.instagram.com/atth.studio'}
-                target="_blank"
+                target='_blank'
               >INSTAGRAM</Link>
               <Link
                 href={'https://bento.me/annie-tran'}
-                target="_blank"
+                target='_blank'
               >BENTO</Link>
             </div>
           </div>
@@ -91,7 +91,7 @@ export default function Home() {
           >ACCEPTING PROJECT FOR 2024</Link>
           <Link
             href={'https://www.malt.fr/profile/annietran'}
-            target="_blank"
+            target='_blank'
           >LOOKING FOR JOBS</Link>
         </div>
       </div>

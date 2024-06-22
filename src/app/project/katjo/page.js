@@ -14,9 +14,10 @@ import conseil3 from '@/app/assets/img/project/katjo/wireframe/Conseil3.svg';
 import design from '@/app/assets/img/project/katjo/design.svg';
 import object from '@/app/assets/img/project/katjo/objectif.svg';
 import designMobile from '@/app/assets/img/project/katjo/designMobile.svg'
-import '../project.css';
 import Link from 'next/link';
- 
+import '../project.css';
+import './katjo.css';
+
 export const metadata = {
   title: 'KatJo',
   description: 'Portfolio Annie Tran ATTH Studio KatJo',
@@ -24,15 +25,15 @@ export const metadata = {
 
 export default function Project() {    
   return (
-    <div className="main">
+    <div className='main'>
       <Top />
-      <div className="section">
+      <div className='section'>
         <Image
           className='imgTopProject'
           width={320}
           height={867}
           priority
-          src="/asset/img/katjo/project1img.svg"
+          src='/asset/img/katjo/project1img.svg'
           alt='imgTopProject'
         ></Image>
         <p className='titleDesignMobileid'>001-KATJO</p>
@@ -41,11 +42,11 @@ export default function Project() {
           className='imgTopProjectMobile'
           width={365}
           height={489}
-          src="/asset/img/katjo/project1mobile.svg"
+          src='/asset/img/katjo/project1mobile.svg'
           alt='projectImgMobile'
         ></Image>
         <p className='btnAplication'>Application mobile</p>
-        <div className="content">
+        <div className='content'>
           <h3 className='titleDesign1'>KatJo catches JO Paris 2024</h3>
           <p className='titletype'>Application mobile - Design sprint </p>
           <div className='pitch'>
@@ -164,7 +165,7 @@ export default function Project() {
           ></Image>
           <Link
             href={'https://www.behance.net/annietran8'}
-            target="_blank"
+            target='_blank'
             className='behancelink'
           >Behance</Link>
         </div>

@@ -12,6 +12,7 @@ import fleur from '@/app/assets/img/project/pl@net/logo/fleur.svg';
 import wiki from '@/app/assets/img/project/pl@net/logo/wiki.svg';
 import len from '@/app/assets/img/project/pl@net/logo/len.svg';
 import '../project.css';
+import './pl@net.css';
 
 export const metadata = {
   title: 'Pl@net',
@@ -20,15 +21,15 @@ export const metadata = {
 
 export default function Project() {    
   return (
-    <div className="main">
+    <div className='main'>
       <Top />
-      <div className="section">
+      <div className='section'>
         <Image
           className='imgTopProject'
           width={320}
           height={867}
           priority
-          src="/asset/img/pl@net/topProjetItsComming.svg"
+          src='/asset/img/pl@net/topProjetItsComming.svg'
           alt='imgTopProject'
         ></Image>
         <p className='titleDesignMobileid'>002-Pl@nt.net</p>
@@ -37,16 +38,16 @@ export default function Project() {
           className='imgTopProjectMobile'
           width={365}
           height={489}
-          src="/asset/img/pl@net/topProjectMobile.svg"
+          src='/asset/img/pl@net/topProjectMobile.svg'
           alt='projectImgMobile'
         ></Image>
         <p className='btnAplication'>Application mobile</p>
         <Link
           href={'https://www.behance.net/annietran8'}
-          target="_blank"
+          target='_blank'
           className='behancelink'
         >Behance</Link>
-        {/* <div className="content">
+        {/* <div className='content'>
           <h3 className='titleDesign1'>Refonte UX design</h3>
           <p>Application mobile - UX Design - UX research - Test utilisateur - Analyse</p>
         </div> */}

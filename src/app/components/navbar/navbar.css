@@ -6,14 +6,25 @@
   justify-content: center;
 }
 
+.DESKTOP-MENU{
+  background-color: #B1BAF6;
+  padding: 10px 0px;
+}
+
 .DESKTOP-MENU li a{
   text-decoration: none;
-  color: #000;
+  color: #FFFFFF;
   font-weight: 600;
   font-style: normal;
   line-height: 45px;
   font-size: 24px;
   font-optical-sizing: auto;
+  padding: 15px 25px;
+}
+
+.item1{
+  background-color: #0123FF;
+  padding: 15px 25px
 }
 
 .MENU-LINK-MOBILE-OPEN LI a {
@@ -64,6 +75,10 @@
   width: 100%;
 }
 
+.navbarMain{
+  margin-top: -25px;
+}
+
 @media (max-width: 430px) {
   .navbarPage{
     display: flex;
@@ -72,6 +87,12 @@
     padding-top: 30px;
     padding-right: 30px;
     position: fixed;
+  }
+
+  .navbarMain{
+    margin-top: 0px;
+    display: flex;
+    justify-content: end;
   }
 }
 
@@ -83,6 +104,29 @@
     padding-top: 30px;
     padding-right: 30px;
     position: fixed;
+  }
+
+  .navbarMain{
+    margin-top: 0px;
+    display: flex;
+    justify-content: end;
+  }
+}
+
+@media (min-width:769px) and (max-width: 960px) {
+  .navbarPage {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-top: 30px;
+    padding-right: 30px;
+    position: fixed;
+  }
+
+  .navbarMain{
+    margin-top: 0px;
+    display: flex;
+    justify-content: end;
   }
 }
 
