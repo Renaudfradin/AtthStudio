@@ -4,8 +4,8 @@ export const itemsMobile = [
     titleid: '001',
     title: 'KATJO',
     slug: 'katjo',
-    img: "/asset/img/KATJO.svg",
-    imgnoir: "/asset/img/KATJOnoir.svg",
+    img: '/asset/img/KATJO.svg',
+    imgnoir: '/asset/img/KATJOnoir.svg',
     category: 'application',
   },
   {
@@ -13,8 +13,8 @@ export const itemsMobile = [
     titleid: '002',
     title: 'PL@NET',
     slug: 'pl@net',
-    img: "/asset/img/KATJO1.svg",
-    imgnoir: "/asset/img/KATJO1noir.svg",
+    img: '/asset/img/KATJO1.svg',
+    imgnoir: '/asset/img/KATJO1noir.svg',
     category: 'application',
   },
   {
@@ -22,8 +22,8 @@ export const itemsMobile = [
     titleid: '003',
     title: 'HESTIA',
     slug: 'hestia',
-    img: "/asset/img/KATJO3.svg",
-    imgnoir: "/asset/img/KATJO3noir.svg",
+    img: '/asset/img/KATJO3.svg',
+    imgnoir: '/asset/img/KATJO3noir.svg',
     category: 'application',
   },
   {
@@ -31,8 +31,8 @@ export const itemsMobile = [
     titleid: '004',
     title: 'Brand Design',
     slug: 'branddesign',
-    imgnoir: "/asset/img/KATJO2noir.svg",
-    img: "/asset/img/KATJO4.svg",
+    imgnoir: '/asset/img/KATJO2noir.svg',
+    img: '/asset/img/KATJO4.svg',
     category: 'application',
   },
   {
@@ -40,8 +40,8 @@ export const itemsMobile = [
     titleid: '005',
     title: 'SUPERMOOD',
     slug: 'supermood',
-    img: "/asset/img/KATJO2.svg",
-    imgnoir: "/asset/img/KATJO4noir.svg",
+    img: '/asset/img/KATJO2.svg',
+    imgnoir: '/asset/img/KATJO4noir.svg',
     category: 'application',
   },
-]
+];

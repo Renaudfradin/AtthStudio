@@ -19,39 +19,41 @@ export const metadata = {
   description: 'Portfolio Annie Tran ATTH Studio Pl@net',
 };
 
-export default function Project() {    
+export default function Project() {
   return (
-    <div className='main'>
+    <div className="main">
       <Top />
-      <div className='section'>
+      <div className="section">
         <Image
-          className='imgTopProject'
+          className="imgTopProject"
           width={320}
           height={867}
           priority
-          src='/asset/img/pl@net/topProjetItsComming.svg'
-          alt='imgTopProject'
+          src="/asset/img/pl@net/topProjetItsComming.svg"
+          alt="imgTopProject"
         ></Image>
-        <p className='titleDesignMobileid'>002-Pl@nt.net</p>
-        <h3 className='titleDesignMobile'>Refonte UX design</h3>
+        <p className="titleDesignMobileid">002-Pl@nt.net</p>
+        <h3 className="titleDesignMobile">Refonte UX design</h3>
         <Image
-          className='imgTopProjectMobile'
+          className="imgTopProjectMobile"
           width={365}
           height={489}
-          src='/asset/img/pl@net/topProjectMobile.svg'
-          alt='projectImgMobile'
+          src="/asset/img/pl@net/topProjectMobile.svg"
+          alt="projectImgMobile"
         ></Image>
-        <p className='btnAplication'>Application mobile</p>
+        <p className="btnAplication">Application mobile</p>
         <Link
           href={'https://www.behance.net/annietran8'}
-          target='_blank'
-          className='behancelink'
-        >Behance</Link>
+          target="_blank"
+          className="behancelink"
+        >
+          Behance
+        </Link>
         {/* <div className='content'>
           <h3 className='titleDesign1'>Refonte UX design</h3>
           <p>Application mobile - UX Design - UX research - Test utilisateur - Analyse</p>
         </div> */}
-           {/*<div className='pitch'>
+        {/*<div className='pitch'>
             <div className='pitchcontent'>
               <h5>Pitch</h5>
               <p>Pl@ntNet est une application qui permette d’identifier les plantes simplement en les photographiant avec votre smartphone. Un grand projet de sciences participatives : toutes les plantes que vous photographiez sont collectées et analysées par des scientifiques du monde entier afin de mieux comprendre l’évolution de la biodiversité végétale et de mieux la préserver.</p>
@@ -158,7 +160,7 @@ export default function Project() {
             alt='messagereconnaissances'
           ></Image> */}
 
-          {/* <h3 className='titleDesign'>Map UX view</h3>
+        {/* <h3 className='titleDesign'>Map UX view</h3>
           <Image
             className='wireframeimg'
             src={umlPartcour}
@@ -176,18 +178,18 @@ export default function Project() {
             src={design}
             alt='design'
           ></Image> */}
-          {/* <Image
+        {/* <Image
             className='imgDesign'
             src={home}
             alt='design'
           ></Image> */}
-          {/* <Image
+        {/* <Image
             className='imgDesignMobile'
             src={designMobile}
             alt='designMobile'
           ></Image> */}
-        </div>
       </div>
+    </div>
     // </div>
-  )
+  );
 }

@@ -28,7 +28,8 @@ yarn install
 ```sh
 npm run dev
 ```
-or 
+
+or
 
 ```sh
 yarn dev

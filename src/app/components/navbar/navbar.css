@@ -6,14 +6,14 @@
   justify-content: center;
 }
 
-.DESKTOP-MENU{
-  background-color: #B1BAF6;
+.DESKTOP-MENU {
+  background-color: #b1baf6;
   padding: 10px 0px;
 }
 
-.DESKTOP-MENU li a{
+.DESKTOP-MENU li a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 600;
   font-style: normal;
   line-height: 45px;
@@ -22,9 +22,9 @@
   padding: 15px 25px;
 }
 
-.item1{
-  background-color: #0123FF;
-  padding: 15px 25px
+.item1 {
+  background-color: #0123ff;
+  padding: 15px 25px;
 }
 
 .MENU-LINK-MOBILE-OPEN LI a {
@@ -36,13 +36,13 @@
   text-decoration: none;
 }
 
-.burgerMenuIcon{
-  background-color: #0123FF;
+.burgerMenuIcon {
+  background-color: #0123ff;
   padding: 20px 15px;
   border-radius: 30px;
 }
 
-.burgerMenuSpan{
+.burgerMenuSpan {
   background-color: white;
 }
 
@@ -57,7 +57,7 @@
   height: 100vh;
   top: 0;
   left: 0;
-  background: #0123FF;
+  background: #0123ff;
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -65,38 +65,21 @@
   align-items: center;
 }
 
-.iconBurgerMenu{
+.iconBurgerMenu {
   color: white;
 }
 
-.navbarPage{
+.navbarPage {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-.navbarMain{
+.navbarMain {
   margin-top: -25px;
 }
 
 @media (max-width: 430px) {
-  .navbarPage{
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    padding-top: 30px;
-    padding-right: 30px;
-    position: fixed;
-  }
-
-  .navbarMain{
-    margin-top: 0px;
-    display: flex;
-    justify-content: end;
-  }
-}
-
-@media (min-width:431px) and (max-width: 768px) {
   .navbarPage {
     display: flex;
     justify-content: flex-end;
@@ -106,14 +89,14 @@
     position: fixed;
   }
 
-  .navbarMain{
+  .navbarMain {
     margin-top: 0px;
     display: flex;
     justify-content: end;
   }
 }
 
-@media (min-width:769px) and (max-width: 960px) {
+@media (min-width: 431px) and (max-width: 768px) {
   .navbarPage {
     display: flex;
     justify-content: flex-end;
@@ -123,14 +106,31 @@
     position: fixed;
   }
 
-  .navbarMain{
+  .navbarMain {
     margin-top: 0px;
     display: flex;
     justify-content: end;
   }
 }
 
-@media (min-width:769px) and (max-width: 1016px) {
+@media (min-width: 769px) and (max-width: 960px) {
+  .navbarPage {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-top: 30px;
+    padding-right: 30px;
+    position: fixed;
+  }
+
+  .navbarMain {
+    margin-top: 0px;
+    display: flex;
+    justify-content: end;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1016px) {
   .navbarPage {
     display: flex;
     justify-content: flex-end;

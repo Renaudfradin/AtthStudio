@@ -1,116 +1,199 @@
-.mainSupermmod{
-  padding: 40px 0px;
+.mainSupermmod {
+  padding: 40px 0px 0px 0px;
 }
 
-.sectionSupermmod{
+.sectionSupermmod {
   padding-top: 20px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.sectionSaas{
-  height: 100vh;
-  width: 100%;
+.titleSupermood {
+  color: black;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 126px;
+  background-color: #ffe838;
+  width: fit-content;
+}
+
+.titleSupermood1 {
+  color: black;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 126px;
+  background-color: #ffe838;
+  width: fit-content;
+  margin-bottom: 5%;
+  margin-top: 4%;
+}
+
+.titleSupermood2 {
+  color: black;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 126px;
+  background-color: #ffe838;
+  width: fit-content;
+  margin-bottom: 5%;
+  margin-top: 0%;
+}
+
+.titleStart {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+.titleQuote {
+  font-family: Source Serif Pro;
+  font-size: 221px;
+  font-weight: 700;
+  line-height: 97px;
+  color: #4b90f7;
+}
+
+.titleDescription {
+  font-size: 69px;
+  font-weight: 700;
+  line-height: 86px;
+  letter-spacing: -0.02em;
+  color: #3a3a3a;
+}
+
+.titleBlock {
   display: flex;
   flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  margin-bottom: 5%;
+}
+
+.titleBlock p {
+  width: 45%;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  color: black;
+}
+
+.sectionSaas {
+  height: 100vh;
+  width: 100%;
   flex-wrap: nowrap;
   align-content: center;
   justify-content: space-between;
   align-items: center;
   padding-left: 5%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
-.sectionSaas{
+.sectionSaas {
   display: flex;
   flex-direction: row;
 }
 
-.sectionValues{
-  background-color: #F3B7F9;
+.sectionValues {
+  background-color: #f3b7f9;
   height: 100vh;
   width: 100%;
   padding: 5%;
 }
 
-.blocks{
+.blocks {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-column-gap: 70px;
+  grid-row-gap: 40px;
 }
 
-.blocks p{
+.blocks p {
   padding: 60px;
   text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 42.24px;
+  text-align: center;
+  display: flex;
+  align-items: center;
 }
 
-.block1{
-  background-color: #A761FF;
+.block1 {
+  background-color: #a761ff;
 }
 
-.block2{
-  background-color: #0EBDB3;
+.block2 {
+  background-color: #0ebdb3;
 }
 
-.block3{
-  background-color: #FD695D;
+.block3 {
+  background-color: #fd695d;
 }
 
-.block4{
-  background-color: #FFF0E3;
+.block4 {
+  background-color: #fff0e3;
 }
 
-.block5{
-  background-color: #2B92FF;
+.block5 {
+  background-color: #2b92ff;
 }
 
-.block6{
-  background-color: #FFE838;
+.block6 {
+  background-color: #ffe838;
 }
 
-.sectionMission{
-  background-color: #FD695D;
+.sectionMission {
+  background-color: #fd695d;
   height: 100vh;
   width: 100%;
   padding: 5%;
+  display: inline-table;
 }
 
-.sectionMission1{
-  background-color: #FD695D;
+.sectionMission1 {
+  background-color: #fd695d;
   height: 100vh;
   width: 100%;
   padding: 5%;
+  display: inline-table;
 }
 
-.wrapImgMain{
+.wrapImgMain {
   display: flex;
 }
 
-.wrapImgInput{
+.wrapImgInput {
   display: flex;
   flex-direction: column;
 }
 
-.wrapImgInputLarge{
+.wrapImgInputLarge {
   display: flex;
   flex-direction: column;
 }
 
-.wrapImgVideo{
+.wrapImgVideo {
   display: flex;
   flex-direction: column;
 }
 
-.sectionMission2{
-  background-color: #2B92FF;
+.sectionMission2 {
+  background-color: #2b92ff;
   height: 100vh;
   width: 100%;
   padding: 5%;
+  display: inline-table;
 }
 
-.wrapImg2{
+.wrapImg2 {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -118,67 +201,290 @@
   justify-content: space-evenly;
 }
 
-.sectionMission3{
-  background-color: #2B92FF;
+.sectionMission3 {
+  background-color: #2b92ff;
   height: 100vh;
   width: 100%;
   padding: 5%;
+  display: inline-table;
 }
 
-.sectionMission4{
-  background-color: #A761FF;
+.sectionMission4 {
+  background-color: #a761ff;
   height: 100vh;
   width: 100%;
   padding: 5%;
+  display: inline-table;
 }
 
-.sectionMission5{
-  background-color: #A761FF;
+.sectionMission5 {
+  background-color: #a761ff;
   height: 100vh;
   width: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  display: inline-table;
 }
 
-.wrapImg5{
+.wrapImg5 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
 }
 
-.sectionMission6{
-  background-color: #F3B7F9;
+.sectionMission6 {
+  background-color: #f3b7f9;
   height: 100vh;
   width: 100%;
   padding: 3%;
 }
 
-.wrapImg6{
+.wrapImg6 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
 }
 
-.sectionMission7{
-  background-color: #F3B7F9;
+.sectionMission7 {
+  background-color: #f3b7f9;
   height: 100vh;
   width: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  display: inline-table;
 }
 
-.wrapImg7{
+.wrapImg7 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
 }
 
-.sectionScreen{
-  background-color: #0EBDB3;
+.sectionScreen {
+  background-color: #0ebdb3;
   height: 100vh;
   width: 100%;
   padding: 5%;
+  display: inline-table;
 }
 
-.sectionScreen img{
+.sectionScreen img {
   margin: auto;
+}
+
+@media (max-width: 430px) {
+  .mainSupermmod {
+    padding: 40px 0px 0px 0px;
+  }
+
+  .titleBlock {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+  }
+
+  .titleDescription {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .titleSupermood {
+    font-size: 25px;
+    width: auto;
+    text-align: center;
+    line-height: 90px;
+  }
+
+  .titleSupermood1 {
+    font-size: 25px;
+    width: auto;
+    text-align: center;
+    line-height: 90px;
+    margin-bottom: 20%;
+  }
+
+  .blocks p {
+    padding: 40px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 42px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .titleSupermood2 {
+    font-size: 25px;
+    width: auto;
+    text-align: center;
+  }
+
+  .titleBlock p {
+    width: 100%;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    color: black;
+    margin-top: 10px;
+  }
+
+  .blocks {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+
+  .sectionSaas,
+  .sectionValues,
+  .sectionMission1,
+  .sectionMission2,
+  .sectionMission3,
+  .sectionMission4,
+  .sectionMission5,
+  .sectionMission6,
+  .sectionMission7,
+  .sectionScreen {
+    height: auto;
+    width: 100%;
+    padding: 5%;
+    display: block;
+  }
+
+  .wrapImgMain,
+  .wrapImg2,
+  .wrapImg5,
+  .wrapImg6,
+  .wrapImg7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+  }
+
+  .wrapImg2 img,
+  .wrapImg5 img,
+  .wrapImg6 img,
+  .wrapImg7 img {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 431px) and (max-width: 768px) {
+  .mainSupermmod {
+    padding: 40px 0px 0px 0px;
+  }
+
+  .titleBlock {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+  }
+
+  .titleDescription {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .titleSupermood {
+    font-size: 25px;
+    width: auto;
+    text-align: center;
+    line-height: 90px;
+  }
+
+  .titleSupermood1 {
+    font-size: 25px;
+    width: auto;
+    text-align: center;
+    line-height: 90px;
+    margin-bottom: 20%;
+  }
+
+  .blocks p {
+    padding: 40px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 42px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .titleSupermood2 {
+    font-size: 25px;
+    width: auto;
+    text-align: center;
+  }
+
+  .titleBlock p {
+    width: 100%;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    color: black;
+    margin-top: 10px;
+  }
+
+  .blocks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+
+  .sectionSaas,
+  .sectionValues,
+  .sectionMission1,
+  .sectionMission2,
+  .sectionMission3,
+  .sectionMission4,
+  .sectionMission5,
+  .sectionMission6,
+  .sectionMission7,
+  .sectionScreen {
+    height: auto;
+    width: 100%;
+    padding: 5%;
+    display: block;
+  }
+
+  .wrapImgMain,
+  .wrapImg2,
+  .wrapImg5,
+  .wrapImg6,
+  .wrapImg7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+  }
+
+  .wrapImg2 img,
+  .wrapImg5 img,
+  .wrapImg6 img,
+  .wrapImg7 img {
+    width: 100%;
+    padding-bottom: 20px;
+  }
 }

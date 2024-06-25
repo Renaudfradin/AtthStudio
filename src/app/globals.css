@@ -10,36 +10,36 @@ body {
   margin: 0%;
   padding: 0%;
   width: 100% !important;
-  background-color: #FBEFDF !important;
+  background-color: #fbefdf !important;
   font-size: 20px !important;
-  font-family: "Mohave", sans-serif !important;
+  font-family: 'Mohave', sans-serif !important;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-.homePage{
+.homePage {
   height: 100vh;
   width: auto;
   display: block;
   padding-top: 35px;
 }
 
-.homeMain{
+.homeMain {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
 }
 
-.flexMain{
+.flexMain {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
-.homeMain img{
+.homeMain img {
   margin-right: 8%;
 }
 
@@ -52,7 +52,7 @@ html{
   margin-top: -40px;
 }
 
-.titleNumber{
+.titleNumber {
   font-size: 20px;
   font-weight: 400;
   line-height: 32.88px;
@@ -62,14 +62,14 @@ html{
   margin-bottom: -30px;
 }
 
-.titleHome{
-  color: #0123FF;
+.titleHome {
+  color: #0123ff;
   font-size: 160px;
   font-weight: 600;
   margin: 0%;
 }
 
-.titleUi{
+.titleUi {
   font-size: 80px;
   font-weight: 400;
   line-height: 140px;
@@ -77,7 +77,7 @@ html{
   margin: 0%;
 }
 
-.titleHumour{
+.titleHumour {
   font-size: 20px;
   font-weight: 400;
   line-height: 32.88px;
@@ -88,7 +88,7 @@ html{
   height: 100vh;
 }
 
-.imgBackground{
+.imgBackground {
   color: transparent !important;
   height: auto !important;
   width: 100% !important;
@@ -99,7 +99,7 @@ html{
   z-index: -1 !important;
 }
 
-.imgBackgroundMobile{
+.imgBackgroundMobile {
   display: none;
 }
 
@@ -111,7 +111,7 @@ html{
   padding-right: 10%;
 }
 
-.aboutMain{
+.aboutMain {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -119,11 +119,11 @@ html{
   align-items: center;
 }
 
-.blockExperience{
+.blockExperience {
   width: 100%;
 }
 
-.blockExperience h2{
+.blockExperience h2 {
   font-size: 32px;
   font-weight: 600;
   line-height: 45px;
@@ -131,17 +131,17 @@ html{
   margin-bottom: 20px;
 }
 
-.footerAboot{
+.footerAboot {
   display: flex;
 }
 
-.footerAboot a{
+.footerAboot a {
   color: black;
   margin-right: 15px;
   text-decoration: underline;
 }
 
-.blockAbout{
+.blockAbout {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -150,28 +150,28 @@ html{
   align-items: flex-start;
 }
 
-.blockAbout div{
+.blockAbout div {
   text-align: center;
   width: 100%;
   margin-top: 20px;
 }
 
-.blockAbout div a{
+.blockAbout div a {
   color: black;
   margin-right: 8%;
   text-decoration: underline;
 }
 
-.logo1{
- width: 100%;
+.logo1 {
+  width: 100%;
 }
 
-.scrollingtext{
+.scrollingtext {
   text-align: center;
   margin-top: 2%;
 }
 
-.scrooldiv{
+.scrooldiv {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -179,14 +179,14 @@ html{
   align-items: center;
 }
 
-.scrooldiv p{
+.scrooldiv p {
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: center;
-  background-color: #0123FF;
-  color: #FBEFDF;
+  background-color: #0123ff;
+  color: #fbefdf;
   padding: 18px 22px;
   border-radius: 50px;
 }
@@ -236,7 +236,7 @@ html{
     align-items: center;
     padding: 15px;
     margin-top: 30%;
-  } 
+  }
 
   .homeMain {
     display: flex;
@@ -270,7 +270,7 @@ html{
   }
 
   .titleHome {
-    color: #0123FF;
+    color: #0123ff;
     font-size: 55px;
     font-weight: 600;
     margin: 0%;
@@ -335,7 +335,7 @@ html{
     align-items: center;
   }
 
-  .aboutMain img{
+  .aboutMain img {
     width: 100%;
   }
 
@@ -362,7 +362,7 @@ html{
     max-width: 100%;
   }
 
-  .blockAbout div{
+  .blockAbout div {
     margin-bottom: 20px;
   }
 
@@ -380,7 +380,7 @@ html{
   }
 }
 
-@media (min-width:431px) and (max-width: 768px) {
+@media (min-width: 431px) and (max-width: 768px) {
   .homePage {
     display: flex;
     flex-direction: column;
@@ -444,7 +444,7 @@ html{
   }
 
   .titleHome {
-    color: #0123FF;
+    color: #0123ff;
     font-size: 55px;
     font-weight: 600;
     margin: 0%;
@@ -533,7 +533,7 @@ html{
     margin-bottom: 10px;
   }
 
-  .scrollingtext{
+  .scrollingtext {
     display: none;
   }
 }
@@ -568,7 +568,7 @@ html{
   }
 
   .titleHome {
-    color: #0123FF;
+    color: #0123ff;
     font-size: 100px;
     font-weight: 600;
     margin: 0%;
@@ -600,12 +600,12 @@ html{
   .aboutMain div {
     width: 100%;
   }
-  
-  .blockAbout{
+
+  .blockAbout {
     text-align: center;
   }
 
-  .logoatthstudio{
+  .logoatthstudio {
     margin-left: auto;
     margin-right: auto;
   }
@@ -626,7 +626,7 @@ html{
     margin-bottom: 20px;
   }
 
-  .aboutPage{
+  .aboutPage {
     margin-top: 0%;
   }
 }
@@ -655,7 +655,7 @@ html{
   }
 
   .titleHome {
-    color: #0123FF;
+    color: #0123ff;
     font-size: 110px;
     font-weight: 600;
     margin: 0%;
