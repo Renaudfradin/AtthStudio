@@ -62,28 +62,36 @@
   color: #3a3a3a;
 }
 
-.titleBlock {
+.titleBlock2 {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.titleBlock,
+.titleBlock2 {
+  margin-bottom: 5%;
+}
+
+.titleBlock2 div,
+.titleBlock div {
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   flex-wrap: nowrap;
-  margin-bottom: 5%;
 }
 
+.titleBlock2 p,
 .titleBlock p {
-  width: 45%;
+  width: 70%;
   font-family: Inter;
   font-size: 16px;
   font-weight: 500;
-  line-height: 19px;
-  color: black;
+  line-height: 19.36px;
 }
 
-.sectionSaas {
-  height: 100vh;
-  width: 100%;
+.sectionSaas1 {
   flex-wrap: nowrap;
   align-content: center;
   justify-content: space-between;
@@ -96,8 +104,10 @@
 }
 
 .sectionSaas {
-  display: flex;
-  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  padding: 5% 0% 5% 0%;
+  display: inline-table;
 }
 
 .sectionValues {
@@ -105,6 +115,7 @@
   height: 100vh;
   width: 100%;
   padding: 5%;
+  display: inline-table;
 }
 
 .blocks {
@@ -117,13 +128,13 @@
 
 .blocks p {
   padding: 60px;
-  text-align: center;
   font-size: 32px;
   font-weight: 700;
   line-height: 42.24px;
   text-align: center;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .block1 {
@@ -158,6 +169,31 @@
   display: inline-table;
 }
 
+.wrapImgMission {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  align-items: start;
+  justify-content: space-between;
+  justify-items: stretch;
+  align-content: center;
+  width: 100%;
+}
+
+.blockMission {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.blockMission img {
+  width: 50%;
+}
+
 .sectionMission1 {
   background-color: #fd695d;
   height: 100vh;
@@ -168,6 +204,11 @@
 
 .wrapImgMain {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  flex-wrap: nowrap;
 }
 
 .wrapImgInput {
@@ -238,6 +279,7 @@
   height: 100vh;
   width: 100%;
   padding: 3%;
+  display: inline-table;
 }
 
 .wrapImg6 {
@@ -273,6 +315,15 @@
 
 .sectionScreen img {
   margin: auto;
+  width: 100%;
+}
+
+@media (min-width: 2500px) {
+  .sectionMission3 img,
+  .sectionMission4 img,
+  .sectionScreen img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 430px) {
@@ -280,7 +331,8 @@
     padding: 40px 0px 0px 0px;
   }
 
-  .titleBlock {
+  .titleBlock,
+  .titleBlock2 {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -296,17 +348,24 @@
 
   .titleSupermood {
     font-size: 25px;
-    width: auto;
+    width: 100%;
     text-align: center;
     line-height: 90px;
   }
 
   .titleSupermood1 {
     font-size: 25px;
-    width: auto;
+    width: 100%;
     text-align: center;
     line-height: 90px;
-    margin-bottom: 20%;
+    margin-bottom: 15%;
+  }
+
+  .titleQuote {
+    font-size: 160px;
+    font-weight: 700;
+    line-height: 97px;
+    color: #4b90f7;
   }
 
   .blocks p {
@@ -344,6 +403,16 @@
     grid-row-gap: 20px;
   }
 
+  .sectionSaas1 {
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 0%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
   .sectionSaas,
   .sectionValues,
   .sectionMission1,
@@ -380,6 +449,49 @@
     width: 100%;
     padding-bottom: 20px;
   }
+
+  .wrapImgMission {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 0fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 30px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+  }
+
+  .blockMission {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wrapImgMission div img {
+    width: 100%;
+  }
+
+  .titleBlock2 div,
+  .titleBlock div {
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .titleBlock2 p,
+  .titleBlock p {
+    width: 100%;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+  }
 }
 
 @media (min-width: 431px) and (max-width: 768px) {
@@ -413,7 +525,14 @@
     width: auto;
     text-align: center;
     line-height: 90px;
-    margin-bottom: 20%;
+    margin-bottom: 15%;
+  }
+
+  .titleQuote {
+    font-size: 160px;
+    font-weight: 700;
+    line-height: 97px;
+    color: #4b90f7;
   }
 
   .blocks p {
@@ -451,6 +570,16 @@
     grid-row-gap: 20px;
   }
 
+  .sectionSaas1 {
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 0%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
   .sectionSaas,
   .sectionValues,
   .sectionMission1,
@@ -486,5 +615,288 @@
   .wrapImg7 img {
     width: 100%;
     padding-bottom: 20px;
+  }
+
+  .wrapImgMission {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 0fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+  }
+
+  .blockMission {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wrapImgMission div img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1701px) and (max-width: 1980px) {
+  .wrapImg71 {
+    width: 25%;
+  }
+
+  .wrapImg72 {
+    width: 34%;
+  }
+
+  .wrapImg73 {
+    width: 30%;
+  }
+
+  .wrapImg61 {
+    width: 30%;
+  }
+
+  .wrapImg62 {
+    width: 30%;
+  }
+
+  .wrapImg63 {
+    width: 23%;
+  }
+
+  .wrapImg51 {
+    width: 28%;
+  }
+
+  .wrapImg52 {
+    width: 30%;
+  }
+
+  .wrapImg53 {
+    width: 21%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1700px) {
+  .wrapImg71 {
+    width: 25%;
+  }
+
+  .wrapImg72 {
+    width: 34%;
+  }
+
+  .wrapImg73 {
+    width: 30%;
+  }
+
+  .wrapImg61 {
+    width: 30%;
+  }
+
+  .wrapImg62 {
+    width: 30%;
+  }
+
+  .wrapImg63 {
+    width: 23%;
+  }
+
+  .wrapImg51 {
+    width: 28%;
+  }
+
+  .wrapImg52 {
+    width: 30%;
+  }
+
+  .wrapImg53 {
+    width: 21%;
+  }
+
+  .wrapImg2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .blocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;
+  }
+
+  .blocks p {
+    padding: 40px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 42.24px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .titleSupermood,
+  .titleSupermood1,
+  .titleSupermood2 {
+    font-size: 50px;
+  }
+
+  .titleDescription {
+    font-size: 45px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sectionSaas1 {
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0%;
+    padding-bottom: 0%;
+  }
+
+  .sectionSaas1 img {
+    width: 100%;
+  }
+
+  .blocks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+
+  .wrapImg2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .wrapImg5,
+  .wrapImg6,
+  .wrapImg7 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+  }
+
+  .wrapImg5 img,
+  .wrapImg6 img,
+  .wrapImg7 img {
+    padding-bottom: 20px;
+  }
+
+  .wrapImg71 {
+    width: 25%;
+  }
+
+  .wrapImg72 {
+    width: 34%;
+  }
+
+  .wrapImg73 {
+    width: 30%;
+  }
+
+  .wrapImg61 {
+    width: 30%;
+  }
+
+  .wrapImg62 {
+    width: 30%;
+  }
+
+  .wrapImg63 {
+    width: 23%;
+  }
+
+  .wrapImg51 {
+    width: 28%;
+  }
+
+  .wrapImg52 {
+    width: 30%;
+  }
+
+  .wrapImg53 {
+    width: 21%;
+  }
+
+  .sectionSaas,
+  .sectionValues,
+  .sectionMission1,
+  .sectionMission2,
+  .sectionMission3,
+  .sectionMission4,
+  .sectionMission6,
+  .sectionScreen {
+    height: auto;
+    width: 100%;
+    padding: 5%;
+    display: inline-table;
+  }
+
+  .sectionMission5,
+  .sectionMission7 {
+    height: auto;
+    width: 100%;
+    display: inline-table;
+    padding: 0%;
+  }
+
+  .blocks p {
+    padding: 25px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 42.24px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .titleSupermood,
+  .titleSupermood1,
+  .titleSupermood2 {
+    font-size: 60px;
+  }
+
+  .wrapImgMission {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    align-items: start;
+    justify-content: space-between;
+    justify-items: stretch;
+    align-content: center;
   }
 }
