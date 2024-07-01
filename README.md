@@ -4,6 +4,8 @@
 <h1 align="center">
   ATTH Studio
 </h1>
+<p>design : <a href="https://www.behance.net/annietran8">Annie Tran</a></p>
+<p>development : Renaud Fradin</p>
 
 ![folio](src/app/assets/img/portfolio.png)
 
@@ -26,7 +28,8 @@ yarn install
 ```sh
 npm run dev
 ```
-or 
+
+or
 
 ```sh
 yarn dev
