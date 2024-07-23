@@ -4,6 +4,12 @@ import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Link from 'next/link';
+import localFont from 'next/font/local';
+import Image from 'next/image';
+
+const monumentExtended = localFont({
+  src: './MonumentExtended-Regular.otf',
+});
 
 export default function scrollSection() {
   const sectionRef = useRef(null);
@@ -41,28 +47,89 @@ export default function scrollSection() {
       <div ref={triggerRef}>
         <div ref={sectionRef} className="scroll-section-inner">
           <div className="scroll-section">
-            <h2>project 1</h2>
-            <Link href="project/yuka">yuka</Link>
+            <div className="content-section">
+              <Link
+                className={`${monumentExtended.className}`}
+                href="project/yuka"
+              >
+                Yūka
+              </Link>
+              <Image
+                width={930}
+                height={510}
+                priority
+                src="/asset/img/yuka.svg"
+                alt="Logo Yuka"
+              ></Image>
+            </div>
           </div>
-
           <div className="scroll-section">
-            <h2>project 2</h2>
-            <Link href="project/salamender">salamender</Link>
+            <div className="content-section">
+              <Link
+                className={`${monumentExtended.className}`}
+                href="project/salamender"
+              >
+                Salamender
+              </Link>
+              <Image
+                width={1190}
+                height={790}
+                priority
+                src="/asset/img/salamander.svg"
+                alt="Logo Salamander"
+              ></Image>
+            </div>
           </div>
-
           <div className="scroll-section">
-            <h2>project 3</h2>
-            <Link href="project/xeahnort">xeahnort</Link>
+            <div className="content-section">
+              <Link
+                className={`${monumentExtended.className}`}
+                href="project/xeahnort"
+              >
+                XEAHNORT
+              </Link>
+              <Image
+                width={930}
+                height={510}
+                priority
+                src="/asset/img/xeahnort.svg"
+                alt="Logo Xeahnort"
+              ></Image>
+            </div>
           </div>
-
           <div className="scroll-section">
-            <h2>project 4</h2>
-            <Link href="project/foresthill">foresthill</Link>
+            <div className="content-section">
+              <Link
+                className={`${monumentExtended.className}`}
+                href="project/foresthill"
+              >
+                FOREST HILL
+              </Link>
+              <Image
+                width={930}
+                height={510}
+                priority
+                src="/asset/img/foresthill.svg"
+                alt="Logo Forest Hill"
+              ></Image>
+            </div>
           </div>
-
           <div className="scroll-section">
-            <h2>project 5</h2>
-            <Link href="project/marcovasco">marcovasco</Link>
+            <div className="content-section">
+              <Link
+                className={`${monumentExtended.className}`}
+                href="project/marcovasco"
+              >
+                MARCO VASCO
+              </Link>
+              <Image
+                width={930}
+                height={510}
+                priority
+                src="/asset/img/marcovasco.svg"
+                alt="Logo Marcovasco"
+              ></Image>
+            </div>
           </div>
         </div>
       </div>
