@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useState } from 'react';
 import { items } from './data';
@@ -9,7 +9,7 @@ export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center navbarMain">
       <nav>
         <section className="MOBILE-MENU flex lg:hidden">
           <div
@@ -20,8 +20,7 @@ export default function Navbar() {
             <span className="block h-0.5 w-7 bg-700 burgerMenuSpan"></span>
             <span className="block h-0.5 w-7 bg-700 burgerMenuSpan"></span>
           </div>
-
-          <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
+          <div className={isNavOpen ? 'showMenuNav' : 'hideMenuNav'}>
             <div
               className="CROSS-ICON absolute top-0 right-0 px-8 py-8"
               onClick={() => setIsNavOpen(false)}
@@ -40,22 +39,29 @@ export default function Navbar() {
               </svg>
             </div>
             <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
-              {items.map(({ url, label, id }) => (
+              {items.map(({ id, url, label }) => (
                 <li className="my-8 uppercase" key={id}>
-                  <Link href={url} onClick={() => setIsNavOpen((prev) => !prev)}>{label}</Link>
+                  <Link
+                    href={url}
+                    onClick={() => setIsNavOpen((prev) => !prev)}
+                  >
+                    {label}
+                  </Link>
                 </li>
-                ))}
+              ))}
             </ul>
           </div>
         </section>
-        <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
-          {items.map(({ url, label, id }) => (
+        <ul className="DESKTOP-MENU hidden space-x-8 lg:flex rounded-full">
+          {items.map(({ id, url, label }) => (
             <li key={id}>
-              <Link href={url}>{label}</Link>
+              <Link className={`rounded-full item${id}`} href={url}>
+                {label}
+              </Link>
             </li>
           ))}
         </ul>
       </nav>
     </div>
-  )
+  );
 }

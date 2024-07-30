@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -9,12 +9,12 @@ import './listProject.css';
 
 export default function ListProject() {
   const [hoveredItem, setHoveredItem] = useState(false);
-  const handleMouseEnter = (id) =>  setHoveredItem(id);
+  const handleMouseEnter = (id) => setHoveredItem(id);
   const handleMouseLeave = () => setHoveredItem(false);
 
   return (
     <>
-      <div className='listProject'>
+      <div className="listProject">
         {items.map(({ id, title, img, imgnoir, slug }) => (
           <div
             className={`project${id}`}
@@ -22,9 +22,7 @@ export default function ListProject() {
             onMouseEnter={() => handleMouseEnter(id)}
             onMouseLeave={handleMouseLeave}
           >
-            <Link
-              href={`/project/${slug}`}
-            >
+            <Link href={`/project/${slug}`}>
               <p className={`titleProject${id}`}>{title}</p>
               <Image
                 className={`projectimg${id}`}
@@ -37,7 +35,7 @@ export default function ListProject() {
           </div>
         ))}
       </div>
-      <div className='listProjectMobile'>
+      <div className="listProjectMobile">
         {itemsMobile.map(({ id, titleid, title, img, imgnoir, slug }) => (
           <div
             className={`project${id}`}
@@ -45,20 +43,22 @@ export default function ListProject() {
             onMouseEnter={() => handleMouseEnter(id)}
             onMouseLeave={handleMouseLeave}
           >
-              <Link
-                href={`/project/${slug}`}
-              >
-                <p className='titleProject'>{titleid}<br />{title}</p>
-                <Image
-                  src={hoveredItem === id ? imgnoir : img}
-                  width={336}
-                  height={240}
-                  alt={`project ${slug}`}
-                ></Image>
-              </Link>
+            <Link href={`/project/${slug}`}>
+              <p className="titleProject">
+                {titleid}
+                <br />
+                {title}
+              </p>
+              <Image
+                src={hoveredItem === id ? imgnoir : img}
+                width={336}
+                height={240}
+                alt={`project ${slug}`}
+              ></Image>
+            </Link>
           </div>
         ))}
       </div>
     </>
-  )
+  );
 }
