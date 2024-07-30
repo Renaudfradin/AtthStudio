@@ -1,0 +1,15 @@
+.main {
+    background-color: var(--fifth-color);
+    color: var(--fourth-color);
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  .wrap_color_content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding-right: 20px;
+  }

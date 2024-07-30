@@ -1,0 +1,12 @@
+.main {
+  background-color: var(--sixth-color);
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.img_marcovasco{
+  border-radius: 0px !important;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.hero h2 {
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 120px;
+}
+
+.hero p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 30px;
+}
+
+.content {
+  margin-top: 7%;
+  padding-bottom: 5%;
+}
+
+.content img {
+  margin-top: 7%;
+  margin-bottom: 7%;
+  border-radius: 32px;
+}
+
+.block_intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 7%;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+
+.introduction_content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.introduction_content h3 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38px;
+}
+
+.introduction_content p {
+  font-family: 'MuseoModerno', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  padding: 10px 10px;
+  border: 1px solid #ffffff;
+  border-radius: 99px;
+}
+
+.introduction_p {
+  font-family: 'MuseoModerno', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  padding-top: 30px;
+}
+
+.techs {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.techs h3 {
+  padding-bottom: 30px;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38px;
+}
+
+.techs p {
+  font-family: 'MuseoModerno', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.wrapImg {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 5%;
+  grid-row-gap: 0px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+}
+
+.wrapImg img {
+  width: auto;
+}
+
+.block_mission {
+  display: flex;
+  flex-direction: row;
+  margin-top: 7%;
+  margin-bottom: 7%;
+  justify-content: space-between;
+}
+
+.block_mission div {
+  width: 40%;
+}
+
+.block_mission div h3 {
+  padding-bottom: 30px;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38px;
+}
+
+.block_mission div p {
+  font-family: 'MuseoModerno', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.block_color {
+  display: flex;
+  flex-direction: row;
+}
+
+.signification {
+  width: 30%;
+}
+
+.signification h3 {
+  padding-bottom: 30px;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38px;
+}
+
+.signification p {
+  font-family: 'MuseoModerno', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.wrap_color {
+  width: 65%;
+}
+
+.wrap_color h3 {
+  padding-bottom: 30px;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38px;
+}

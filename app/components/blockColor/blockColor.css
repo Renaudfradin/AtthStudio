@@ -1,0 +1,19 @@
+.main_color {
+  width: 100%;
+  padding: 6%;
+}
+
+.main_color div {
+  border-radius: 22px;
+  border: 0.69px solid;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  padding-top: 30%;
+}
+
+.main_color div p {
+  font-family: 'MuseoModerno', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 19px;
+}

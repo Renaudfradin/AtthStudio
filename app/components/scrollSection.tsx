@@ -50,9 +50,9 @@ export default function scrollSection() {
             <div className="content-section">
               <Link
                 className={`${monumentExtended.className}`}
-                href="project/yuka"
+                href="project/kumiio"
               >
-                Yūka
+                Kūmiio
               </Link>
               <Image
                 width={930}
@@ -101,16 +101,16 @@ export default function scrollSection() {
             <div className="content-section">
               <Link
                 className={`${monumentExtended.className}`}
-                href="project/foresthill"
+                href="project/supermood"
               >
-                FOREST HILL
+                Supermood
               </Link>
               <Image
                 width={930}
                 height={510}
                 priority
                 src="/asset/img/foresthill.svg"
-                alt="Logo Forest Hill"
+                alt="Logo Supermood"
               ></Image>
             </div>
           </div>
