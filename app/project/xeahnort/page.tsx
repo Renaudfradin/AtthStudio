@@ -1,13 +1,13 @@
 import { Metadata } from 'next';
 import React from 'react';
 import localFont from 'next/font/local';
+import Image from 'next/image';
+import template1 from '@/app/assets/img/project/xeahnort/template2.svg';
 import '../project.css';
 import './xeahnort.css';
-import Image from 'next/image';
-import template1 from '@/app/assets/img/project/xeahnort/template1.png';
 
 const monumentExtendedd = localFont({
-  src: './MonumentExtended-Regular.otf',
+  src: '../MonumentExtended-Regular.otf',
 });
 
 export const metadata: Metadata = {
@@ -34,7 +34,12 @@ export default function xeahnort() {
               <p>UI design</p>
             </div>
             <p className="introduction_p">
-              Un homme marchant dehors tard le soir est soudainement attiré par une lumière provenant d’un appartement. Une fois arrivé dans un couloir sombre menant à sa porte d’entrée, il se retrouve avec un groupe d’hommes avec qui il va sympathiser. S’en suis une virée nocturne dans Paris dans lequel il se plongea dans ses sentiments de conquérant...
+              Un homme marchant dehors tard le soir est soudainement attiré par
+              une lumière provenant d’un appartement. Une fois arrivé dans un
+              couloir sombre menant à sa porte d’entrée, il se retrouve avec un
+              groupe d’hommes avec qui il va sympathiser. S’en suis une virée
+              nocturne dans Paris dans lequel il se plongea dans ses sentiments
+              de conquérant...
             </p>
           </div>
           <div className="techs">
@@ -46,12 +51,22 @@ export default function xeahnort() {
             <p>PREMIERE PRO</p>
           </div>
         </div>
-        <Image src={template1} className="" alt="Image template xeahnort"></Image>
+        <Image
+          src={template1}
+          className="img_xeahnort"
+          alt="Image template xeahnort"
+        ></Image>
         <div className="block_mission">
           <div>
             <h3 className={`${monumentExtendedd.className}`}>Mission</h3>
             <p>
-              La mission de Yūka, en tant que brand design, est de créer une marque qui non seulement vend du matcha, mais qui raconte une histoire, éveille les sens et promeut un mode de vie sain. En intégrant des éléments traditionnels dans un cadre moderne, Yūka offre une expérience unique et mémorable à ses clients, les invitant à découvrir et à apprécier l'essence du matcha dans toute sa splendeur
+              La mission de Yūka, en tant que brand design, est de créer une
+              marque qui non seulement vend du matcha, mais qui raconte une
+              histoire, éveille les sens et promeut un mode de vie sain. En
+              intégrant des éléments traditionnels dans un cadre moderne, Yūka
+              offre une expérience unique et mémorable à ses clients, les
+              invitant à découvrir et à apprécier l'essence du matcha dans toute
+              sa splendeur
             </p>
           </div>
           <div>
@@ -59,12 +74,12 @@ export default function xeahnort() {
               Mon intervention
             </h3>
             <p>
-              Réalisation de toute la production, j’ai dirigé la mise en place de la vidéo + un montage sur le making-off. 
+              Réalisation de toute la production, j’ai dirigé la mise en place
+              de la vidéo + un montage sur le making-off.
             </p>
           </div>
         </div>
-        <Image src={template1} className="" alt="Image template kumiio"></Image>
-        <Image src={template1} className="" alt="Image template kumiio"></Image>
+        <div className="block_mission"></div>
       </div>
     </div>
   );

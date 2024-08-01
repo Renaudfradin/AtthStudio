@@ -9,12 +9,6 @@
   height: 100vh;
 }
 
-.hero h2 {
-  font-size: 100px;
-  font-weight: 400;
-  line-height: 120px;
-}
-
 .hero p {
   font-size: 20px;
   font-weight: 400;
@@ -43,7 +37,7 @@
 .introduction {
   display: flex;
   flex-direction: column;
-  width: 65%;
+  width: 70%;
 }
 
 .introduction_content {
@@ -172,4 +166,142 @@
   font-size: 32px;
   font-weight: 400;
   line-height: 38px;
+}
+
+@media (max-width: 430px) {
+  .hero p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 30px;
+  }
+
+  .block_intro {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 7%;
+    flex-direction: column;
+  }
+
+  .introduction_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .introduction {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .introduction_content p {
+    margin-top: 20px;
+  }
+
+  .techs {
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .techs h3 {
+    padding-bottom: 30px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38px;
+  }
+
+  .block_mission {
+    display: flex;
+    flex-direction: column;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    justify-content: space-between;
+  }
+
+  .block_mission div {
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  .block_color {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrap_color_content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(3, 1fr) !important;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding-right: 20px;
+  }
+
+  .signification {
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  .wrap_color {
+    width: 100%;
+  }
+}
+
+@media (min-width: 431px) and (max-width: 768px) {
+  .block_mission div {
+    width: 48%;
+  }
+
+  .block_color {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrap_color {
+    width: 100%;
+  }
+
+  .signification {
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  .block_intro {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 7%;
+    flex-direction: column;
+  }
+
+  .techs {
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .introduction {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .techs h3 {
+    padding-bottom: 30px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .block_mission div {
+    width: 48%;
+  }
 }

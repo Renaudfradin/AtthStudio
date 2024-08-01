@@ -1,15 +1,15 @@
 import { Metadata } from 'next';
 import React from 'react';
 import localFont from 'next/font/local';
-import '../project.css';
-import './kumiio.css';
 import Image from 'next/image';
 import logo from '@/app/assets/img/project/kumiio/logo_kumiio.png';
 import kumiios from '@/app/assets/img/project/kumiio/kumiio.png';
 import BlockColor from '@/app/components/blockColor/blockColor';
+import '../project.css';
+import './kumiio.css';
 
 const monumentExtendedd = localFont({
-  src: './MonumentExtended-Regular.otf',
+  src: '../MonumentExtended-Regular.otf',
 });
 
 export const metadata: Metadata = {
@@ -98,26 +98,14 @@ export default function kumiio() {
                 color="#1E4423"
                 colorText="#FFFFFF"
               />
-              <BlockColor 
-                title="OPALE" 
-                color="#FEFBE9" 
-                colorText="#1C1C1C" 
-              />
+              <BlockColor title="OPALE" color="#FEFBE9" colorText="#1C1C1C" />
               <BlockColor
                 title="QUARTZ ROSE"
                 color="#F19BAB"
                 colorText="#FFFFFF"
               />
-              <BlockColor 
-                title="BÉRIL" 
-                color="#F2F593" 
-                colorText="#1C1C1C" 
-              />
-              <BlockColor 
-                title="JADE" 
-                color="#8CAF5A" 
-                colorText="#FFFFFF" 
-              />
+              <BlockColor title="BÉRIL" color="#F2F593" colorText="#1C1C1C" />
+              <BlockColor title="JADE" color="#8CAF5A" colorText="#FFFFFF" />
             </div>
           </div>
           <div className="signification">
