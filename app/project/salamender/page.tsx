@@ -10,6 +10,7 @@ import template2 from '@/app/assets/img/project/salamander/template2.svg';
 import template3 from '@/app/assets/img/project/salamander/template3.svg';
 import salamanderM from '@/app/assets/img/project/salamander/salamander_maillot.png';
 import BlockColor from '@/app/components/blockColor/blockColor';
+import Top from '@/app/components/top/top';
 import '../project.css';
 import './salamender.css';
 
@@ -25,6 +26,7 @@ export const metadata: Metadata = {
 export default function salamender() {
   return (
     <div className="main">
+      <Top />
       <div className="hero">
         <h2 className={`${monumentExtendedd.className}`}>Salamender</h2>
         <p className={`${monumentExtendedd.className}`}>

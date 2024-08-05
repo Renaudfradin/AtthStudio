@@ -1,0 +1,12 @@
+.main_top {
+  width: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+}
+
+.main_top a {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}

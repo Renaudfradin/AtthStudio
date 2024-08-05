@@ -1,0 +1,38 @@
+.main_progress {
+  width: auto;
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 3%;
+  justify-content: flex-end;
+}
+
+.progress_bar {
+  width: 15%;
+  margin-right: 35%;
+}
+
+.color_not_progress {
+  background-color: #d9d9d9;
+}
+
+.color_progress {
+  background-color: #0123ff;
+}
+
+.content_progress {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.content_progress p {
+  margin-top: 5px;
+}
+
+.main_progress a {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}

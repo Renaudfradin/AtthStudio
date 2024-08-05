@@ -8,6 +8,7 @@ import template1 from '@/app/assets/img/project/marcovasco/template1.png';
 import template2 from '@/app/assets/img/project/marcovasco/template2.png';
 import '../project.css';
 import './marcovasco.css';
+import Top from '@/app/components/top/top';
 
 const monumentExtendedd = localFont({
   src: '../MonumentExtended-Regular.otf',
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
 export default function kumiio() {
   return (
     <div className="main">
+      <Top />
       <div className="hero">
         <h2 className={`${monumentExtendedd.className}`}>Marcovasco</h2>
         <p className={`${monumentExtendedd.className}`}>

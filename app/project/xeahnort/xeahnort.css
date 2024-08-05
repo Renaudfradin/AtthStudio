@@ -1,7 +1,6 @@
 .main {
   background-color: var(--fourth-color);
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-top: 0%;
 }
 
 .hero h2 {
@@ -10,9 +9,20 @@
   line-height: 120px;
 }
 
-.img_xeahnort {
+.img_xeahnort,
+.img_xeahnort_other {
   border-radius: 0px !important;
-  width: auto;
+  width: 100%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 0% !important;
+  margin-bottom: 0% !important;
+  padding: 0%;
+}
+
+.img_xeahnort_ramdom {
+  border-radius: 0px !important;
+  width: 33%;
   margin-left: auto !important;
   margin-right: auto !important;
   margin-top: 0% !important;
@@ -40,5 +50,17 @@
     font-size: 75px;
     font-weight: 400;
     line-height: 120px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .img_xeahnort_other {
+    border-radius: 0px !important;
+    width: 50%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 0% !important;
+    margin-bottom: 0% !important;
+    padding: 0%;
   }
 }

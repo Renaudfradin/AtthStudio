@@ -5,6 +5,7 @@ import Image from 'next/image';
 import logo from '@/app/assets/img/project/kumiio/logo_kumiio.png';
 import kumiios from '@/app/assets/img/project/kumiio/kumiio.png';
 import BlockColor from '@/app/components/blockColor/blockColor';
+import Top from '@/app/components/top/top';
 import '../project.css';
 import './supermood.css';
 
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
 export default function kumiio() {
   return (
     <div className="main">
+      <Top />
       <div className="hero">
         <h2 className={`${monumentExtendedd.className}`}>Supermood</h2>
         <p className={`${monumentExtendedd.className}`}>

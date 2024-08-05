@@ -6,6 +6,8 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Link from 'next/link';
 import localFont from 'next/font/local';
 import Image from 'next/image';
+import Top from './top/top';
+import Footer from './footer/footer';
 
 const monumentExtended = localFont({
   src: './MonumentExtended-Regular.otf',
@@ -47,6 +49,7 @@ export default function scrollSection() {
       <div ref={triggerRef}>
         <div ref={sectionRef} className="scroll-section-inner">
           <div className="scroll-section">
+            <Top />
             <div className="content-section">
               <Link
                 className={`${monumentExtended.className}`}
@@ -59,11 +62,13 @@ export default function scrollSection() {
                 height={510}
                 priority
                 src="/asset/img/yuka.svg"
-                alt="Logo Yuka"
+                alt="Logo Kūmiio"
               ></Image>
             </div>
+            <Footer project_min="01" project_max="05" progress="20%" />
           </div>
           <div className="scroll-section">
+            <Top />
             <div className="content-section">
               <Link
                 className={`${monumentExtended.className}`}
@@ -79,8 +84,10 @@ export default function scrollSection() {
                 alt="Logo Salamander"
               ></Image>
             </div>
+            <Footer project_min="01" project_max="05" progress="40%" />
           </div>
           <div className="scroll-section">
+            <Top />
             <div className="content-section">
               <Link
                 className={`${monumentExtended.className}`}
@@ -96,8 +103,10 @@ export default function scrollSection() {
                 alt="Logo Xeahnort"
               ></Image>
             </div>
+            <Footer project_min="01" project_max="05" progress="60%" />
           </div>
           <div className="scroll-section">
+            <Top />
             <div className="content-section">
               <Link
                 className={`${monumentExtended.className}`}
@@ -113,8 +122,10 @@ export default function scrollSection() {
                 alt="Logo Supermood"
               ></Image>
             </div>
+            <Footer project_min="01" project_max="05" progress="80%" />
           </div>
           <div className="scroll-section">
+            <Top />
             <div className="content-section">
               <Link
                 className={`${monumentExtended.className}`}
@@ -130,6 +141,7 @@ export default function scrollSection() {
                 alt="Logo Marcovasco"
               ></Image>
             </div>
+            <Footer project_min="01" project_max="05" progress="100%" />
           </div>
         </div>
       </div>

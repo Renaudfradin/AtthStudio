@@ -48,7 +48,7 @@ html {
 
 .content-section {
   width: 100%;
-  height: 100vh;
+  height: 78vh;
   display: flex;
   flex-direction: row;
   align-content: center;

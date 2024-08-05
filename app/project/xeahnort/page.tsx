@@ -3,6 +3,15 @@ import React from 'react';
 import localFont from 'next/font/local';
 import Image from 'next/image';
 import template1 from '@/app/assets/img/project/xeahnort/template2.svg';
+import template3 from '@/app/assets/img/project/xeahnort/template3.svg';
+import template4 from '@/app/assets/img/project/xeahnort/template4.svg';
+import template5 from '@/app/assets/img/project/xeahnort/template5.svg';
+import template6 from '@/app/assets/img/project/xeahnort/VINYLE.svg';
+import template7 from '@/app/assets/img/project/xeahnort/test.svg';
+import random1 from '@/app/assets/img/project/xeahnort/random1.png';
+import random2 from '@/app/assets/img/project/xeahnort/test.png';
+import random3 from '@/app/assets/img/project/xeahnort/test2.png';
+import Top from '@/app/components/top/top';
 import '../project.css';
 import './xeahnort.css';
 
@@ -18,6 +27,7 @@ export const metadata: Metadata = {
 export default function xeahnort() {
   return (
     <div className="main">
+      <Top />
       <div className="hero">
         <h2 className={`${monumentExtendedd.className}`}>Xeahnort</h2>
         <p className={`${monumentExtendedd.className}`}>
@@ -51,6 +61,7 @@ export default function xeahnort() {
             <p>PREMIERE PRO</p>
           </div>
         </div>
+        {/* img floux */}
         <Image
           src={template1}
           className="img_xeahnort"
@@ -79,7 +90,94 @@ export default function xeahnort() {
             </p>
           </div>
         </div>
-        <div className="block_mission"></div>
+        <div className="block_other">
+          <div>
+            <h3 className={`${monumentExtendedd.className}`}>Moodboard</h3>
+            <Image
+              src={template3}
+              className="img_xeahnort"
+              alt="Image template xeahnort"
+            ></Image>
+          </div>
+        </div>
+        <div className="block_other">
+          <div>
+            <h3 className={`${monumentExtendedd.className}`}>Storyboard</h3>
+            <Image
+              src={template4}
+              className="img_xeahnort"
+              alt="Image template xeahnort"
+              priority
+            ></Image>
+          </div>
+        </div>
+        <div className="block_random">
+          <div>
+            <h3 className={`${monumentExtendedd.className}`}>Random photo</h3>
+            <div>
+              <Image
+                src={random1}
+                className="img_xeahnort_ramdom"
+                alt="Image template xeahnort"
+              ></Image>
+              <Image
+                src={random2}
+                className="img_xeahnort_ramdom"
+                alt="Image template xeahnort"
+              ></Image>
+              <Image
+                src={random3}
+                className="img_xeahnort_ramdom"
+                alt="Image template xeahnort"
+              ></Image>
+            </div>
+          </div>
+        </div>
+        <div className="block_other">
+          <div>
+            <h3 className={`${monumentExtendedd.className}`}>Random mersh</h3>
+            <div>
+              <Image
+                src={template5}
+                className="img_xeahnort_other"
+                alt="Image template xeahnort"
+                priority
+              ></Image>
+              <Image
+                src={template6}
+                className="img_xeahnort_other"
+                alt="Image template xeahnort"
+                priority
+              ></Image>
+            </div>
+          </div>
+        </div>
+        <div className="block_other">
+          <div>
+            <h3 className={`${monumentExtendedd.className}`}>Clip video</h3>
+          </div>
+        </div>
+        <div className="block_other">
+          <div>
+            <h3 className={`${monumentExtendedd.className}`}>Making-off</h3>
+          </div>
+        </div>
+        <div className="block_end">
+          <div>
+            {/* img floux */}
+            <Image
+              src={template7}
+              className="img_xeahnort"
+              alt="Image template xeahnort"
+            ></Image>
+            <div>
+              <p>CHEIK KONE</p>
+              <p>SAMUEL JO</p>
+              <p>JACKY TRUONG</p>
+              <p>JORDAN TOKO</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

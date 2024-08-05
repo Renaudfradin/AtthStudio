@@ -1,13 +1,13 @@
 <div align="center">
-  <img alt="logo ATTH Studio" src="./src/app/assets/img/logo.svg" width="100" />
+  <img alt="logo ATTH Studio" src="./app/assets/img/logo.svg" width="100" />
 </div>
 <h1 align="center">
   ATTH Studio
 </h1>
-<p>design : <a href="https://www.behance.net/annietran8">Annie Tran</a></p>
-<p>development : Renaud Fradin</p>
+<p>Design : <a href="https://www.behance.net/annietran8">Annie Tran</a></p>
+<p>Development : <a href="https://github.com/Renaudfradin">Renaud Fradin</a></p>
 
-![folio](src/app/assets/img/portfolio.png)
+![folio](app/assets/img/portfolio.png)
 
 ## 🛠 Installation & Set Up
 
@@ -33,4 +33,10 @@ or
 
 ```sh
 yarn dev
+```
+
+3. Format code
+
+```sh
+npm run format
 ```

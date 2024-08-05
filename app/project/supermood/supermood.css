@@ -1,8 +1,7 @@
 .main {
   background-color: var(--fifth-color);
   color: var(--fourth-color);
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-top: 0%;
 }
 
 .hero h2 {
