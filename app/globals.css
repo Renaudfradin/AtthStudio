@@ -10,6 +10,14 @@
   --fourth-color: #000000;
   --fifth-color: #f3b7f9;
   --sixth-color: #1e242b;
+  --first-font: 'MuseoModerno', sans-serif;
+  --color-progress: #0123ff;
+  --color_not_progress: #d9d9d9;
+  --space-left: 5%;
+  --space-right: 5%;
+  --space-top: 5%;
+  --space-bottom: 5%;
+  --height: 100vh;
 }
 
 body {
@@ -26,7 +34,7 @@ html {
 
 .hero {
   width: 100%;
-  height: 100vh;
+  height: var(--height);
 }
 
 .scroll-section-outer {
@@ -34,7 +42,7 @@ html {
 }
 
 .scroll-section-inner {
-  height: 100vh;
+  height: var(--height);
   width: 500vw;
   display: flex;
   flex-direction: row;
@@ -43,7 +51,7 @@ html {
 
 .scroll-section {
   width: 100%;
-  height: 100vh;
+  height: var(--height);
 }
 
 .content-section {

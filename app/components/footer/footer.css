@@ -1,8 +1,8 @@
 .main_progress {
   width: auto;
   display: flex;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: var(--space-left);
+  margin-right: var(--space-right);
   margin-bottom: 3%;
   justify-content: flex-end;
 }
@@ -13,11 +13,11 @@
 }
 
 .color_not_progress {
-  background-color: #d9d9d9;
+  background-color: var(--color_not_progress);
 }
 
 .color_progress {
-  background-color: #0123ff;
+  background-color: var(--color-progress);
 }
 
 .content_progress {
