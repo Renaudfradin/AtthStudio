@@ -75,3 +75,19 @@ html {
   font-size: 100px;
   font-weight: 400;
 }
+
+.notFound {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+}
+
+.notFound h2 {
+  color: var(--primary-color);
+  font-size: 65px;
+  font-weight: 400;
+  line-height: 76px;
+}

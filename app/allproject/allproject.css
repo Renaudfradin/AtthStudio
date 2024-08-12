@@ -68,7 +68,7 @@
 }
 
 @media (max-width: 430px) {
-  .content_allproject{
+  .content_allproject {
     margin-top: 7%;
   }
 
@@ -97,7 +97,6 @@
     width: auto;
     padding-right: 10px;
   }
-  
 }
 
 @media (min-width: 431px) and (max-width: 768px) {
