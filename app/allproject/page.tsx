@@ -25,15 +25,30 @@ export default function page() {
               Don’t be shy
             </h2>
           </div>
-          <Image src={slider} className="" alt="Image all project" priority/>
+          <Image src={slider} className="" alt="Image all project" priority />
         </div>
-        <div className='content'>
-          {items.map(({ title, slug, release }) => (
-            <div>
-              <Link className={`${monumentExtended.className} title_list`} href={`project/${slug}`}>{title}</Link>
-              <p>{release}</p>
-            </div>
-          ))}
+        <div className="content">
+          {items.map(({ id, title, slug, release }) =>
+            release === true ? (
+              <div key={id}>
+                <Link
+                  className={`${monumentExtended.className} title_list`}
+                  href={`project/${slug}`}
+                >
+                  {title}
+                </Link>
+              </div>
+            ) : (
+              <div key={id} className="comingSoonProject">
+                <p className={`${monumentExtended.className} title_list_sooon`}>
+                  {title}
+                </p>
+                <p className={`${monumentExtended.className} title_list_sooon`}>
+                  Coming soon
+                </p>
+              </div>
+            ),
+          )}
         </div>
       </div>
     </div>
