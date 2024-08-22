@@ -32,7 +32,7 @@ export default function scrollSection() {
         scrollTrigger: {
           trigger: triggerRef.current,
           start: 'top top',
-          end: '2000 top',
+          end: '1900 top',
           scrub: 0.6,
           pin: true,
         },
@@ -61,7 +61,7 @@ export default function scrollSection() {
                 width={930}
                 height={510}
                 priority
-                src="/asset/img/yuka.svg"
+                src="/asset/img/Kūmiio.png"
                 alt="Logo Kūmiio"
               ></Image>
             </div>
@@ -98,8 +98,7 @@ export default function scrollSection() {
               <Image
                 width={930}
                 height={510}
-                priority
-                src="/asset/img/xeahnort.svg"
+                src="/asset/img/xeahnort.png"
                 alt="Logo Xeahnort"
               ></Image>
             </div>

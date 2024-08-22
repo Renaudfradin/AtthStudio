@@ -1,7 +1,7 @@
 import React from 'react';
-import './footer.css';
 import Link from 'next/link';
 import localFont from 'next/font/local';
+import './footer.css';
 
 const monumentExtendedd = localFont({
   src: '../MonumentExtended-Regular.otf',
