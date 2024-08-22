@@ -15,7 +15,6 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-
   return (
     <>
       {!loadingComplete && <LoadingPage />}

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Top from './components/top/top';
-import './globals.css';
 import localFont from 'next/font/local';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'ATTH Studio',

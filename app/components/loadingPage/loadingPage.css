@@ -5,7 +5,8 @@
   justify-content: center;
   height: 100vh;
   text-align: center;
-  background-color: #f0f0f0;
+  background-color: #151515;
+  color: #FFFFFF;
   position: fixed;
   width: 100%;
   top: 0;
@@ -16,4 +17,10 @@
   
 .slide-up {
   transform: translateY(-100%);
+}
+
+.loading-container{
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
 }

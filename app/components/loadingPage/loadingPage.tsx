@@ -1,7 +1,11 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import localFont from 'next/font/local';
 import './loadingPage.css'
+
+const monumentExtendedd = localFont({
+  src: '../MonumentExtended-Regular.otf',
+});
 
 export default function loadingPage() {
   const [visible, setVisible] = useState(true);
@@ -21,8 +25,8 @@ export default function loadingPage() {
 
   return (
     <div className={`loading-container ${animationClass}`}>
-      <h1>Chargement...</h1>
-      <p>Veuillez patienter, vous serez redirigé sous peu.</p>
+     
+     <p className={`${monumentExtendedd.className}`}>Annie Tran</p>
     </div>
   );
   
