@@ -48,7 +48,6 @@
   }
 }
 
-
 @media (max-width: 425px) {
   .main_progress {
     margin-top: var(--space-top);

@@ -92,7 +92,6 @@ html {
   line-height: 76px;
 }
 
-
 @media (min-width: 1000px) and (max-width: 1439px) {
   .content-section {
     height: 70vh;
