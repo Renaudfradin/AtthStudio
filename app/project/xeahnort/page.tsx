@@ -30,6 +30,7 @@ export default function xeahnort() {
       <Top />
       <div className="hero">
         <h2 className={`${monumentExtendedd.className}`}>Xeahnort</h2>
+        <span className='border' />
         <p className={`${monumentExtendedd.className}`}>
           Scroll to see the project
         </p>

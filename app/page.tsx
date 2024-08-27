@@ -5,7 +5,9 @@ import ScrollSection from './components/scrollSection';
 import LoadingPage from './components/loadingPage/loadingPage';
 
 export default function Home() {
-  const [loadingComplete, setLoadingComplete] = useState(false);
+  const [loadingComplete, setLoadingComplete] = useState(() => {
+    return !!localStorage.getItem('hasLoaded');
+  });
 
   useEffect(() => {
     const hasLoaded = localStorage.getItem('hasLoaded');
