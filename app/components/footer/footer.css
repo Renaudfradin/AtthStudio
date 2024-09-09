@@ -4,12 +4,11 @@
   margin-left: var(--space-left);
   margin-right: var(--space-right);
   margin-bottom: 3%;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .progress_bar {
   width: 15%;
-  margin-right: 35%;
 }
 
 .color_not_progress {
@@ -39,7 +38,7 @@
 
 @media (min-width: 1000px) and (max-width: 1440px) {
   .main_progress {
-    margin-top: var(--space-top);
+    /* margin-top: var(--space-top); */
   }
 
   .progress_bar {
@@ -51,7 +50,7 @@
 @media (max-width: 425px) {
   .main_progress {
     margin-top: var(--space-top);
-    width: 90%;
+    width: 100%;
     display: flex;
     margin-left: 0;
     margin-right: 0;
@@ -63,7 +62,7 @@
   }
 
   .progress_bar {
-    width: 80%;
+    width: 50%;
     margin: 0%;
   }
 }

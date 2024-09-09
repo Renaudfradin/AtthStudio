@@ -29,9 +29,6 @@ export default function footer({
           <p className={`${monumentExtendedd.className}`}>{project_max}</p>
         </div>
       </div>
-      <Link className={`${monumentExtendedd.className}`} href="allproject">
-        ALL PROJECT
-      </Link>
     </div>
   );
 }

@@ -17,7 +17,7 @@
   --space-right: 5%;
   --space-top: 5%;
   --space-bottom: 5%;
-  --height: 100vh;
+  --height: 75vh;
 }
 
 body {
@@ -46,17 +46,17 @@ html {
   width: 500vw;
   display: flex;
   flex-direction: row;
-  position: relative;
 }
 
 .scroll-section {
   width: 100%;
   height: var(--height);
+  flex: 1;
 }
 
 .content-section {
   width: 100%;
-  height: 78vh;
+  height: 70vh;
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -68,6 +68,7 @@ html {
   color: transparent;
   position: absolute !important;
   z-index: -1 !important;
+  width: auto;
 }
 
 .content-section a {
@@ -92,6 +93,21 @@ html {
   line-height: 76px;
 }
 
+.allproject {
+  width: auto;
+  padding-left: var(--space-left);
+  padding-right: var(--space-right);
+  padding-bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.allproject a {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
 @media (min-width: 1000px) and (max-width: 1439px) {
   .content-section {
     height: 70vh;
@@ -100,6 +116,32 @@ html {
 
 @media (min-width: 1440px) and (max-width: 1600px) {
   .content-section {
-    height: 65vh;
+    height: 70vh;
+  }
+}
+
+@media (max-width: 430px) {
+  .content-section {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-section a {
+    color: var(--primary-color);
+    font-size: 50px;
+    font-weight: 400;
+  }
+
+  .content-section img {
+    color: transparent;
+    position: absolute !important;
+    z-index: -1 !important;
+    height: auto;
+    width: 18%;
   }
 }

@@ -10,7 +10,18 @@ const monumentExtendedd = localFont({
 export default function top() {
   return (
     <div className="main_top">
-      <Link className={`${monumentExtendedd.className}`} href="/">
+      <Link
+        className={`${monumentExtendedd.className}`}
+        href="/"
+        prefetch={true}
+      >
+        Annie Tran
+      </Link>
+      <Link
+        className={`${monumentExtendedd.className}`}
+        href="/"
+        prefetch={true}
+      >
         Annie Tran
       </Link>
     </div>

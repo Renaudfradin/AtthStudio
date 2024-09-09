@@ -8,13 +8,13 @@ export const items = [
   {
     id: 2,
     title: 'SALAMENDERS',
-    slug: 'salamenders',
+    slug: 'salamender',
     release: true,
   },
   {
     id: 3,
     title: 'XEANHNORT',
-    slug: 'xeanhnort',
+    slug: 'xeahnort',
     release: true,
   },
   {
