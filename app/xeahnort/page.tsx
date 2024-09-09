@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function xeahnort() {
   return (
-    <div className="main">
+    <div className="mainXeahnort">
       <Top />
       <div className="hero1">
         <h2 className={`${monumentExtendedd.className}`}>Xeahnort</h2>

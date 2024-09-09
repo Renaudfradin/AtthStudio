@@ -166,6 +166,7 @@
 .block_color {
   display: flex;
   flex-direction: row;
+  margin-top: 10%;
 }
 
 .signification {

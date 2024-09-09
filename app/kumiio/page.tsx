@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function kumiio() {
   return (
-    <div className="main">
+    <div className="mainKumiio">
       <Top />
       <div className="hero1">
         <h2 className={`${monumentExtendedd.className}`}>Kūmiio</h2>

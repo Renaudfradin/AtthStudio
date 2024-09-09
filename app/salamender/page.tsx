@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 export default function salamender() {
   return (
-    <div className="main">
+    <div className="mainSalamender">
       <Top />
       <div className="hero1">
         <h2 className={`${monumentExtendedd.className}`}>Salamender</h2>
