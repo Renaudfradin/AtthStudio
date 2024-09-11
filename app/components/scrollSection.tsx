@@ -9,10 +9,10 @@ import Image from 'next/image';
 import Top from './top/top';
 import Footer from './footer/footer';
 import supermood from '@/app/assets/img/supermood.svg';
-import kumiio from '@/app/assets/img/kumiio.svg';
-import xeahnort from '@/app/assets/img/xeahnort.svg';
+import kumiio from '@/app/assets/img/kumiio.png';
+import xeahnort from '@/app/assets/img/xeahnort.png';
 import salamander from '@/app/assets/img/salamander.svg';
-import marcovasco from '@/app/assets/img/marcovasco.svg';
+import marcovasco from '@/app/assets/img/marcovasco.png';
 
 const monumentExtended = localFont({
   src: './MonumentExtended-Regular.otf',
