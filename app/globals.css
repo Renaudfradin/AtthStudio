@@ -112,6 +112,12 @@ html {
   line-height: 24px;
 }
 
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out;
+}
+
 @media (min-width: 1000px) and (max-width: 1439px) {
   .content-section {
     height: 70vh;

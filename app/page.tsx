@@ -6,11 +6,32 @@ import LoadingPage from './components/loadingPage/loadingPage';
 
 export default function Home() {
   const [loadingComplete, setLoadingComplete] = useState<boolean | null>(null);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const hasLoaded = !!window.localStorage.getItem('hasLoaded');
       setLoadingComplete(hasLoaded);
+
+      const images = document.querySelectorAll('img');
+      let loadedImagesCount = 0;
+
+      images.forEach((img) => {
+        if (img.complete) {
+          loadedImagesCount += 1;
+        } else {
+          img.onload = () => {
+            loadedImagesCount += 1;
+            if (loadedImagesCount === images.length) {
+              setImagesLoaded(true);
+            }
+          };
+        }
+      });
+
+      if (loadedImagesCount === images.length) {
+        setImagesLoaded(true);
+      }
     }
   }, []);
 
@@ -30,7 +51,7 @@ export default function Home() {
       {!loadingComplete && <LoadingPage onComplete={handleLoadingComplete} />}
       {loadingComplete && (
         <div className="hero">
-          <ScrollSection />
+          <ScrollSection imagesLoaded={imagesLoaded}/>
         </div>
       )}
     </>
