@@ -20,7 +20,7 @@ const monumentExtended = localFont({
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function scrollSection({ imagesLoaded } : { imagesLoaded: boolean }) {
+export default function scrollSection() {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
@@ -56,7 +56,7 @@ export default function scrollSection({ imagesLoaded } : { imagesLoaded: boolean
   return (
     <div ref={triggerRef}>
       <Top />
-      <div ref={sectionRef} className={`scroll-section-inner ${!imagesLoaded ? 'hidden' : ''}`}>
+      <div ref={sectionRef} className={`scroll-section-inner`}>
         <div className="scroll-section">
           <div className="content-section">
             <Link className={`${monumentExtended.className}`} href="kumiio">
