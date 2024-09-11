@@ -3,7 +3,6 @@
   display: flex;
   margin-left: var(--space-left);
   margin-right: var(--space-right);
-  margin-bottom: 3%;
   justify-content: center;
 }
 

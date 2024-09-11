@@ -13,8 +13,8 @@
   --first-font: 'MuseoModerno', sans-serif;
   --color-progress: #0123ff;
   --color_not_progress: #d9d9d9;
-  --space-left: 5%;
-  --space-right: 5%;
+  --space-left: 4.5%;
+  --space-right: 4.5%;
   --space-top: 5%;
   --space-bottom: 5%;
   --height: 75vh;
@@ -71,6 +71,10 @@ html {
   width: auto;
 }
 
+.imgSalamender {
+  height: 800px;
+}
+
 .content-section a {
   color: var(--primary-color);
   font-size: 100px;
@@ -97,7 +101,7 @@ html {
   width: auto;
   padding-left: var(--space-left);
   padding-right: var(--space-right);
-  padding-bottom: 0;
+  /* padding-bottom: var(--space-bottom); */
   display: flex;
   justify-content: flex-end;
 }
@@ -123,7 +127,6 @@ html {
 @media (max-width: 430px) {
   .content-section {
     width: 100%;
-    height: 50vh;
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -143,5 +146,52 @@ html {
     z-index: -1 !important;
     height: auto;
     width: 18%;
+  }
+
+  .scroll-section {
+    width: 100%;
+    height: 90vh;
+  }
+
+  .scroll-section-inner {
+    height: 90vh;
+  }
+}
+
+@media (min-width: 431px) and (max-width: 770px) {
+  .content-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-section a {
+    color: var(--primary-color);
+    font-size: 50px;
+    font-weight: 400;
+  }
+
+  .content-section img {
+    color: transparent;
+    position: absolute !important;
+    z-index: -1 !important;
+    height: auto;
+    width: 18%;
+  }
+
+  .scroll-section {
+    width: 100%;
+    height: 90vh;
+  }
+
+  .scroll-section-inner {
+    height: 85vh;
+  }
+
+  .progress_bar {
+    width: 35% !important;
   }
 }

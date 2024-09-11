@@ -1,3 +1,9 @@
+.aboutMain {
+  padding-left: var(--space-left);
+  padding-right: var(--space-right);
+  padding-top: var(--space-top);
+}
+
 .content_allproject {
   padding-right: var(--space-right);
   padding-left: var(--space-left);

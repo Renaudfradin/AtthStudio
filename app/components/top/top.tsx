@@ -2,6 +2,7 @@ import React from 'react';
 import './top.css';
 import Link from 'next/link';
 import localFont from 'next/font/local';
+import { TfiLineDouble } from 'react-icons/tfi';
 
 const monumentExtendedd = localFont({
   src: '../MonumentExtended-Regular.otf',
@@ -19,10 +20,10 @@ export default function top() {
       </Link>
       <Link
         className={`${monumentExtendedd.className}`}
-        href="/"
+        href="/about"
         prefetch={true}
       >
-        Annie Tran
+        <TfiLineDouble className="iconAbout" />
       </Link>
     </div>
   );
