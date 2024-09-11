@@ -8,16 +8,21 @@ import localFont from 'next/font/local';
 import Image from 'next/image';
 import Top from './top/top';
 import Footer from './footer/footer';
+import supermood from '@/app/assets/img/supermood.svg';
+import kumiio from '@/app/assets/img/kumiio.png';
+import xeahnort from '@/app/assets/img/xeahnort.png';
+import salamander from '@/app/assets/img/salamander.svg';
+import marcovasco from '@/app/assets/img/marcovasco.png';
 
 const monumentExtended = localFont({
   src: './MonumentExtended-Regular.otf',
 });
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function scrollSection() {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
-
-  gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
     const pin = gsap.fromTo(
@@ -27,122 +32,86 @@ export default function scrollSection() {
       },
       {
         translateX: '-400vw',
-        ease: 'none',
-        duration: 10,
+        duration: 40,
+        delay: 0.1,
         scrollTrigger: {
           trigger: triggerRef.current,
           start: 'top top',
-          end: '1900 top',
-          scrub: 0.6,
+          end: '1400 50',
+          scrub: 4,
+          markers: false,
           pin: true,
+          // onUpdate: (self) => console.log('progress:', self.progress * 100),
+          // onToggle: (self) => console.log('toggled. active?', self.isActive),
         },
       },
     );
+    ScrollTrigger.refresh();
 
     return () => {
-      pin.kill();
+      pin.revert();
     };
   }, []);
 
   return (
-    <div className="scroll-section-outer">
-      <div ref={triggerRef}>
-        <div ref={sectionRef} className="scroll-section-inner">
-          <div className="scroll-section">
-            <Top />
-            <div className="content-section">
-              <Link
-                className={`${monumentExtended.className}`}
-                href="project/kumiio"
-              >
-                Kūmiio
-              </Link>
-              <Image
-                width={930}
-                height={510}
-                priority
-                src="/asset/img/Kūmiio.png"
-                alt="Logo Kūmiio"
-              ></Image>
-            </div>
-            <Footer project_min="01" project_max="05" progress="20%" />
+    <div ref={triggerRef}>
+      <Top />
+      <div ref={sectionRef} className={`scroll-section-inner`}>
+        <div className="scroll-section">
+          <div className="content-section">
+            <Link className={`${monumentExtended.className}`} href="kumiio">
+              Kūmiio
+            </Link>
+            <Image src={kumiio} alt="Logo Kūmiio" priority></Image>
           </div>
-          <div className="scroll-section">
-            <Top />
-            <div className="content-section">
-              <Link
-                className={`${monumentExtended.className}`}
-                href="project/salamender"
-              >
-                Salamender
-              </Link>
-              <Image
-                width={1190}
-                height={790}
-                priority
-                src="/asset/img/salamander.svg"
-                alt="Logo Salamander"
-              ></Image>
-            </div>
-            <Footer project_min="01" project_max="05" progress="40%" />
-          </div>
-          <div className="scroll-section">
-            <Top />
-            <div className="content-section">
-              <Link
-                className={`${monumentExtended.className}`}
-                href="project/xeahnort"
-              >
-                XEAHNORT
-              </Link>
-              <Image
-                width={930}
-                height={510}
-                src="/asset/img/xeahnort.png"
-                alt="Logo Xeahnort"
-              ></Image>
-            </div>
-            <Footer project_min="01" project_max="05" progress="60%" />
-          </div>
-          <div className="scroll-section">
-            <Top />
-            <div className="content-section">
-              <Link
-                className={`${monumentExtended.className}`}
-                href="project/supermood"
-              >
-                Supermood
-              </Link>
-              <Image
-                width={930}
-                height={510}
-                priority
-                src="/asset/img/foresthill.svg"
-                alt="Logo Supermood"
-              ></Image>
-            </div>
-            <Footer project_min="01" project_max="05" progress="80%" />
-          </div>
-          <div className="scroll-section">
-            <Top />
-            <div className="content-section">
-              <Link
-                className={`${monumentExtended.className}`}
-                href="project/marcovasco"
-              >
-                MARCO VASCO
-              </Link>
-              <Image
-                width={930}
-                height={510}
-                priority
-                src="/asset/img/marcovasco.svg"
-                alt="Logo Marcovasco"
-              ></Image>
-            </div>
-            <Footer project_min="01" project_max="05" progress="100%" />
-          </div>
+          <Footer project_min="01" project_max="05" progress="20%" />
         </div>
+        <div className="scroll-section">
+          <div className="content-section">
+            <Link className={`${monumentExtended.className}`} href="salamender">
+              Salamender
+            </Link>
+            <Image
+              src={salamander}
+              alt="Logo Salamander"
+              className="imgSalamender"
+              priority
+            ></Image>
+          </div>
+          <Footer project_min="02" project_max="05" progress="40%" />
+        </div>
+        <div className="scroll-section">
+          <div className="content-section">
+            <Link className={`${monumentExtended.className}`} href="xeahnort">
+              XEAHNORT
+            </Link>
+            <Image src={xeahnort} alt="Logo Xeahnort" priority></Image>
+          </div>
+          <Footer project_min="03" project_max="05" progress="60%" />
+        </div>
+        <div className="scroll-section">
+          <div className="content-section">
+            <Link className={`${monumentExtended.className}`} href="supermood">
+              Supermood
+            </Link>
+            <Image src={supermood} alt="Logo Supermood" priority></Image>
+          </div>
+          <Footer project_min="04" project_max="05" progress="80%" />
+        </div>
+        <div className="scroll-section">
+          <div className="content-section">
+            <Link className={`${monumentExtended.className}`} href="marcovasco">
+              MARCO VASCO
+            </Link>
+            <Image src={marcovasco} alt="Logo Marcovasco" priority></Image>
+          </div>
+          <Footer project_min="05" project_max="05" progress="100%" />
+        </div>
+      </div>
+      <div className="allproject">
+        <Link className={`${monumentExtended.className} `} href="allproject">
+          ALL PROJECT
+        </Link>
       </div>
     </div>
   );

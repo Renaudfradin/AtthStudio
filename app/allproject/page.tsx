@@ -27,13 +27,13 @@ export default function page() {
           </div>
           <Image src={slider} className="" alt="Image all project" priority />
         </div>
-        <div className="content">
+        <div>
           {items.map(({ id, title, slug, release }) =>
             release === true ? (
               <div key={id}>
                 <Link
                   className={`${monumentExtended.className} title_list`}
-                  href={`project/${slug}`}
+                  href={`${slug}`}
                 >
                   {title}
                 </Link>

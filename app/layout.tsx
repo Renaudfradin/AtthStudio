@@ -4,7 +4,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'ATTH Studio',
+  title: 'Annie Tran',
   description: 'Portfolio Annie Tran ATTH Studio',
 };
 

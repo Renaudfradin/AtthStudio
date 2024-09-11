@@ -32,7 +32,7 @@ export default function loadingPage({ onComplete }: LoadingComponentProps) {
           onComplete();
         }
       }, 1000);
-    }, 20000);
+    }, 8000);
 
     return () => clearTimeout(timer);
   }, [onComplete]);
