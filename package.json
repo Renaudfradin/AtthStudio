@@ -14,7 +14,7 @@
     "@vercel/speed-insights": "^1.0.12",
     "gsap": "^3.12.5",
     "i18next": "^23.12.2",
-    "next": "14.2.5",
+    "next": "^14.2.12",
     "prettier": "^3.3.3",
     "react": "^18",
     "react-dom": "^18",
