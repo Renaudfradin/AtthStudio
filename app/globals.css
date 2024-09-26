@@ -101,7 +101,6 @@ html {
   width: auto;
   padding-left: var(--space-left);
   padding-right: var(--space-right);
-  /* padding-bottom: var(--space-bottom); */
   display: flex;
   justify-content: flex-end;
 }
@@ -116,6 +115,10 @@ html {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease-in-out;
+}
+
+.supermood{
+  color: #000000 !important;
 }
 
 @media (min-width: 1000px) and (max-width: 1439px) {

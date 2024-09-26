@@ -91,7 +91,7 @@ export default function scrollSection() {
         </div>
         <div className="scroll-section">
           <div className="content-section">
-            <Link className={`${monumentExtended.className}`} href="supermood">
+            <Link className={`${monumentExtended.className} supermood`} href="supermood">
               Supermood
             </Link>
             <Image src={supermood} alt="Logo Supermood" priority></Image>
