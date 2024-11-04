@@ -47,6 +47,12 @@
   line-height: 24px;
 }
 
+.main_bottom div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .introduction {
   display: flex;
   flex-direction: column;
@@ -58,7 +64,17 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
+  width: 97%;
+}
+
+.introduction_content div{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  width: 60%;
 }
 
 .introduction_content h3 {
@@ -72,7 +88,7 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
-  padding: 10px 10px;
+  padding: 8px 20px;
   border: 1px solid #ffffff;
   border-radius: 99px;
 }
@@ -89,7 +105,18 @@
   width: 30%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+
+.techs div{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
 
 .techs h3 {
@@ -167,10 +194,11 @@
   display: flex;
   flex-direction: row;
   margin-top: 10%;
+  justify-content: space-between;
 }
 
 .signification {
-  width: 30%;
+  width: 20%;
 }
 
 .signification h3 {
@@ -188,7 +216,7 @@
 }
 
 .wrap_color {
-  width: 65%;
+  width: 75%;
 }
 
 .wrap_color h3 {
@@ -261,8 +289,25 @@
   .introduction_content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+    width: 100%;
+  }
+
+  .introduction_content div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .introduction_content h3 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 38px;
   }
 
   .introduction {
@@ -273,6 +318,7 @@
 
   .introduction_content p {
     margin-top: 20px;
+    font-size: 12px;
   }
 
   .techs {
@@ -284,10 +330,15 @@
   }
 
   .techs h3 {
-    padding-bottom: 30px;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 38px;
+    display: none;
+  }
+
+  .techs div{
+    width: 300px;
+  height: 200px;
+  border: 2px solid #333;
+  padding: 10px;
+  overflow-y: scroll;
   }
 
   .block_mission {

@@ -11,7 +11,6 @@ export default function Home() {
     if (typeof window !== 'undefined') {
       const hasLoaded = !!window.localStorage.getItem('hasLoaded');
       setLoadingComplete(hasLoaded);
-
     }
   }, []);
 

@@ -8,7 +8,6 @@ import template3 from '@/app/assets/img/project/xeahnort/template3.svg';
 import template4 from '@/app/assets/img/project/xeahnort/template4.svg';
 import template5 from '@/app/assets/img/project/xeahnort/template5.svg';
 import template6 from '@/app/assets/img/project/xeahnort/VINYLE.svg';
-import template7 from '@/app/assets/img/project/xeahnort/test.svg';
 import random1 from '@/app/assets/img/project/xeahnort/random1.png';
 import random2 from '@/app/assets/img/project/xeahnort/test.png';
 import random3 from '@/app/assets/img/project/xeahnort/test2.png';
@@ -28,22 +27,26 @@ export const metadata: Metadata = {
 export default function xeahnort() {
   return (
     <div className="mainXeahnort">
-      <Top />
-      <div className="hero1">
-        <h2 className={`${monumentExtendedd.className}`}>Xeahnort</h2>
-        <span className="border" />
-        <p className={`${monumentExtendedd.className}`}>
-          Scroll to see the project
-        </p>
+      <div className='mainXeahnortTop'>
+        <Top />
+        <div className="hero1">
+          <h2 className={`${monumentExtendedd.className}`}>Xeahnort</h2>
+          <span className="border" />
+          <p className={`${monumentExtendedd.className}`}>
+            Scroll to see the project
+          </p>
+        </div>
       </div>
       <div className="content">
         <div className="block_intro">
           <div className="introduction">
             <div className="introduction_content">
               <h3 className={`${monumentExtendedd.className}`}>Introduction</h3>
-              <p>Brand design</p>
-              <p>UX design</p>
-              <p>UI design</p>
+              <div>
+                <p>Brand design</p>
+                <p>UX design</p>
+                <p>UI design</p>
+              </div>
             </div>
             <p className="introduction_p">
               Un homme marchant dehors tard le soir est soudainement attiré par
@@ -56,14 +59,15 @@ export default function xeahnort() {
           </div>
           <div className="techs">
             <h3 className={`${monumentExtendedd.className}`}>Techs</h3>
-            <p>FIGMA</p>
-            <p>PHOTOSHOP</p>
-            <p>Notion</p>
-            <p>Catcup</p>
-            <p>PREMIERE PRO</p>
+            <div>
+              <p>FIGMA</p>
+              <p>Catcup</p>
+              <p>PHOTOSHOP</p>
+              <p>PREMIERE PRO</p>
+              <p>Notion</p>
+            </div>
           </div>
         </div>
-        {/* img floux */}
         <Image
           src={template1}
           className="img_xeahnort"
@@ -99,6 +103,7 @@ export default function xeahnort() {
               src={template3}
               className="img_xeahnort"
               alt="Image template xeahnort"
+              priority
             ></Image>
           </div>
         </div>
@@ -159,35 +164,20 @@ export default function xeahnort() {
             <h3 className={`${monumentExtendedd.className}`}>Clip video</h3>
           </div>
         </div>
-        <div className="block_other">
-          <div>
-            <h3 className={`${monumentExtendedd.className}`}>Making-off</h3>
-          </div>
-        </div>
-        <div className="block_end">
-          <div>
-            {/* img floux */}
-            <Image
-              src={template7}
-              className="img_xeahnort"
-              alt="Image template xeahnort"
-            ></Image>
-            <div>
-              <p>CHEIK KONE</p>
-              <p>SAMUEL JO</p>
-              <p>JACKY TRUONG</p>
-              <p>JORDAN TOKO</p>
-            </div>
-          </div>
-        </div>
       </div>
       <div className="main_bottom">
-        <Link className={`${monumentExtendedd.className}`} href="/salamender">
-          PROJET PRÉCEDENT
-        </Link>
-        <Link className={`${monumentExtendedd.className}`} href="/supermood">
-          PROJET SUIVANT
-        </Link>
+        <div>
+          <Link className={`${monumentExtendedd.className}`} href="/salamender">
+            SALAMENDER
+          </Link>
+          <p>Projet précédent</p>
+        </div>
+        <div>
+          <Link className={`${monumentExtendedd.className}`} href="/supermood">
+            SUPERMOOD
+          </Link>
+          <p>Projet suivant</p>
+        </div>
       </div>
     </div>
   );

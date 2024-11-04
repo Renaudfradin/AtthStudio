@@ -40,9 +40,11 @@ export default function salamender() {
           <div className="introduction">
             <div className="introduction_content">
               <h3 className={`${monumentExtendedd.className}`}>Introduction</h3>
-              <p>Brand design</p>
-              <p>UX design</p>
-              <p>UI design</p>
+              <div>
+                <p>Brand design</p>
+                <p>UX design</p>
+                <p>UI design</p>
+              </div>
             </div>
             <p className="introduction_p">
               Au début de 2020, deux amis fraîchement diplômés, fusionnent leur
@@ -141,12 +143,18 @@ export default function salamender() {
         ></Image>
       </div>
       <div className="main_bottom">
-        <Link className={`${monumentExtendedd.className}`} href="/kumiio">
-          PROJET PRÉCEDENT
-        </Link>
-        <Link className={`${monumentExtendedd.className}`} href="/xeahnort">
-          PROJET SUIVANT
-        </Link>
+        <div>
+          <Link className={`${monumentExtendedd.className}`} href="/kumiio">
+            ???
+          </Link>
+          <p>Projet précédent</p>
+        </div>
+        <div>
+          <Link className={`${monumentExtendedd.className}`} href="/xeahnort">
+            XEANHNORT
+          </Link>
+          <p>Projet suivant</p>
+        </div>
       </div>
     </div>
   );
