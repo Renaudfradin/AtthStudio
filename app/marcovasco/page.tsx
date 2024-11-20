@@ -92,7 +92,12 @@ export default function kumiio() {
               Mon intervention
             </h3>
             <p>
-              L'objectif était de créer une expérience utilisateur unique et mémorable, en analysant les attentes des utilisateurs, les tendances du marché et les objectifs commerciaux. J'ai développé une approche créative et innovante pour l'UX/UI de l'espace client. Cet espace, permet de garantir une fluidité et une gestion optimale des voyages.
+              L'objectif était de créer une expérience utilisateur unique et
+              mémorable, en analysant les attentes des utilisateurs, les
+              tendances du marché et les objectifs commerciaux. J'ai développé
+              une approche créative et innovante pour l'UX/UI de l'espace
+              client. Cet espace, permet de garantir une fluidité et une gestion
+              optimale des voyages.
             </p>
           </div>
         </div>

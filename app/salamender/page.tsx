@@ -71,7 +71,12 @@ export default function salamender() {
           <div>
             <h3 className={`${monumentExtendedd.className}`}>Mission</h3>
             <p>
-              La mission de Salamender, en tant que brand design, est de créer une marque qui non seulement mets en évidence un symbole mais également une histoire. En intégrant des éléments “fusion” dans un cadre innovant , Salamender offre une expérience unique et mémorable à ses fidèles, les invitant à découvrir et à apprécier l'essence de l’e-sport dans toute sa splendeur.
+              La mission de Salamender, en tant que brand design, est de créer
+              une marque qui non seulement mets en évidence un symbole mais
+              également une histoire. En intégrant des éléments “fusion” dans un
+              cadre innovant , Salamender offre une expérience unique et
+              mémorable à ses fidèles, les invitant à découvrir et à apprécier
+              l'essence de l’e-sport dans toute sa splendeur.
             </p>
           </div>
           <div>
@@ -79,7 +84,12 @@ export default function salamender() {
               Mon intervention
             </h3>
             <p>
-              Je devais façonner et maintenir une identité de marque forte et cohérente pour Salamender. Je souhaitais mettre l'accent sur la modernité et la fusion, en créant des expériences sensorielles mémorables, pour aider Salamender à se démarquer et à fidéliser une clientèle passionnée par la culture de l’e-sport et se challenger par dessus.
+              Je devais façonner et maintenir une identité de marque forte et
+              cohérente pour Salamender. Je souhaitais mettre l'accent sur la
+              modernité et la fusion, en créant des expériences sensorielles
+              mémorables, pour aider Salamender à se démarquer et à fidéliser
+              une clientèle passionnée par la culture de l’e-sport et se
+              challenger par dessus.
             </p>
           </div>
         </div>

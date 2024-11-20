@@ -19,19 +19,19 @@
   padding-right: 20px;
 }
 
-.img_template_supermood{
+.img_template_supermood {
   width: 100% !important;
   margin-top: 0% !important;
   border-radius: 0px !important;
 }
 
-.img_template_supermood_1{
+.img_template_supermood_1 {
   width: 100% !important;
   margin-top: 5% !important;
   border-radius: 0px !important;
 }
 
-.small_precision{
+.small_precision {
   width: 55%;
 }
 
@@ -82,7 +82,7 @@
     flex-wrap: nowrap;
   }
 
-  .small_precision{
+  .small_precision {
     width: 100%;
   }
 }

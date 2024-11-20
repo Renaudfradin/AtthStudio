@@ -4,7 +4,7 @@
   color: var(--primary-color) !important;
 }
 
-.mainXeahnortTop{
+.mainXeahnortTop {
   background-image: url('../../app/assets/img/xeahnort.png') !important;
   background-position: center;
   background-repeat: no-repeat;
@@ -37,7 +37,7 @@
   margin-bottom: 0% !important;
 }
 
-.youtube_video{
+.youtube_video {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -61,7 +61,7 @@
     padding-top: 0%;
     color: var(--primary-color) !important;
   }
-  
+
   .hero1 h2 {
     font-size: 44px;
     font-weight: 400;

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 export default function xeahnort() {
   return (
     <div className="mainXeahnort">
-      <div className='mainXeahnortTop'>
+      <div className="mainXeahnortTop">
         <Top />
         <div className="hero1">
           <h2 className={`${monumentExtendedd.className}`}>Xeahnort</h2>
@@ -77,9 +77,12 @@ export default function xeahnort() {
           <div>
             <h3 className={`${monumentExtendedd.className}`}>Mission</h3>
             <p>
-              La mission était de promouvoir un artiste français qui à travers son texte témoigne d’un sentiments de reconnaissance pour challenger tout au long de sa vie. 
-              Dans chaque moment de notre vie, nous faisons obstacles a des doutes et des peurs. 
-              Ce texte renvoie une image à surmonter les épreuves et prouver sa valeur envers soi-même
+              La mission était de promouvoir un artiste français qui à travers
+              son texte témoigne d’un sentiments de reconnaissance pour
+              challenger tout au long de sa vie. Dans chaque moment de notre
+              vie, nous faisons obstacles a des doutes et des peurs. Ce texte
+              renvoie une image à surmonter les épreuves et prouver sa valeur
+              envers soi-même
             </p>
           </div>
           <div>
@@ -159,8 +162,17 @@ export default function xeahnort() {
           <div>
             <h3 className={`${monumentExtendedd.className}`}>Clip video</h3>
           </div>
-          <div className='youtube_video'>
-            <iframe width="980" height="450" src="https://www.youtube.com/embed/Cjc3b66gq4Q?si=2gelDW10OIgN6naF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
+          <div className="youtube_video">
+            <iframe
+              width="980"
+              height="450"
+              src="https://www.youtube.com/embed/Cjc3b66gq4Q?si=2gelDW10OIgN6naF"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </div>
