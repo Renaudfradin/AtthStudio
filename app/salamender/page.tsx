@@ -71,13 +71,7 @@ export default function salamender() {
           <div>
             <h3 className={`${monumentExtendedd.className}`}>Mission</h3>
             <p>
-              La mission de Yūka, en tant que brand design, est de créer une
-              marque qui non seulement vend du matcha, mais qui raconte une
-              histoire, éveille les sens et promeut un mode de vie sain. En
-              intégrant des éléments traditionnels dans un cadre moderne, Yūka
-              offre une expérience unique et mémorable à ses clients, les
-              invitant à découvrir et à apprécier l'essence du matcha dans toute
-              sa splendeur
+              La mission de Salamender, en tant que brand design, est de créer une marque qui non seulement mets en évidence un symbole mais également une histoire. En intégrant des éléments “fusion” dans un cadre innovant , Salamender offre une expérience unique et mémorable à ses fidèles, les invitant à découvrir et à apprécier l'essence de l’e-sport dans toute sa splendeur.
             </p>
           </div>
           <div>
@@ -85,12 +79,7 @@ export default function salamender() {
               Mon intervention
             </h3>
             <p>
-              Je devais façonner et maintenir une identité de marque forte et
-              cohérente pour Yūka. Je souhaitais mettre l'accent sur la
-              tradition et la modernité, et en créant des expériences
-              sensorielles mémorables, pour aider Yūka à se démarquer et à
-              fidéliser une clientèle passionnée par le matcha et la culture
-              japonaise
+              Je devais façonner et maintenir une identité de marque forte et cohérente pour Salamender. Je souhaitais mettre l'accent sur la modernité et la fusion, en créant des expériences sensorielles mémorables, pour aider Salamender à se démarquer et à fidéliser une clientèle passionnée par la culture de l’e-sport et se challenger par dessus.
             </p>
           </div>
         </div>
@@ -143,12 +132,7 @@ export default function salamender() {
         ></Image>
       </div>
       <div className="main_bottom">
-        <div>
-          <Link className={`${monumentExtendedd.className}`} href="/kumiio">
-            ???
-          </Link>
-          <p>Projet précédent</p>
-        </div>
+        <div></div>
         <div>
           <Link className={`${monumentExtendedd.className}`} href="/xeahnort">
             XEANHNORT

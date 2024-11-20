@@ -9,7 +9,6 @@ import Image from 'next/image';
 import Top from './top/top';
 import Footer from './footer/footer';
 import supermood from '@/app/assets/img/supermood.svg';
-import kumiio from '@/app/assets/img/kumiio.png';
 import xeahnort from '@/app/assets/img/xeahnort.png';
 import salamander from '@/app/assets/img/salamander.svg';
 import marcovasco from '@/app/assets/img/marcovasco.png';
@@ -31,7 +30,7 @@ export default function scrollSection() {
         translateX: 0,
       },
       {
-        translateX: '-400vw',
+        translateX: '-300vw',
         duration: 40,
         delay: 0.1,
         scrollTrigger: {
@@ -59,15 +58,6 @@ export default function scrollSection() {
       <div ref={sectionRef} className={`scroll-section-inner`}>
         <div className="scroll-section">
           <div className="content-section">
-            <Link className={`${monumentExtended.className}`} href="kumiio">
-              Kūmiio
-            </Link>
-            <Image src={kumiio} alt="Logo Kūmiio" priority></Image>
-          </div>
-          <Footer project_min="01" project_max="05" progress="20%" />
-        </div>
-        <div className="scroll-section">
-          <div className="content-section">
             <Link className={`${monumentExtended.className}`} href="salamender">
               Salamender
             </Link>
@@ -78,7 +68,7 @@ export default function scrollSection() {
               priority
             ></Image>
           </div>
-          <Footer project_min="02" project_max="05" progress="40%" />
+          <Footer project_min="01" project_max="04" progress="25%" />
         </div>
         <div className="scroll-section">
           <div className="content-section">
@@ -87,7 +77,7 @@ export default function scrollSection() {
             </Link>
             <Image src={xeahnort} alt="Logo Xeahnort" priority></Image>
           </div>
-          <Footer project_min="03" project_max="05" progress="60%" />
+          <Footer project_min="02" project_max="04" progress="50%" />
         </div>
         <div className="scroll-section">
           <div className="content-section">
@@ -99,7 +89,7 @@ export default function scrollSection() {
             </Link>
             <Image src={supermood} alt="Logo Supermood" priority></Image>
           </div>
-          <Footer project_min="04" project_max="05" progress="80%" />
+          <Footer project_min="03" project_max="04" progress="75%" />
         </div>
         <div className="scroll-section">
           <div className="content-section">
@@ -108,13 +98,14 @@ export default function scrollSection() {
             </Link>
             <Image src={marcovasco} alt="Logo Marcovasco" priority></Image>
           </div>
-          <Footer project_min="05" project_max="05" progress="100%" />
+          <Footer project_min="04" project_max="04" progress="100%" />
         </div>
       </div>
       <div className="allproject">
-        <Link className={`${monumentExtended.className} `} href="allproject">
-          ALL PROJECT
-        </Link>
+        <div>
+          <p className={`${monumentExtended.className} `}>ALL PROJECT</p>
+          <p className={`${monumentExtended.className} `}>(soon)</p>
+        </div>
       </div>
     </div>
   );

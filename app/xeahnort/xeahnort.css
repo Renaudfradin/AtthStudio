@@ -37,6 +37,16 @@
   margin-bottom: 0% !important;
 }
 
+.youtube_video{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+}
+
 @media (max-width: 330px) {
   .hero1 h2 {
     font-size: 30px !important;

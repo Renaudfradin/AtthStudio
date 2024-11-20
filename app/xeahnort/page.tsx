@@ -77,13 +77,9 @@ export default function xeahnort() {
           <div>
             <h3 className={`${monumentExtendedd.className}`}>Mission</h3>
             <p>
-              La mission de Yūka, en tant que brand design, est de créer une
-              marque qui non seulement vend du matcha, mais qui raconte une
-              histoire, éveille les sens et promeut un mode de vie sain. En
-              intégrant des éléments traditionnels dans un cadre moderne, Yūka
-              offre une expérience unique et mémorable à ses clients, les
-              invitant à découvrir et à apprécier l'essence du matcha dans toute
-              sa splendeur
+              La mission était de promouvoir un artiste français qui à travers son texte témoigne d’un sentiments de reconnaissance pour challenger tout au long de sa vie. 
+              Dans chaque moment de notre vie, nous faisons obstacles a des doutes et des peurs. 
+              Ce texte renvoie une image à surmonter les épreuves et prouver sa valeur envers soi-même
             </p>
           </div>
           <div>
@@ -162,6 +158,9 @@ export default function xeahnort() {
         <div className="block_other">
           <div>
             <h3 className={`${monumentExtendedd.className}`}>Clip video</h3>
+          </div>
+          <div className='youtube_video'>
+            <iframe width="980" height="450" src="https://www.youtube.com/embed/Cjc3b66gq4Q?si=2gelDW10OIgN6naF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
           </div>
         </div>
       </div>

@@ -43,7 +43,7 @@ html {
 
 .scroll-section-inner {
   height: var(--height);
-  width: 500vw;
+  width: 400vw;
   display: flex;
   flex-direction: row;
 }
@@ -103,12 +103,6 @@ html {
   padding-right: var(--space-right);
   display: flex;
   justify-content: flex-end;
-}
-
-.allproject a {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 24px;
 }
 
 .hidden {
