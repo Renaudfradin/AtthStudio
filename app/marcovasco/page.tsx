@@ -5,8 +5,8 @@ import localFont from 'next/font/local';
 import Image from 'next/image';
 import logo1 from '@/app/assets/img/project/marcovasco/logo1.png';
 import logo2 from '@/app/assets/img/project/marcovasco/logo2.png';
-import template1 from '@/app/assets/img/project/marcovasco/template1.png';
-import template2 from '@/app/assets/img/project/marcovasco/template2.png';
+import template from '@/app/assets/img/project/marcovasco/template.svg';
+import template2 from '@/app/assets/img/project/marcovasco/template2.svg';
 import './marcovasco.css';
 import '../project.css';
 import Top from '@/app/components/top/top';
@@ -36,9 +36,11 @@ export default function kumiio() {
           <div className="introduction">
             <div className="introduction_content">
               <h3 className={`${monumentExtendedd.className}`}>Introduction</h3>
-              <p>Brand design</p>
-              <p>UX design</p>
-              <p>UI design</p>
+              <div>
+                <p>Brand design</p>
+                <p>UX design</p>
+                <p>UI design</p>
+              </div>
             </div>
             <p className="introduction_p">
               Chez Marco Vasco, ils redéfinissent l'art du voyage sur mesure et
@@ -82,7 +84,7 @@ export default function kumiio() {
               Vasco pour offrir une expérience utilisateur unique et mémorable,
               distincte des autres sites concurrent, en tenant compte des
               besoins spécifiques de nos utilisateurs cibles et en assurant une
-              cohérence globale avec la marque
+              cohérence globale avec la marque.
             </p>
           </div>
           <div>
@@ -100,7 +102,7 @@ export default function kumiio() {
           </div>
         </div>
         <Image
-          src={template1}
+          src={template}
           className="img_marcovasco"
           alt="Image template 1 marcovasco"
         ></Image>
@@ -111,9 +113,12 @@ export default function kumiio() {
         ></Image>
       </div>
       <div className="main_bottom">
-        <Link className={`${monumentExtendedd.className}`} href="/supermood">
-          PROJET PRÉCEDENT
-        </Link>
+        <div>
+          <Link className={`${monumentExtendedd.className}`} href="/supermood">
+            SUPERMOOD
+          </Link>
+          <p>Projet précédent</p>
+        </div>
       </div>
     </div>
   );

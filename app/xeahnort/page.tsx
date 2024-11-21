@@ -14,6 +14,7 @@ import random3 from '@/app/assets/img/project/xeahnort/test2.png';
 import Top from '@/app/components/top/top';
 import './xeahnort.css';
 import '../project.css';
+import { YouTubeEmbed } from '@next/third-parties/google';
 
 const monumentExtendedd = localFont({
   src: '../MonumentExtended-Regular.otf',
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
 export default function xeahnort() {
   return (
     <div className="mainXeahnort">
-      <div className='mainXeahnortTop'>
+      <div className="mainXeahnortTop">
         <Top />
         <div className="hero1">
           <h2 className={`${monumentExtendedd.className}`}>Xeahnort</h2>
@@ -77,13 +78,12 @@ export default function xeahnort() {
           <div>
             <h3 className={`${monumentExtendedd.className}`}>Mission</h3>
             <p>
-              La mission de Yūka, en tant que brand design, est de créer une
-              marque qui non seulement vend du matcha, mais qui raconte une
-              histoire, éveille les sens et promeut un mode de vie sain. En
-              intégrant des éléments traditionnels dans un cadre moderne, Yūka
-              offre une expérience unique et mémorable à ses clients, les
-              invitant à découvrir et à apprécier l'essence du matcha dans toute
-              sa splendeur
+              La mission était de promouvoir un artiste français qui à travers
+              son texte témoigne d’un sentiments de reconnaissance pour
+              challenger tout au long de sa vie. Dans chaque moment de notre
+              vie, nous faisons obstacles a des doutes et des peurs. Ce texte
+              renvoie une image à surmonter les épreuves et prouver sa valeur
+              envers soi-même
             </p>
           </div>
           <div>
@@ -159,9 +159,12 @@ export default function xeahnort() {
             </div>
           </div>
         </div>
-        <div className="block_other">
+        <div className="block_others">
           <div>
             <h3 className={`${monumentExtendedd.className}`}>Clip video</h3>
+          </div>
+          <div>
+            <YouTubeEmbed videoid="Cjc3b66gq4Q" height={450} width={980} />
           </div>
         </div>
       </div>

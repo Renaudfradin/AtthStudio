@@ -3,9 +3,11 @@ import Link from 'next/link';
 import React from 'react';
 import localFont from 'next/font/local';
 import Image from 'next/image';
-import logo from '@/app/assets/img/project/kumiio/logo_kumiio.png';
-import kumiios from '@/app/assets/img/project/kumiio/kumiio.png';
-import BlockColor from '@/app/components/blockColor/blockColor';
+import Template from '@/app/assets/img/project/supermood/template.svg';
+import Template2 from '@/app/assets/img/project/supermood/template2.svg';
+import Template3 from '@/app/assets/img/project/supermood/template3.svg';
+import TextArea from '@/app/assets/img/project/supermood/textArea.svg';
+import Template4 from '@/app/assets/img/project/supermood/template4.svg';
 import Top from '@/app/components/top/top';
 import './supermood.css';
 import '../project.css';
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
   description: 'Portfolio Annie Tran ATTH Studio Supermood',
 };
 
-export default function kumiio() {
+export default function supermood() {
   return (
     <div className="mainSupermood">
       <Top />
@@ -35,42 +37,41 @@ export default function kumiio() {
           <div className="introduction">
             <div className="introduction_content">
               <h3 className={`${monumentExtendedd.className}`}>Introduction</h3>
-              <p>Brand design</p>
-              <p>UX design</p>
-              <p>UI design</p>
+              <div>
+                <p>Brand design</p>
+                <p>UX design</p>
+                <p>UI design</p>
+              </div>
             </div>
             <p className="introduction_p">
-              Yūka est une marque de Matcha, ils travaillent en étroite
-              collaboration avec des fermes locales au Japon qui cultivent leur
-              thé selon des pratiques agricoles durables et respectueuses de
-              l'environnement. Ils prônent que la culture du thé doit être
-              guidée par la passion et le respect de la nature pour préserver la
-              richesse de l'agriculture japonaise et offrir des produits de
-              qualité supérieure.
+              J’ai travaillé sur Supermood, une plateforme SASS qui permet
+              d’accompagner des entreprises à mieux comprendre et améliorer
+              l'engagement de leurs employés. La plateforme permet aux
+              entreprises de créer des enquêtes sur mesure, de collecter des
+              données qualitatives et quantitatives, et d'analyser ces
+              informations pour prendre des décisions stratégiques éclairées.
             </p>
           </div>
           <div className="techs">
             <h3 className={`${monumentExtendedd.className}`}>Techs</h3>
             <p>FIGMA</p>
-            <p>ADOBE PHOTOSHOP</p>
+            <p>JIRA</p>
+            <p>ADOBE ILLUSTRATOR</p>
           </div>
         </div>
-        <div className="wrapImg">
-          <Image src={logo} className="" alt="Image logo kumiio"></Image>
-          <Image src={logo} className="" alt="Image logo kumiio"></Image>
-          <Image src={logo} className="" alt="Image logo kumiio"></Image>
-        </div>
+        <Image
+          src={Template}
+          className="img_template_supermood"
+          alt="Image template supermood"
+        ></Image>
         <div className="block_mission">
           <div>
-            <h3 className={`${monumentExtendedd.className}`}>Mission</h3>
+            <h3 className={`${monumentExtendedd.className}`}>1er Mission</h3>
             <p>
-              La mission de Yūka, en tant que brand design, est de créer une
-              marque qui non seulement vend du matcha, mais qui raconte une
-              histoire, éveille les sens et promeut un mode de vie sain. En
-              intégrant des éléments traditionnels dans un cadre moderne, Yūka
-              offre une expérience unique et mémorable à ses clients, les
-              invitant à découvrir et à apprécier l'essence du matcha dans toute
-              sa splendeur
+              En intégrant Supermood, j'ai été affectée à la partie produit pour
+              réaliser un design system, donc une documentation entre
+              développeur et designer pour se coordiner sur les implantations de
+              fonctionnalité, d'abord minimal puis complexe.
             </p>
           </div>
           <div>
@@ -78,61 +79,99 @@ export default function kumiio() {
               Mon intervention
             </h3>
             <p>
-              Je devais façonner et maintenir une identité de marque forte et
-              cohérente pour Yūka. Je souhaitais mettre l'accent sur la
-              tradition et la modernité, et en créant des expériences
-              sensorielles mémorables, pour aider Yūka à se démarquer et à
-              fidéliser une clientèle passionnée par le matcha et la culture
-              japonaise
+              Nous nous sommes inspiré des librairie déjà dispo sur Internet
+              comme Material Design, Bootstrap qui propose des fonctionnalités
+              permettant à s'identifier entre dev et designer. Mon intervention
+              était donc le design system par une librairie Rokit en designant
+              des Element UI a visuelle attractive puis les poster sur la
+              lbrairie.
             </p>
           </div>
         </div>
-        <Image src={kumiios} className="" alt="Image template kumiio"></Image>
-        <div className="block_color">
-          <div className="wrap_color">
-            <h3 className={`${monumentExtendedd.className}`}>Couleur</h3>
-            <div className="wrap_color_content">
-              <BlockColor
-                title="PIERRE LUNE"
-                color="#FFFFFF"
-                colorText="#1C1C1C"
-              />
-              <BlockColor
-                title="EMERAUDE"
-                color="#1E4423"
-                colorText="#FFFFFF"
-              />
-              <BlockColor title="OPALE" color="#FEFBE9" colorText="#1C1C1C" />
-              <BlockColor
-                title="QUARTZ ROSE"
-                color="#F19BAB"
-                colorText="#FFFFFF"
-              />
-              <BlockColor title="BÉRIL" color="#F2F593" colorText="#1C1C1C" />
-              <BlockColor title="JADE" color="#8CAF5A" colorText="#FFFFFF" />
-            </div>
-          </div>
-          <div className="signification">
-            <h3 className={`${monumentExtendedd.className}`}>Signification</h3>
+        <Image
+          src={Template4}
+          className="img_template_supermood"
+          alt="Image template supermood"
+        ></Image>
+        <div className="block_small_precision">
+          <div className="small_precision">
+            <h3 className={`${monumentExtendedd.className}`}>
+              Petite précision
+            </h3>
             <p>
-              Je devais façonner et maintenir une identité de marque forte et
-              cohérente pour Yūka. Je souhaitais mettre l'accent sur la
-              tradition et la modernité, et en créant des expériences
-              sensorielles mémorables, pour aider Yūka à se démarquer et à
-              fidéliser une clientèle passionnée par le matcha et la culture
-              japonaise
+              J'ai ensuite travaillé sur des composants plus simples comme des
+              inputs, des boutons, des text-areas. Ici c'est le cas, je procèdes
+              par Anatomy, Etats, Prototypage/schéma.
+            </p>
+            <br />
+            <p>
+              Dans un premier temps, je procède l'anatomy du text area en
+              découpant les points important : content et description. Ensuite
+              les états : ver, focus, error, disabled.
+            </p>
+            <br />
+            <p>
+              Le but de cette mission a été de pouvoir recréer des bases solides
+              pour la continuité de nos prochaines design, notre objectif a été
+              de pouvoir développer par la suite des fonctionnalité plus
+              complexe en reprenant des fonctionnalité plus simple.
+            </p>
+          </div>
+          <Image
+            src={TextArea}
+            className=""
+            alt="Image template supermood"
+          ></Image>
+        </div>
+        <div className="block_mission">
+          <div>
+            <h3 className={`${monumentExtendedd.className}`}>2e Mission</h3>
+            <p>
+              L’enjeu a été d’améliorer l’interface utilisateur pour rendre la
+              plateforme plus intuitive, accessible, avec une visuelle
+              attrayante. La problématique a été d’identifier et résoudre les
+              problèmes liés au layout existant tout en respectant les
+              contraintes de la plateforme et les attentes des utilisateurs.
+            </p>
+          </div>
+          <div>
+            <h3 className={`${monumentExtendedd.className}`}>
+              Mon intervention
+            </h3>
+            <p>
+              Je devais intégrer les retours des utilisateurs de manière
+              efficace pour garantir que les modifications apportées améliorent
+              réellement l’expérience.Extraire une analyse a été très difficile
+              pour moi de comprendre et de pouvoir améliorer. Mes
+              responsabilités ont été d’analyse le layout actuel, énumerer des
+              propositions de modifications, réaliser de maquettes de redesign.
             </p>
           </div>
         </div>
-        <Image src={kumiios} className="" alt="Image template kumiio"></Image>
+        <Image
+          src={Template2}
+          className="img_template_supermood"
+          alt="Image template supermood"
+        ></Image>
+        <Image
+          src={Template3}
+          className="img_template_supermood_1"
+          alt="Image template supermood"
+        ></Image>
       </div>
       <div className="main_bottom">
-        <Link className={`${monumentExtendedd.className}`} href="/xeahnort">
-          PROJET PRÉCEDENT
-        </Link>
-        <Link className={`${monumentExtendedd.className}`} href="/marcovasco">
-          PROJET SUIVANT
-        </Link>
+        <div>
+          <Link className={`${monumentExtendedd.className}`} href="/xeahnort">
+            XEAHNORT
+          </Link>
+          <p>Projet précédent</p>
+        </div>
+        <div>
+          <Link className={`${monumentExtendedd.className}`} href="/marcovasco">
+            MARCOVASCO
+          </Link>
+          <p>Projet suivant</p>
+        </div>
       </div>
     </div>
   );

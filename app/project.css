@@ -67,7 +67,7 @@
   width: 97%;
 }
 
-.introduction_content div{
+.introduction_content div {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -111,7 +111,7 @@
   flex-wrap: nowrap;
 }
 
-.techs div{
+.techs div {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -183,6 +183,7 @@
 }
 
 .block_other div h3,
+.block_others div h3,
 .block_random div h3 {
   padding-bottom: 30px;
   font-size: 32px;
@@ -294,7 +295,7 @@
     width: 100%;
   }
 
-  .introduction_content div{
+  .introduction_content div {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -333,12 +334,12 @@
     display: none;
   }
 
-  .techs div{
+  .techs div {
     width: 300px;
-  height: 200px;
-  border: 2px solid #333;
-  padding: 10px;
-  overflow-y: scroll;
+    height: 200px;
+    border: none;
+    padding: 10px;
+    overflow-y: scroll;
   }
 
   .block_mission {
