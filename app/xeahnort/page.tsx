@@ -14,6 +14,7 @@ import random3 from '@/app/assets/img/project/xeahnort/test2.png';
 import Top from '@/app/components/top/top';
 import './xeahnort.css';
 import '../project.css';
+import { YouTubeEmbed } from '@next/third-parties/google';
 
 const monumentExtendedd = localFont({
   src: '../MonumentExtended-Regular.otf',
@@ -158,21 +159,12 @@ export default function xeahnort() {
             </div>
           </div>
         </div>
-        <div className="block_other">
+        <div className="block_others">
           <div>
             <h3 className={`${monumentExtendedd.className}`}>Clip video</h3>
           </div>
-          <div className="youtube_video">
-            <iframe
-              width="980"
-              height="450"
-              src="https://www.youtube.com/embed/Cjc3b66gq4Q?si=2gelDW10OIgN6naF"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+          <div>
+            <YouTubeEmbed videoid="Cjc3b66gq4Q" height={450} width={980} />
           </div>
         </div>
       </div>
