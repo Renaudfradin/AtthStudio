@@ -1,6 +1,9 @@
 import React from 'react';
 import { callApi } from '@/utils/api';
 import '../article.css';
+import { Metadata } from 'next';
+import Article from '@/app/components/article/page';
+import SuggestArticle from '@/app/components/suggestArticle/page';
 
 type ArticleDetailType = {
   id: string;
@@ -14,7 +17,32 @@ type ArticleDetailType = {
   document: any;
 };
 
-export default async function Article({
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  let article: ArticleDetailType | null = null;
+
+  try {
+    const response: ArticleDetailType | { data: ArticleDetailType } =
+      await callApi(`/api/article/${params.slug}`);
+    if ('data' in response) {
+      article = response.data;
+    } else {
+      article = response;
+    }
+  } catch (e) {
+    article = null;
+  }
+
+  return {
+    title: article?.title || params.slug,
+    description: 'Article ATTHSTUDIO',
+  };
+}
+
+export default async function ArticlePage({
   params,
 }: {
   params: { slug: string };
@@ -26,7 +54,6 @@ export default async function Article({
       await callApi(`/api/article/${params.slug}`);
     if ('data' in response) {
       article = response.data;
-      console.log(article);
     } else {
       article = response;
     }
@@ -40,13 +67,8 @@ export default async function Article({
 
   return (
     <div>
-      <h1>{article.title}</h1>
-      <p>{article.content}</p>
-      <p>{article.time_read} minutes de lecture</p>
-      <p>{article.active ? 'Actif' : 'Inactif'}</p>
-      <p>{article.category_id}</p>
-      <img src={article.image} alt={article.title} />
-      <div>{article.document}</div>
+      <Article article={article} />
+      <SuggestArticle article={article} />
     </div>
   );
 }

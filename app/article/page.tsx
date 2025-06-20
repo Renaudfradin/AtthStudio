@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { callApi } from '@/utils/api';
 import './article.css';
+import { Metadata } from 'next';
 
 type ArticleType = {
   id: string;
@@ -20,6 +21,11 @@ type CategoryType = {
 
 type ArticlesApiResponse = ArticleType[] | { data: ArticleType[] };
 type CategoriesApiResponse = CategoryType[] | { data: CategoryType[] };
+
+export const metadata: Metadata = {
+  title: 'Articles',
+  description: 'Articles ATTHSTUDIO',
+};
 
 export default async function Article() {
   let articles: ArticleType[] = [];
@@ -60,7 +66,6 @@ export default async function Article() {
           </Link>
         ))}
       </div>
-
 
       {articles.map((article: any) => (
         <div key={article.id}>
