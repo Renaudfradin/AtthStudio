@@ -1,8 +1,10 @@
+'use client';
+
 import Link from 'next/link';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { callApi } from '@/utils/api';
+import CategoryFilter from '@/app/components/categoryFilter/CategoryFilter';
 import './article.css';
-import { Metadata } from 'next';
 
 type ArticleType = {
   id: string;
@@ -11,6 +13,7 @@ type ArticleType = {
   content: string;
   time_read: number;
   image: string;
+  category?: { id: string; slug: string; title: string };
 };
 
 type CategoryType = {
@@ -22,54 +25,61 @@ type CategoryType = {
 type ArticlesApiResponse = ArticleType[] | { data: ArticleType[] };
 type CategoriesApiResponse = CategoryType[] | { data: CategoryType[] };
 
-export const metadata: Metadata = {
-  title: 'Articles',
-  description: 'Articles ATTHSTUDIO',
-};
+export default function Article() {
+  const [articles, setArticles] = useState<ArticleType[]>([]);
+  const [categories, setCategories] = useState<CategoryType[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-export default async function Article() {
-  let articles: ArticleType[] = [];
-  let categories: CategoryType[] = [];
-  try {
-    const response: ArticlesApiResponse = await callApi('/api/articles');
-    if (Array.isArray(response)) {
-      articles = response;
-    } else if (response && 'data' in response) {
-      articles = response.data;
+  useEffect(() => {
+    async function fetchArticles() {
+      try {
+        const response: ArticlesApiResponse = await callApi('/api/articles');
+        if (Array.isArray(response)) {
+          setArticles(response);
+        } else if (response && 'data' in response) {
+          setArticles(response.data);
+        }
+      } catch (e) {
+        setArticles([]);
+      }
     }
-    console.log(articles);
-  } catch (e) {
-    articles = [];
-  }
+    async function fetchCategories() {
+      try {
+        const response: CategoriesApiResponse =
+          await callApi('/api/categories');
+        if (Array.isArray(response)) {
+          setCategories(response);
+        } else if (response && 'data' in response) {
+          setCategories(response.data);
+        }
+      } catch (e) {
+        setCategories([]);
+      }
+    }
+    fetchArticles();
+    fetchCategories();
+  }, []);
 
-  try {
-    const response: CategoriesApiResponse = await callApi('/api/categories');
-    if (Array.isArray(response)) {
-      categories = response;
-    } else if (response && 'data' in response) {
-      categories = response.data;
-    }
-    console.log(categories);
-  } catch (e) {
-    categories = [];
-  }
+  const filteredArticles = selectedCategory
+    ? articles.filter(
+        (article: any) => article.category?.slug === selectedCategory,
+      )
+    : articles;
 
   return (
     <div>
       <h1>Article</h1>
 
-      <div>
-        <h2>Catégories</h2>
-        {categories.map((category: any) => (
-          <Link key={category.id} href={`/category/${category.slug}`}>
-            {category.title}
-          </Link>
-        ))}
-      </div>
+      <CategoryFilter
+        categories={categories}
+        selectedCategory={selectedCategory}
+        onSelectCategory={setSelectedCategory}
+      />
 
-      {articles.map((article: any) => (
+      {filteredArticles.map((article: any) => (
         <div key={article.id}>
           <h2>{article.title}</h2>
+          <p>{article.category?.title}</p>
           <Link href={`/article/${article.slug}`}>Voir l'article</Link>
           <p>{article.time_read} minutes de lecture</p>
           <img src={article.image} alt={article.title} />

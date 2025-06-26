@@ -1,6 +1,7 @@
 import React from 'react';
 import { callApi } from '@/utils/api';
 import '../archive.css';
+import DocumentGallery from '@/app/components/documentGallery/DocumentGallery';
 
 type ArchiveDetailType = {
   id: string;
@@ -8,7 +9,7 @@ type ArchiveDetailType = {
   slug: string;
   content: string;
   image: string;
-  document: any;
+  documents: any;
 };
 
 export default async function Archive({
@@ -38,7 +39,7 @@ export default async function Archive({
       <h1>{archive.title}</h1>
       <p>{archive.content}</p>
       <img src={archive.image} alt={archive.title} />
-      <div>{archive.document}</div>
+      <DocumentGallery documents={archive.documents} />
     </div>
   );
 }
