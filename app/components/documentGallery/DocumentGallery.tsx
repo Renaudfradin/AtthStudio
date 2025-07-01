@@ -9,18 +9,29 @@ interface DocumentGalleryProps {
   documents: DocumentType[];
 }
 
-const DocumentGallery: React.FC<DocumentGalleryProps> = ({ documents }) => {
+export default async function DocumentGallery({
+  documents,
+}: DocumentGalleryProps) {
+  const rows = [];
+  let i = 0;
+  while (i < documents.length) {
+    rows.push(
+      <div className="gallery-row" key={`row-${i}`}>
+        <div className="gallery-item-small">
+          {documents[i] && <img src={documents[i].image} alt="document" />}
+        </div>
+        <div className="gallery-item-small">
+          {documents[i + 1] && (
+            <img src={documents[i + 1].image} alt="document" />
+          )}
+        </div>
+      </div>,
+    );
+    i += 2;
+  }
   return (
-    <section>
-      <div>
-        {documents.map((doc, idx) => (
-          <div key={idx}>
-            <img src={doc.image} />
-          </div>
-        ))}
-      </div>
+    <section className="gallery-scroll-container">
+      <div className="gallery-list">{rows}</div>
     </section>
   );
-};
-
-export default DocumentGallery;
+}

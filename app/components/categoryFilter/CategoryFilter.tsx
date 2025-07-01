@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import './categoryFilter.css';
 
 type CategoryType = {
   id: string;
@@ -20,25 +21,20 @@ export default function CategoryFilter({
   onSelectCategory,
 }: CategoryFilterProps) {
   return (
-    <div>
-      <h2>Catégories</h2>
+    <div className="category-filter-row">
       <button
+        className={`category-pill${!selectedCategory ? ' selected' : ''}`}
         onClick={() => onSelectCategory(null)}
-        style={{
-          marginRight: 8,
-          fontWeight: !selectedCategory ? 'bold' : 'normal',
-        }}
+        type="button"
       >
-        Toutes
+        All
       </button>
       {categories.map((category) => (
         <button
           key={category.id}
+          className={`category-pill${selectedCategory === category.slug ? ' selected' : ''}`}
           onClick={() => onSelectCategory(category.slug)}
-          style={{
-            marginRight: 8,
-            fontWeight: selectedCategory === category.slug ? 'bold' : 'normal',
-          }}
+          type="button"
         >
           {category.title}
         </button>

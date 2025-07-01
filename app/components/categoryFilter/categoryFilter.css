@@ -1,0 +1,43 @@
+.category-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  padding: 1.2rem 0 1.6rem 0;
+  background: none;
+}
+
+.category-pill {
+  background: #fff;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 999px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.05rem;
+  color: #222;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: border 0.13s, color 0.13s, background 0.13s;
+  box-shadow: none;
+}
+.category-pill.selected {
+  border: 2px solid #bbb;
+  color: #111;
+  font-weight: 700;
+  background: #f6f3ea;
+}
+.category-pill:hover:not(.selected) {
+  border-color: #bdbdbd;
+  color: #222;
+  background: #f3f3f3;
+}
+
+@media (max-width: 600px) {
+  .category-filter-row {
+    gap: 0.6rem;
+    padding: 1rem 0 1.2rem 0;
+  }
+  .category-pill {
+    font-size: 0.98rem;
+    padding: 0.4rem 1rem;
+  }
+}

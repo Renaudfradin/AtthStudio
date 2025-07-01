@@ -67,25 +67,50 @@ export default function Article() {
     : articles;
 
   return (
-    <div>
-      <h1>Article</h1>
-
+    <div className="articles-page-wrapper">
+      <div className="articles-header-row">
+        <h1 className="articles-title">
+          Terminados.<span className="articles-title-sub"> find my topic</span>
+        </h1>
+      </div>
       <CategoryFilter
         categories={categories}
         selectedCategory={selectedCategory}
         onSelectCategory={setSelectedCategory}
       />
-
-      {filteredArticles.map((article: any) => (
-        <div key={article.id}>
-          <h2>{article.title}</h2>
-          <p>{article.category?.title}</p>
-          <Link href={`/article/${article.slug}`}>Voir l'article</Link>
-          <p>{article.time_read} minutes de lecture</p>
-          <img src={article.image} alt={article.title} />
-          <p>{article.content}</p>
-        </div>
-      ))}
+      <div className="articles-grid">
+        {filteredArticles.map((article: any) => (
+          <div className="article-card" key={article.id}>
+            <div className="article-card-img-wrapper">
+              <img
+                src={article.image}
+                alt={article.title}
+                className="article-card-img"
+              />
+            </div>
+            <div className="article-card-content">
+              <h2 className="article-card-title">
+                <span className="article-card-title-bold">{article.title}</span>
+              </h2>
+              <div className="article-card-excerpt">
+                {article.content?.slice(0, 120)}...
+              </div>
+              <div className="article-card-meta-row">
+                <span className="article-card-meta-read">
+                  {article.time_read} min de lecture
+                </span>
+                <span className="article-card-meta-dot">·</span>
+                <Link
+                  href={`/article/${article.slug}`}
+                  className="article-card-link"
+                >
+                  Lire l’article
+                </Link>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

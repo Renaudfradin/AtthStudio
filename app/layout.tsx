@@ -18,9 +18,16 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
-        <body suppressHydrationWarning={true}>
+        <body
+          suppressHydrationWarning={true}
+          style={{
+            minHeight: '100vh',
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
           <Navbar />
-          {children}
+          <main className="main-layout">{children}</main>
           <SpeedInsights />
           <Footer />
         </body>

@@ -28,16 +28,29 @@ export default async function Archive() {
   }
 
   return (
-    <div>
-      <h1>Archive</h1>
-      {archives.map((archive: any) => (
-        <div key={archive.id}>
-          <h2>{archive.title}</h2>
-          <Link href={`/archive/${archive.slug}`}>Voir l'archive</Link>
-          <p>{archive.content}</p>
-          <Image src={archive.image} alt="dddddd" width={300} height={300} />
-        </div>
-      ))}
+    <div className="archives">
+      <div className="archives-header">
+        <span className="archives-title underline">Archives.</span>
+        <span className="archives-subtitle">inspire.kind.respect</span>
+      </div>
+      <div className="archives-grid">
+        {archives.map((archive: any) => (
+          <div className="archive-card" key={archive.id}>
+            <Link href={`/archive/${archive.slug}`}>
+              <div className="archive-image-wrapper">
+                <Image
+                  src={archive.image}
+                  alt={archive.title}
+                  width={120}
+                  height={120}
+                  className="archive-image"
+                />
+              </div>
+              <div className="archive-title">{archive.title}</div>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -25,16 +25,49 @@ export default async function Projects() {
     projects = [];
   }
 
-  return (
-    <div>
-      <h1>Projects</h1>
+  const gridProjects = projects.slice(0, 12);
+  const colors = [
+    'proj-color-green',
+    'proj-color-beige',
+    'proj-color-blue',
+    'proj-color-olive',
+    'proj-color-brown',
+    'proj-color-yellow',
+    'proj-color-orange',
+    'proj-color-pink',
+    'proj-color-purple',
+    'proj-color-lilac',
+    'proj-color-grey',
+    'proj-color-violet',
+  ];
 
-      {projects.map((project: any) => (
-        <div key={project.id}>
-          <h2>{project.title}</h2>
-          <Link href={`/project/${project.slug}`}>Voir l'project</Link>
+  return (
+    <div className="projects-grid-wrapper">
+      <div className="projects-grid">
+        {gridProjects.map((project, idx) => (
+          <div
+            className={`project-grid-item ${colors[idx % colors.length]}`}
+            key={project.id}
+          >
+            <Link
+              href={`/project/${project.slug}`}
+              className="project-grid-link"
+            >
+              <span className="project-grid-title">{project.title}</span>
+              {/* <span className={`project-grid-btn${idx === 0 ? ' always-visible' : ''}`}>See work</span> */}
+            </Link>
+          </div>
+        ))}
+        <div className="projects-grid-center">
+          <span className="projects-grid-center-title">
+            Select
+            <br />
+            the
+            <br />
+            work
+          </span>
         </div>
-      ))}
+      </div>
     </div>
   );
 }
