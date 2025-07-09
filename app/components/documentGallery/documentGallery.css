@@ -12,10 +12,12 @@
   width: 12px;
   background: transparent;
 }
+
 .gallery-scroll-container::-webkit-scrollbar-thumb {
   background: #111;
   border-radius: 6px;
 }
+
 .gallery-scroll-container::-webkit-scrollbar-track {
   background: transparent;
   border-radius: 10px;
@@ -71,5 +73,22 @@
   }
   .gallery-item-small img {
     height: 80px;
+  }
+}
+
+@media (max-width: 430px) {
+  .gallery-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gallery-item-small img {
+    height: auto;
+  }
+}
+
+@media (min-width: 430px) and (max-width: 900px) {
+  .gallery-item-small img {
+    height: auto;
   }
 }

@@ -17,7 +17,32 @@
 .archives-header {
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  align-items: baseline;
+  gap: 1.2rem;
+  background: #fcf8ee;
+  padding-left: 1.5rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.archives-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #181818;
+  margin-right: 0.7rem;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+
+.archives-subtitle {
+  font-size: 1.35rem;
+  font-style: italic;
+  color: #222;
+  font-weight: 400;
+  margin-left: 0.5rem;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
 }
 
 .archive-detail-container {
@@ -107,5 +132,26 @@
   }
   .archive-title {
     font-size: 0.97rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .archive-detail-container {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .archive-detail-top {
+    width: 100%;
+  }
+
+  .archive-detail-gallery {
+    width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .archives-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

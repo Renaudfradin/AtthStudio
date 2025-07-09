@@ -1,4 +1,6 @@
 import React from 'react';
+import { remark } from 'remark';
+import html from 'remark-html';
 import { callApi } from '@/utils/api';
 import '../archive.css';
 import DocumentGallery from '@/app/components/documentGallery/DocumentGallery';
@@ -60,11 +62,19 @@ export default async function Archive({
     return <div>Archive non trouvée</div>;
   }
 
+  const processedContent = await remark()
+    .use(html)
+    .process(archive.content || '');
+  const contentHtml = processedContent.toString();
+
   return (
     <div className="archive-detail-container">
       <div className="archive-detail-top">
         <h1 className="archive-detail-title">{archive.title}</h1>
-        <p className="archive-detail-content">{archive.content}</p>
+        <div
+          className="archive-detail-content"
+          dangerouslySetInnerHTML={{ __html: contentHtml }}
+        />
       </div>
       <div className="archive-detail-gallery">
         <DocumentGallery documents={archive.documents} />

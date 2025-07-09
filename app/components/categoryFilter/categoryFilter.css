@@ -16,7 +16,10 @@
   font-weight: 500;
   cursor: pointer;
   outline: none;
-  transition: border 0.13s, color 0.13s, background 0.13s;
+  transition:
+    border 0.13s,
+    color 0.13s,
+    background 0.13s;
   box-shadow: none;
 }
 .category-pill.selected {

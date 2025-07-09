@@ -68,29 +68,44 @@ export default async function ArticlePage({
     return <div>Article non trouvée</div>;
   }
 
-  const processedContent = await remark().use(html).process(article.content || '');
+  const processedContent = await remark()
+    .use(html)
+    .process(article.content || '');
   const contentHtml = processedContent.toString();
 
   return (
     <div className="article-detail-page">
       <div className="article-detail-header">
+        {' '}
         <div className="article-detail-header-img-wrapper">
-          <img src={article.image} alt={article.title} className="article-detail-header-img" />
-          <span className="article-detail-category-badge">{article.category_id}</span>
+          <img
+            src={article.image}
+            alt={article.title}
+            className="article-detail-header-img"
+          />
         </div>
-        <div className="article-detail-header-meta">
-          <span className="article-detail-time-read">{article.time_read}mn de lecture</span>
+        <div className="article-detail-header-meta-row">
+          <span className="article-detail-category-badge">
+            {article.category_id}
+          </span>
+          <span className="article-detail-time-read">
+            {article.time_read}mn de lecture
+          </span>
         </div>
         <div className="article-detail-header-content">
-          <h1 className="article-detail-title"><span>{article.title}</span></h1>
+          <h1 className="article-detail-title">
+            <span>{article.title}</span>
+          </h1>
           <div className="article-detail-author">Par Annie, UX Designer</div>
         </div>
       </div>
       <div className="article-detail-body">
-        <div className="article-detail-content" dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        <div
+          className="article-detail-content"
+          dangerouslySetInnerHTML={{ __html: contentHtml }}
+        />
       </div>
       <div className="article-detail-suggest">
-        <h2 className="article-detail-suggest-title">Mes autres articles.<span className="article-detail-suggest-sub"> find my topic</span></h2>
         <SuggestArticle article={article} />
       </div>
     </div>

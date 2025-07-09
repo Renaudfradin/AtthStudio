@@ -47,18 +47,40 @@ export default async function SuggestArticle({
 
   return (
     <div className="suggest-articles">
-      <h3>Articles suggérés :</h3>
-      <ul>
-        {suggestions.map((article: any) => (
-          <div key={article.id}>
-            <h2>{article.title}</h2>
-            <Link href={`/article/${article.slug}`}>Voir l'article</Link>
-            <p>{article.time_read} minutes de lecture</p>
-            <img src={article.image} alt={article.title} />
-            <p>{article.content}</p>
+      <div className="suggest-articles-header">
+        <span className="suggest-articles-title">Mes autres articles.</span>
+        <span className="suggest-articles-sub">find my topic</span>
+      </div>
+      <div className="suggest-articles-list">
+        {suggestions.map((a: any) => (
+          <div className="suggest-article-card" key={a.id}>
+            <div className="suggest-article-img-wrapper">
+              <img
+                src={a.image}
+                alt={a.title}
+                className="suggest-article-img"
+              />
+            </div>
+            <div className="suggest-article-content">
+              <div className="suggest-article-title">{a.title}</div>
+              <div className="suggest-article-excerpt">
+                {a.content?.slice(0, 120)}...
+              </div>
+              <div className="suggest-article-meta">
+                <span className="suggest-article-read">
+                  {a.time_read}m de lecture
+                </span>
+                <Link
+                  className="suggest-article-link"
+                  href={`/article/${a.slug}`}
+                >
+                  Lire l’article ↗
+                </Link>
+              </div>
+            </div>
           </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
