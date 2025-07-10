@@ -31,6 +31,7 @@ export async function generateMetadata({
       project = response;
     }
   } catch (e) {
+    console.error(e);
     project = null;
   }
 
@@ -55,6 +56,7 @@ export default async function Project({
       project = response;
     }
   } catch (e) {
+    console.error(e);
     project = null;
   }
 

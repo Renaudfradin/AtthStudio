@@ -40,6 +40,7 @@ export default function Article() {
           setArticles(response.data);
         }
       } catch (e) {
+        console.error(e);
         setArticles([]);
       }
     }
@@ -53,6 +54,7 @@ export default function Article() {
           setCategories(response.data);
         }
       } catch (e) {
+        console.error(e);
         setCategories([]);
       }
     }

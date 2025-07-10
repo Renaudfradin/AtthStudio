@@ -31,6 +31,7 @@ export async function generateMetadata({
       archive = response;
     }
   } catch (e) {
+    console.error(e);
     archive = null;
   }
 
@@ -55,6 +56,7 @@ export default async function Archive({
       archive = response;
     }
   } catch (e) {
+    console.error(e);
     archive = null;
   }
 

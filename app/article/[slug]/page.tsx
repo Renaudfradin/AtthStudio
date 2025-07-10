@@ -33,6 +33,7 @@ export async function generateMetadata({
       article = response;
     }
   } catch (e) {
+    console.error(e);
     article = null;
   }
 
@@ -61,6 +62,7 @@ export default async function ArticlePage({
       article = response;
     }
   } catch (e) {
+    console.error(e);
     article = null;
   }
 

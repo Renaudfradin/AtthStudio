@@ -24,6 +24,7 @@ export default async function Archive() {
       archives = response.data;
     }
   } catch (e) {
+    console.error(e);
     archives = [];
   }
 

@@ -22,6 +22,7 @@ export default async function Projects() {
       projects = response.data;
     }
   } catch (e) {
+    console.error(e);
     projects = [];
   }
 
