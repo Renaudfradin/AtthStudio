@@ -1,9 +1,6 @@
 .articles-page-wrapper {
   min-height: 100vh;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: 2% 5%;
 }
 
 .articles-header-row {
@@ -15,7 +12,7 @@
 .articles-title {
   font-size: 2.2rem;
   font-weight: 800;
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: Inter, Arial, sans-serif;
   letter-spacing: -0.01em;
   color: #111;
   margin-right: 1.2rem;
@@ -32,7 +29,7 @@
 .articles-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.2rem 2.2rem;
+  gap: 2.2rem;
   margin-top: 2.2rem;
 }
 
@@ -125,21 +122,23 @@
   color: #2275c7;
 }
 
-@media (max-width: 1200px) {
+@media (width <= 1200px) {
   .articles-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 800px) {
+@media (width <= 800px) {
   .articles-grid {
     grid-template-columns: 1fr;
   }
+
   .article-card-img-wrapper {
     flex-basis: 90px;
   }
+
   .article-card-content {
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 1rem;
   }
 }
 
@@ -147,7 +146,7 @@
 .article-detail-page {
   background: #f7f2e7;
   min-height: 100vh;
-  padding: 0 0 2.5rem 0;
+  padding: 0 0 2.5rem;
 }
 
 .article-detail-header {
@@ -160,10 +159,7 @@
   height: 240px;
   overflow: hidden;
   border-radius: 18px;
-  margin-bottom: 1.2rem;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  margin-top: 2vw;
+  margin: 2vw 5vw 1.2rem;
 }
 
 .article-detail-header-img {
@@ -271,6 +267,7 @@
 .article-detail-content em {
   font-style: italic;
 }
+
 .article-detail-content a {
   color: #2275c7;
   text-decoration: underline;
@@ -281,13 +278,15 @@
   margin-right: 5vw;
   margin-top: 2.5rem;
 }
+
 .article-detail-suggest-title {
   font-size: 1.2rem;
   font-weight: 800;
   color: #181818;
   margin-bottom: 1.2rem;
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: Inter, Arial, sans-serif;
 }
+
 .article-detail-suggest-sub {
   font-size: 1rem;
   font-style: italic;
@@ -296,16 +295,17 @@
   margin-left: 0.5rem;
 }
 
-@media (max-width: 800px) {
+@media (width <= 800px) {
   .article-detail-header-img-wrapper {
     height: 130px;
   }
+
   .article-detail-content {
-    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+    padding: 1.2rem 0.7rem;
   }
 }
 
-@media (max-width: 430px) {
+@media (width <= 430px) {
   .article-detail-body {
     margin-left: 2vw;
     margin-right: 2vw;

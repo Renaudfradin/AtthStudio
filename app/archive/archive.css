@@ -1,8 +1,5 @@
 .archives {
-  margin-right: 5%;
-  margin-left: 5%;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin: 2% 5%;
 }
 
 .archives-grid {
@@ -49,10 +46,7 @@
   display: flex;
   flex-direction: row;
   gap: 3rem;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: 2% 5%;
 }
 
 .archive-detail-top {
@@ -66,17 +60,19 @@
   width: 70%;
 }
 
-@media (max-width: 1200px) {
+@media (width <= 1200px) {
   .archives-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-@media (max-width: 800px) {
+
+@media (width <= 800px) {
   .archives-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 500px) {
+
+@media (width <= 500px) {
   .archives-grid {
     grid-template-columns: 1fr;
   }
@@ -86,7 +82,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.2rem 0.7rem 0.7rem 0.7rem;
+  padding: 1.2rem 0.7rem 0.7rem;
   cursor: pointer;
   text-align: center;
   box-shadow: none;
@@ -122,20 +118,22 @@
   word-break: break-word;
 }
 
-@media (max-width: 600px) {
+@media (width <= 600px) {
   .archives-grid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 1.2rem 0.7rem;
   }
+
   .archive-card {
-    padding: 0.7rem 0.3rem 0.5rem 0.3rem;
+    padding: 0.7rem 0.3rem 0.5rem;
   }
+
   .archive-title {
     font-size: 0.97rem;
   }
 }
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .archive-detail-container {
     flex-direction: column;
     gap: 1.2rem;
@@ -150,7 +148,7 @@
   }
 }
 
-@media (max-width: 430px) {
+@media (width <= 430px) {
   .archives-grid {
     grid-template-columns: repeat(2, 1fr);
   }

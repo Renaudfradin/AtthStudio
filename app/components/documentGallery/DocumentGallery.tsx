@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import './documentGallery.css';
 
 export type DocumentType = {
@@ -18,11 +19,19 @@ export default async function DocumentGallery({
     rows.push(
       <div className="gallery-row" key={`row-${i}`}>
         <div className="gallery-item-small">
-          {documents[i] && <img src={documents[i].image} alt="document" />}
+          {documents[i] && (
+            <img
+              src={documents[i].image}
+              alt="document"
+            />
+          )}
         </div>
         <div className="gallery-item-small">
           {documents[i + 1] && (
-            <img src={documents[i + 1].image} alt="document" />
+            <img
+              src={documents[i + 1].image}
+              alt="document"
+            />
           )}
         </div>
       </div>,

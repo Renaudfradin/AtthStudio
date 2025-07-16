@@ -1,5 +1,5 @@
 .suggest-articles {
-  margin: 2.5rem 0 0 0;
+  margin: 2.5rem 0 0;
   padding: 0;
   background: transparent;
 }
@@ -14,7 +14,7 @@
 .suggest-articles-title {
   font-size: 2rem;
   font-weight: 800;
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: Inter, Arial, sans-serif;
   color: #181818;
 }
 
@@ -25,11 +25,10 @@
 }
 
 .suggest-articles-list {
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
   gap: 2.2rem;
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
   align-items: center;
 }
 
@@ -111,11 +110,12 @@
   transition: color 0.15s;
 }
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .suggest-articles-list {
     flex-direction: column;
     gap: 1.2rem;
   }
+
   .suggest-article-card {
     min-width: 0;
     max-width: 100vw;

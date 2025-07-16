@@ -50,12 +50,15 @@ export default async function Projects() {
             className={`project-grid-item ${colors[idx % colors.length]}`}
             key={project.id}
           >
+            <span className="project-grid-title">{project.title}</span>
+
             <Link
               href={`/project/${project.slug}`}
               className="project-grid-link"
             >
-              <span className="project-grid-title">{project.title}</span>
-              {/* <span className={`project-grid-btn${idx === 0 ? ' always-visible' : ''}`}>See work</span> */}
+              <span className="project-grid-btn project-grid-btn-mobile">
+                See work
+              </span>
             </Link>
           </div>
         ))}

@@ -12,7 +12,7 @@ type ProjectDetailType = {
   slug: string;
   content: string;
   image: string;
-  documents: any;
+  documents: DocumentType[];
 };
 
 export async function generateMetadata({

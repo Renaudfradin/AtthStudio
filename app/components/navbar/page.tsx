@@ -1,18 +1,25 @@
 'use client';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './navbar.css';
 import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const pathname = usePathname();
-  const [menuOpen, setMenuOpen] = React.useState(false);
-  const menuRef = React.useRef<HTMLDivElement>(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const hamburgerRef = useRef<HTMLButtonElement>(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!menuOpen) return;
     function handleClickOutside(event: MouseEvent) {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      const target = event.target as Node;
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(target) &&
+        hamburgerRef.current &&
+        !hamburgerRef.current.contains(target)
+      ) {
         setMenuOpen(false);
       }
     }
@@ -34,11 +41,14 @@ export default function Navbar() {
       </div>
 
       <button
-        className="navbar__hamburger"
+        ref={hamburgerRef}
+        className={`navbar__hamburger${menuOpen ? ' open' : ''}`}
         aria-label="Ouvrir le menu"
         onClick={() => setMenuOpen((open) => !open)}
       >
-        <span style={{ fontWeight: 800 }}>&#9776;</span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
       </button>
 
       {menuOpen && (
