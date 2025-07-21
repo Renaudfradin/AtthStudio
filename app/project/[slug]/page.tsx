@@ -2,10 +2,10 @@ import React from 'react';
 import { callApi } from '@/utils/api';
 import DocumentGallery from '@/app/components/documentGallery/DocumentGallery';
 import type { DocumentType } from '@/app/components/documentGallery/DocumentGallery';
-import './project.css';
 import { Metadata } from 'next';
 import { remark } from 'remark';
 import html from 'remark-html';
+import './project.css';
 
 type ProjectDetailType = {
   id: string;
@@ -21,7 +21,6 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  // Attendre la résolution des params
   const { slug } = await params;
   let project: ProjectDetailType | null = null;
 
@@ -49,7 +48,6 @@ export default async function Project({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  // Attendre la résolution des params
   const { slug } = await params;
   let project: ProjectDetailType | null = null;
   try {

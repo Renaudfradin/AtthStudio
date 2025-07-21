@@ -1,5 +1,5 @@
 .gallery-scroll-container {
-  height: 500px;
+  height: 700px;
   overflow: hidden scroll;
   background: none;
   box-sizing: border-box;
@@ -8,7 +8,7 @@
 }
 
 .gallery-scroll-container::-webkit-scrollbar {
-  width: 12px;
+  width: 15px;
   background: transparent;
 }
 

@@ -2,7 +2,12 @@
 import Link from 'next/link';
 import React, { useEffect, useState, useRef } from 'react';
 import { usePathname } from 'next/navigation';
+import localFont from 'next/font/local';
 import './navbar.css';
+
+const criteriacf_bold = localFont({
+  src: '../../assets/font/criteriacf-bold.otf',
+});
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -29,27 +34,52 @@ export default function Navbar() {
     };
   }, [menuOpen]);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [menuOpen]);
+
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar__left">
         <div className="navbar__logo">
           <Link href="/" className="logo-link">
-            <span className="logo-line1">Atth -</span>
-            <span className="logo-line2">Studio</span>
+            <span className={`${criteriacf_bold.className} logo-line1`}>
+              Atth -
+            </span>
+            <span className={`${criteriacf_bold.className} logo-line2`}>
+              Studio
+            </span>
           </Link>
         </div>
-      </div>
+        {/* <div className="navbar__subtitle">
+          I’m product designer specializing of UX design
+          <br />
+          based in France
+        </div> */}
 
-      <button
-        ref={hamburgerRef}
-        className={`navbar__hamburger${menuOpen ? ' open' : ''}`}
-        aria-label="Ouvrir le menu"
-        onClick={() => setMenuOpen((open) => !open)}
-      >
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
-      </button>
+        <button
+          ref={hamburgerRef}
+          className={`navbar__hamburger${menuOpen ? ' open' : ''}`}
+          aria-label="Ouvrir le menu"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </button>
+      </div>
 
       {menuOpen && (
         <div className="navbar__mobile-menu" ref={menuRef}>
@@ -63,6 +93,7 @@ export default function Navbar() {
               href="https://instagram.com"
               className="navbar__link"
               rel="noopener noreferrer"
+              onClick={handleLinkClick}
             >
               Instagram <span className="navbar__arrow">↗</span>
             </Link>
@@ -70,26 +101,27 @@ export default function Navbar() {
               href="https://linkedin.com"
               className="navbar__link"
               rel="noopener noreferrer"
+              onClick={handleLinkClick}
             >
               Linkdin <span className="navbar__arrow">↗</span>
             </Link>
           </div>
           <div className="navbar__links-group">
             {pathname === '/article' || pathname.startsWith('/article/') ? (
-              <Link href="/" className="navbar__link">
+              <Link href="/" className="navbar__link" onClick={handleLinkClick}>
                 Go back to the home <span className="navbar__arrow">↗</span>
               </Link>
             ) : (
-              <Link href="/article" className="navbar__link">
+              <Link href="/article" className="navbar__link" onClick={handleLinkClick}>
                 Check my blog <span className="navbar__arrow">↗</span>
               </Link>
             )}
             {pathname === '/archive' || pathname.startsWith('/archive/') ? (
-              <Link href="/" className="navbar__link">
+              <Link href="/" className="navbar__link" onClick={handleLinkClick}>
                 Go back to the home <span className="navbar__arrow">↗</span>
               </Link>
             ) : (
-              <Link href="/archive" className="navbar__link">
+              <Link href="/archive" className="navbar__link" onClick={handleLinkClick}>
                 Check my random life <span className="navbar__arrow">↗</span>
               </Link>
             )}

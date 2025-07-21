@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { callApi } from '@/utils/api';
+import localFont from 'next/font/local';
 import './projects.css';
 
 type ProjectType = {
@@ -9,6 +10,10 @@ type ProjectType = {
   slug: string;
   content: string;
 };
+
+const HV_Weist_Havanah_Trial = localFont({
+  src: '../../assets/font/HV-Weist-Havanah-Trial.otf',
+});
 
 type ProjectsApiResponse = ProjectType[] | { data: ProjectType[] };
 
@@ -63,7 +68,9 @@ export default async function Projects() {
           </div>
         ))}
         <div className="projects-grid-center">
-          <span className="projects-grid-center-title">
+          <span
+            className={`${HV_Weist_Havanah_Trial.className} projects-grid-center-title`}
+          >
             Select
             <br />
             the

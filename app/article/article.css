@@ -122,6 +122,12 @@
   color: #2275c7;
 }
 
+.article-detail-time-read {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+}
+
 @media (width <= 1200px) {
   .articles-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -152,7 +158,6 @@
 .article-detail-header {
   position: relative;
   width: 100%;
-  margin-bottom: 2.4rem;
 }
 
 .article-detail-header-img-wrapper {
@@ -171,7 +176,7 @@
 
 .article-detail-category-badge {
   background: #fff;
-  color: #222;
+  color: #000;
   font-size: 0.97rem;
   font-weight: 600;
   border-radius: 12px;
@@ -206,10 +211,10 @@
 }
 
 .article-detail-title {
-  font-size: 2rem;
-  font-weight: 800;
+  font-size: 35px;
+  font-weight: 600;
   font-style: italic;
-  color: #181818;
+  color: #000;
   margin-bottom: 0.35rem;
   line-height: 1.15;
 }
@@ -222,10 +227,11 @@
 }
 
 .article-detail-author {
-  font-size: 1rem;
-  color: #666;
+  font-size: 18px;
+  font-weight: 300;
   font-style: italic;
-  margin-bottom: 0.7rem;
+  color: #000;
+  font-style: italic;
 }
 
 .article-detail-body {
@@ -234,8 +240,10 @@
 }
 
 .article-detail-content {
-  font-size: 1.08rem;
-  color: #222;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
+  color: #000;
   line-height: 1.7;
 }
 

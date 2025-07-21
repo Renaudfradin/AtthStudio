@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](;https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <img alt="logo ATTH Studio" src="./app/assets/img/logo.svg" width="100" />
+</div>
+<h1 align="center">
+  ATTH Studio
+</h1>
+<p>Design : <a href="https://www.behance.net/annietran8">Annie Tran</a></p>
+<p>Development : <a href="https://github.com/Renaudfradin">Renaud Fradin</a></p>
 
-## Getting Started
+![folio](app/assets/img/portfolio.png)
 
-First, run the development server:
+## 🛠 Installation & Set Up
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+1. Install dependencies
+
+```sh
+npm install
 ```
 
-Open [http://localhost:3000](;http://localhost:3000) with your browser to see the result.
+or
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [geist](https://vercel.com/font), a new font family for Vercel.
+2. Start the development server
 
-## Learn More
+```sh
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+or
 
-- [Next.js documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```sh
+yarn dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Format code
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```sh
+npm run format
+```

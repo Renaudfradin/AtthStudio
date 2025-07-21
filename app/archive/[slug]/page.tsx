@@ -21,7 +21,6 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  // Attendre la résolution des params
   const { slug } = await params;
   let archive: ArchiveDetailType | null = null;
 
@@ -49,9 +48,8 @@ export default async function Archive({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  // Attendre la résolution des params
   const { slug } = await params;
-  
+
   let archive: ArchiveDetailType | null = null;
   try {
     const response: ArchiveDetailType | { data: ArchiveDetailType } =

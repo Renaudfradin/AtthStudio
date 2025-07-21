@@ -51,9 +51,20 @@
   font-size: 1.05rem;
   font-weight: 500;
   margin-bottom: 0.2rem;
-  color: #222;
+  color: #000;
   letter-spacing: 0.01em;
   word-break: break-word;
+}
+
+.project-detail-content {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.project-detail-title {
+  font-size: 35px;
+  font-weight: 700;
+  font-style: Bold;
 }
 
 @media (width <= 600px) {
