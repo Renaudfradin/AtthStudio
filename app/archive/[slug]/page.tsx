@@ -19,13 +19,15 @@ type ArchiveDetailType = {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
+  // Attendre la résolution des params
+  const { slug } = await params;
   let archive: ArchiveDetailType | null = null;
 
   try {
     const response: ArchiveDetailType | { data: ArchiveDetailType } =
-      await callApi(`/api/archive/${params.slug}`);
+      await callApi(`/api/archive/${slug}`);
     if ('data' in response) {
       archive = response.data;
     } else {
@@ -37,7 +39,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: archive?.title || params.slug,
+    title: archive?.title || slug,
     description: 'Archive ATTHSTUDIO',
   };
 }
@@ -45,12 +47,15 @@ export async function generateMetadata({
 export default async function Archive({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
+  // Attendre la résolution des params
+  const { slug } = await params;
+  
   let archive: ArchiveDetailType | null = null;
   try {
     const response: ArchiveDetailType | { data: ArchiveDetailType } =
-      await callApi(`/api/archive/${params.slug}`);
+      await callApi(`/api/archive/${slug}`);
     if ('data' in response) {
       archive = response.data;
     } else {

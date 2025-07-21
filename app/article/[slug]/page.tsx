@@ -1,7 +1,7 @@
 import React from 'react';
 import { callApi } from '@/utils/api';
 import { Metadata } from 'next';
-import SuggestArticle from '@/app/components/suggestArticle/page';
+import SuggestArticle from '@/app/components/suggestArticle/suggestArticle';
 import { remark } from 'remark';
 import html from 'remark-html';
 import Image from 'next/image';
@@ -21,13 +21,15 @@ type ArticleDetailType = {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
+  // Attendre la résolution des params
+  const { slug } = await params;
   let article: ArticleDetailType | null = null;
 
   try {
     const response: ArticleDetailType | { data: ArticleDetailType } =
-      await callApi(`/api/article/${params.slug}`);
+      await callApi(`/api/article/${slug}`);
     if ('data' in response) {
       article = response.data;
     } else {
@@ -39,7 +41,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: article?.title || params.slug,
+    title: article?.title || slug,
     description: 'Article ATTHSTUDIO',
   };
 }
@@ -48,13 +50,15 @@ export async function generateMetadata({
 export default async function ArticlePage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
+  // Attendre la résolution des params
+  const { slug } = await params;
   let article: ArticleDetailType | null = null;
 
   try {
     const response: ArticleDetailType | { data: ArticleDetailType } =
-      await callApi(`/api/article/${params.slug}`);
+      await callApi(`/api/article/${slug}`);
     if ('data' in response) {
       article = response.data;
     } else {

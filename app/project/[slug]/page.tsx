@@ -1,6 +1,7 @@
 import React from 'react';
 import { callApi } from '@/utils/api';
 import DocumentGallery from '@/app/components/documentGallery/DocumentGallery';
+import type { DocumentType } from '@/app/components/documentGallery/DocumentGallery';
 import './project.css';
 import { Metadata } from 'next';
 import { remark } from 'remark';
@@ -18,13 +19,15 @@ type ProjectDetailType = {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
+  // Attendre la résolution des params
+  const { slug } = await params;
   let project: ProjectDetailType | null = null;
 
   try {
     const response: ProjectDetailType | { data: ProjectDetailType } =
-      await callApi(`/api/project/${params.slug}`);
+      await callApi(`/api/project/${slug}`);
     if ('data' in response) {
       project = response.data;
     } else {
@@ -36,7 +39,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: project?.title || params.slug,
+    title: project?.title || slug,
     description: 'Project ATTHSTUDIO',
   };
 }
@@ -44,12 +47,14 @@ export async function generateMetadata({
 export default async function Project({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
+  // Attendre la résolution des params
+  const { slug } = await params;
   let project: ProjectDetailType | null = null;
   try {
     const response: ProjectDetailType | { data: ProjectDetailType } =
-      await callApi(`/api/project/${params.slug}`);
+      await callApi(`/api/project/${slug}`);
     if ('data' in response) {
       project = response.data;
     } else {
