@@ -1,9 +1,11 @@
 import React from 'react';
 import { callApi } from '@/utils/api';
-import '../article.css';
 import { Metadata } from 'next';
-import Article from '@/app/components/article/page';
 import SuggestArticle from '@/app/components/suggestArticle/page';
+import { remark } from 'remark';
+import html from 'remark-html';
+import Image from 'next/image';
+import '../article.css';
 
 type ArticleDetailType = {
   id: string;
@@ -14,7 +16,6 @@ type ArticleDetailType = {
   time_read: number;
   category_id: string;
   active: boolean;
-  document: any;
 };
 
 export async function generateMetadata({
@@ -43,8 +44,6 @@ export async function generateMetadata({
   };
 }
 
-import { remark } from 'remark';
-import html from 'remark-html';
 
 export default async function ArticlePage({
   params,
@@ -80,10 +79,12 @@ export default async function ArticlePage({
       <div className="article-detail-header">
         {' '}
         <div className="article-detail-header-img-wrapper">
-          <img
+          <Image
             src={article.image}
             alt={article.title}
             className="article-detail-header-img"
+            width={500}
+            height={500}
           />
         </div>
         <div className="article-detail-header-meta-row">

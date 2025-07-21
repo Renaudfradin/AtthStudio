@@ -20,17 +20,21 @@ export default async function DocumentGallery({
       <div className="gallery-row" key={`row-${i}`}>
         <div className="gallery-item-small">
           {documents[i] && (
-            <img
+            <Image
               src={documents[i].image}
               alt="document"
+              width={500}
+              height={500}
             />
           )}
         </div>
         <div className="gallery-item-small">
           {documents[i + 1] && (
-            <img
+            <Image
               src={documents[i + 1].image}
               alt="document"
+              width={500}
+              height={500}
             />
           )}
         </div>

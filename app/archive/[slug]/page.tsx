@@ -2,9 +2,10 @@ import React from 'react';
 import { remark } from 'remark';
 import html from 'remark-html';
 import { callApi } from '@/utils/api';
-import '../archive.css';
 import DocumentGallery from '@/app/components/documentGallery/DocumentGallery';
 import { Metadata } from 'next';
+import type { DocumentType } from '@/app/components/documentGallery/DocumentGallery';
+import '../archive.css';
 
 type ArchiveDetailType = {
   id: string;
@@ -12,7 +13,7 @@ type ArchiveDetailType = {
   slug: string;
   content: string;
   image: string;
-  documents: any;
+  documents: DocumentType[];
 };
 
 export async function generateMetadata({

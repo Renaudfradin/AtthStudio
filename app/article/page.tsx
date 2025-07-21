@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { callApi } from '@/utils/api';
 import CategoryFilter from '@/app/components/categoryFilter/CategoryFilter';
 import './article.css';
+import Image from 'next/image';
 
 type ArticleType = {
   id: string;
@@ -64,7 +65,7 @@ export default function Article() {
 
   const filteredArticles = selectedCategory
     ? articles.filter(
-        (article: any) => article.category?.slug === selectedCategory,
+        (article: ArticleType) => article.category?.slug === selectedCategory,
       )
     : articles;
 
@@ -81,13 +82,15 @@ export default function Article() {
         onSelectCategory={setSelectedCategory}
       />
       <div className="articles-grid">
-        {filteredArticles.map((article: any) => (
+        {filteredArticles.map((article: ArticleType) => (
           <div className="article-card" key={article.id}>
             <div className="article-card-img-wrapper">
-              <img
+              <Image
                 src={article.image}
                 alt={article.title}
                 className="article-card-img"
+                width={500}
+                height={500}
               />
             </div>
             <div className="article-card-content">

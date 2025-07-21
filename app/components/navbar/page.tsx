@@ -1,8 +1,8 @@
 'use client';
 import Link from 'next/link';
 import React, { useEffect, useState, useRef } from 'react';
-import './navbar.css';
 import { usePathname } from 'next/navigation';
+import './navbar.css';
 
 export default function Navbar() {
   const pathname = usePathname();

@@ -1,4 +1,7 @@
 import React from 'react';
+import { callApi } from '@/utils/api';
+import Link from 'next/link';
+import Image from 'next/image';
 import './suggestArticle.css';
 
 type ArticleDetailType = {
@@ -10,11 +13,7 @@ type ArticleDetailType = {
   time_read: number;
   category_id: string;
   active: boolean;
-  document: any;
 };
-
-import { callApi } from '@/utils/api';
-import Link from 'next/link';
 
 async function getSuggestedArticles(categoryId: string, excludeId: string) {
   const response = await callApi(
@@ -52,13 +51,15 @@ export default async function SuggestArticle({
         <span className="suggest-articles-sub">find my topic</span>
       </div>
       <div className="suggest-articles-list">
-        {suggestions.map((a: any) => (
+        {suggestions.map((a: ArticleDetailType) => (
           <div className="suggest-article-card" key={a.id}>
             <div className="suggest-article-img-wrapper">
-              <img
-                src={a.image}
+              <Image
                 alt={a.title}
                 className="suggest-article-img"
+                src={a.image}
+                width={500}
+                height={500}
               />
             </div>
             <div className="suggest-article-content">

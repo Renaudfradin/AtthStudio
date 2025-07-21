@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
 import { callApi } from '@/utils/api';
-import './archive.css';
 import Image from 'next/image';
+import './archive.css';
 
 type ArchiveType = {
   id: string;
@@ -35,7 +35,7 @@ export default async function Archive() {
         <span className="archives-subtitle">inspire.kind.respect</span>
       </div>
       <div className="archives-grid">
-        {archives.map((archive: any) => (
+        {archives.map((archive: ArchiveType) => (
           <div className="archive-card" key={archive.id}>
             <Link href={`/archive/${archive.slug}`}>
               <div className="archive-image-wrapper">
