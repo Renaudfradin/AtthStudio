@@ -1,7 +1,9 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: ['api-atthstudio.s3.fr-par.scw.cloud'],
+  },
 };
 
 export default nextConfig;

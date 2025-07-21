@@ -1,0 +1,157 @@
+.footer {
+  background: #f5efe3;
+  padding: 32px 24px 18px;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1300px;
+}
+
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__col--left {
+  min-width: 160px;
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.footer__col--right {
+  min-width: 180px;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.footer__title {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__list li {
+  margin-bottom: 6px;
+}
+
+.footer__link {
+  color: #222;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  transition: color 0.15s;
+}
+
+.footer__link:hover {
+  color: #7c3aed;
+  text-decoration: underline;
+}
+
+.footer__col--right .footer__link {
+  display: block;
+  margin-bottom: 8px;
+  color: #222;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.footer__col--right .footer__link:hover {
+  color: #7c3aed;
+  text-decoration: underline;
+}
+
+.footer__annie {
+  font-size: 0.93rem;
+  color: #222;
+  margin-top: 32px;
+  opacity: 0.85;
+}
+
+.footer__bg-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+  font-size: 8vw;
+  font-weight: 700;
+  color: #f3ede4;
+  opacity: 0.9;
+  letter-spacing: -2px;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+  white-space: nowrap;
+  padding-left: 24px;
+}
+
+@media (width <= 700px) {
+  .footer__bg-text {
+    font-size: 15vw;
+    padding-left: 8px;
+  }
+}
+
+.footer {
+  position: relative;
+  overflow: hidden;
+}
+
+@media (width <= 700px) {
+  .footer__bg-text {
+    font-size: 15vw;
+    bottom: 0;
+  }
+}
+
+.footer__call-btn {
+  background: #2d2256;
+  color: #fff;
+  border-radius: 18px;
+  padding: 6px 18px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin-top: 8px;
+  text-decoration: none;
+  box-shadow: 0 1px 5px rgb(60 40 100 / 7%);
+  transition:
+    background 0.18s,
+    color 0.18s;
+  display: inline-block;
+}
+
+.footer__call-btn:hover {
+  background: #45357c;
+  color: #fff;
+}
+
+@media (width <= 700px) {
+  .footer__content {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer__col--left,
+  .footer__col--right {
+    min-width: 0;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .footer__annie {
+    margin-top: 18px;
+  }
+}
