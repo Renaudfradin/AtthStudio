@@ -27,11 +27,15 @@
 }
 
 .navbar__logo {
-  font-weight: 800;
+  font-weight: 700;
   font-size: 1.7rem;
   line-height: 1.05;
   margin-bottom: 6px;
   letter-spacing: -1px;
+  font-style: Bold;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0px;
 }
 
 .logo-line1 {
@@ -59,8 +63,11 @@
 
 .navbar__subtitle {
   font-size: 1rem;
-  color: #222;
+  color: #000;
   margin-bottom: 0;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0px;
 }
 
 .navbar__links-group {
@@ -71,7 +78,7 @@
 }
 
 .navbar__link {
-  color: #222;
+  color: #000;
   text-decoration: none;
   font-size: 1.02rem;
   display: flex;
@@ -79,6 +86,10 @@
   transition: color 0.15s;
   font-weight: 400;
   letter-spacing: -0.2px;
+  font-style: Regular;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0px;
 }
 
 .navbar__link:hover {

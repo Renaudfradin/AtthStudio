@@ -1,8 +1,8 @@
 .projects-grid-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 90vh;
+  margin-top: 30px;
+  margin-bottom: 10px;
   background: #f7f2e7;
 }
 
@@ -130,22 +130,23 @@
 }
 
 .projects-grid-center {
-  grid-column: 2 / span 2;
-  grid-row: 2 / span 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: none;
   z-index: 1;
   pointer-events: none;
+  background: none;
+  grid-area: 2 / 2 / span 2 / span 2;
+  justify-content: flex-start;
+  align-items: flex-end;
+  display: flex;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 .projects-grid-center-title {
-  font-family: Georgia, serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #222;
-  text-align: center;
+  font-size: 70px;
+  font-weight: 400;
+  color: #000;
+  text-align: start;
   line-height: 1.05;
   letter-spacing: -0.01em;
 }

@@ -2,7 +2,12 @@
 import Link from 'next/link';
 import React, { useEffect, useState, useRef } from 'react';
 import { usePathname } from 'next/navigation';
+import localFont from 'next/font/local';
 import './navbar.css';
+
+const criteriacf_bold = localFont({
+  src: '../../assets/font/criteriacf-bold.otf',
+});
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -34,9 +39,18 @@ export default function Navbar() {
       <div className="navbar__left">
         <div className="navbar__logo">
           <Link href="/" className="logo-link">
-            <span className="logo-line1">Atth -</span>
-            <span className="logo-line2">Studio</span>
+            <span className={`${criteriacf_bold.className} logo-line1`}>
+              Atth -
+            </span>
+            <span className={`${criteriacf_bold.className} logo-line2`}>
+              Studio
+            </span>
           </Link>
+        </div>
+        <div className="navbar__subtitle">
+          I’m product designer specializing of UX design
+          <br />
+          based in France
         </div>
       </div>
 

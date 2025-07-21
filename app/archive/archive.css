@@ -35,7 +35,7 @@
 .archives-subtitle {
   font-size: 1.35rem;
   font-style: italic;
-  color: #222;
+  color: #000;
   font-weight: 400;
   margin-left: 0.5rem;
   letter-spacing: 0.01em;
@@ -58,6 +58,17 @@
 
 .archive-detail-gallery {
   width: 70%;
+}
+
+.archive-detail-title {
+  font-size: 35px;
+  font-weight: 700;
+  font-style: Bold;
+}
+
+.archive-detail-content {
+  font-size: 16px;
+  font-weight: 500;
 }
 
 @media (width <= 1200px) {
@@ -113,7 +124,7 @@
   font-size: 1.05rem;
   font-weight: 500;
   margin-bottom: 0.2rem;
-  color: #222;
+  color: #000;
   letter-spacing: 0.01em;
   word-break: break-word;
 }

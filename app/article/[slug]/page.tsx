@@ -23,7 +23,6 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  // Attendre la résolution des params
   const { slug } = await params;
   let article: ArticleDetailType | null = null;
 
@@ -46,13 +45,11 @@ export async function generateMetadata({
   };
 }
 
-
 export default async function ArticlePage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  // Attendre la résolution des params
   const { slug } = await params;
   let article: ArticleDetailType | null = null;
 
@@ -96,7 +93,7 @@ export default async function ArticlePage({
             {article.category_id}
           </span>
           <span className="article-detail-time-read">
-            {article.time_read}mn de lecture
+            {article.time_read}m de lecture
           </span>
         </div>
         <div className="article-detail-header-content">

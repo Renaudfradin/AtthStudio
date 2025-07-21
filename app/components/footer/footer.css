@@ -29,9 +29,13 @@
 }
 
 .footer__title {
-  font-weight: 600;
+  color: #000;
+  font-weight: 400;
   margin-bottom: 6px;
-  font-size: 1rem;
+  font-size: 18px;
+  font-style: Regular;
+  line-height: 100%;
+  letter-spacing: 0px;
 }
 
 .footer__list {
@@ -45,12 +49,15 @@
 }
 
 .footer__link {
-  color: #222;
+  color: #000;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: 400;
   margin-bottom: 0;
   transition: color 0.15s;
+  font-style: Regular;
+  line-height: 100%;
+  letter-spacing: 0px;
 }
 
 .footer__link:hover {
@@ -61,10 +68,8 @@
 .footer__col--right .footer__link {
   display: block;
   margin-bottom: 8px;
-  color: #222;
+  color: #000;
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 400;
 }
 
 .footer__col--right .footer__link:hover {
@@ -73,10 +78,13 @@
 }
 
 .footer__annie {
-  font-size: 0.93rem;
-  color: #222;
+  font-size: 18px;
+  color: #000;
   margin-top: 32px;
   opacity: 0.85;
+  font-style: Regular;
+  line-height: 100%;
+  letter-spacing: 0px;
 }
 
 .footer__bg-text {
@@ -118,12 +126,13 @@
 }
 
 .footer__call-btn {
-  background: #2d2256;
+  font-family: 'Merriweather', serif;
+  background: #201e30;
   color: #fff;
   border-radius: 18px;
   padding: 6px 18px;
-  font-size: 0.98rem;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 900;
   margin-top: 8px;
   text-decoration: none;
   box-shadow: 0 1px 5px rgb(60 40 100 / 7%);
