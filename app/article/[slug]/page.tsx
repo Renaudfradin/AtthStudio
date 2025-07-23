@@ -15,6 +15,7 @@ type ArticleDetailType = {
   image: string;
   time_read: number;
   category_id: string;
+  category_name: string;
   active: boolean;
 };
 
@@ -90,7 +91,7 @@ export default async function ArticlePage({
         </div>
         <div className="article-detail-header-meta-row">
           <span className="article-detail-category-badge">
-            {article.category_id}
+            {article.category_name}
           </span>
           <span className="article-detail-time-read">
             {article.time_read}m de lecture

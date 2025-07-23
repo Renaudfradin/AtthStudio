@@ -82,7 +82,7 @@ export default async function Project({
         />
       </div>
       <div className="project-detail-gallery">
-        <DocumentGallery documents={project.documents} />
+        <DocumentGallery documents={project.documents} columns={2} />
       </div>
     </div>
   );

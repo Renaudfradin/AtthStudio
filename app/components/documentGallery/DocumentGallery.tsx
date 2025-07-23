@@ -8,39 +8,39 @@ export type DocumentType = {
 
 interface DocumentGalleryProps {
   documents: DocumentType[];
+  columns?: 2 | 3;
 }
 
 export default async function DocumentGallery({
   documents,
+  columns = 2,
 }: DocumentGalleryProps) {
   const rows = [];
   let i = 0;
   while (i < documents.length) {
+    const rowItems = [];
+
+    for (let col = 0; col < columns; col++) {
+      if (documents[i + col]) {
+        rowItems.push(
+          <div className="gallery-item-small" key={`item-${i + col}`}>
+            <Image
+              src={documents[i + col].image}
+              alt="document"
+              width={500}
+              height={500}
+            />
+          </div>,
+        );
+      }
+    }
+
     rows.push(
       <div className="gallery-row" key={`row-${i}`}>
-        <div className="gallery-item-small">
-          {documents[i] && (
-            <Image
-              src={documents[i].image}
-              alt="document"
-              width={500}
-              height={500}
-            />
-          )}
-        </div>
-        <div className="gallery-item-small">
-          {documents[i + 1] && (
-            <Image
-              src={documents[i + 1].image}
-              alt="document"
-              width={500}
-              height={500}
-            />
-          )}
-        </div>
+        {rowItems}
       </div>,
     );
-    i += 2;
+    i += columns;
   }
   return (
     <section className="gallery-scroll-container">

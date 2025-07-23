@@ -1,8 +1,8 @@
 .projects-grid-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  padding: 30px;
+  padding-bottom: 10px;
   background: #f7f2e7;
 }
 
@@ -24,7 +24,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
 }
 
 .project-grid-btn-mobile {
@@ -42,21 +41,26 @@
 
 .project-grid-title {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 800;
+  font-style: Extra Bold;
   letter-spacing: 0.01em;
   text-align: center;
-  text-shadow: 0 1px 0 #fff4;
+  line-height: 140%;
+  letter-spacing: 0px;
 }
 
 .project-grid-btn {
   display: none;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
   background: #fff;
   color: #111;
   font-size: 0.95rem;
   font-weight: 600;
   padding: 0.3rem 1.1rem;
-  margin-top: 0.2rem;
   border: none;
+  border-radius: 20px;
   box-shadow: 0 2px 8px #0001;
   cursor: pointer;
   transition:
@@ -100,33 +104,33 @@
 }
 
 .proj-color-orange {
-  background: #ff5a2b;
-  color: #fff;
+  background: #ed5724;
+  color: #c6ff7c;
 }
 
 .proj-color-pink {
   background: #ffb6c1;
-  color: #b12c00;
+  color: #fff;
 }
 
 .proj-color-purple {
-  background: #7e3d5c;
-  color: #fff;
+  background: #7e3c60;
+  color: #ffcfd2;
 }
 
 .proj-color-lilac {
-  background: #e2d8f7;
-  color: #6d3edb;
+  background: #f08080;
+  color: #ffdab9;
 }
 
 .proj-color-grey {
-  background: #8a89a8;
-  color: #fff;
+  background: #e4d9ff;
+  color: #a74482;
 }
 
 .proj-color-violet {
   background: #7e79ab;
-  color: #fff;
+  color: #273469;
 }
 
 .projects-grid-center {

@@ -16,9 +16,7 @@ type ArticleDetailType = {
 };
 
 async function getSuggestedArticles(categoryId: string, excludeId: string) {
-  const response = await callApi(
-    `/api/articles?category_id=${categoryId}&limit=4`,
-  );
+  const response = await callApi(`/api/suggest-articles/${categoryId}`);
   let articles: ArticleDetailType[] = [];
 
   if ('data' in response) {
