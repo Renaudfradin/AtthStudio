@@ -112,7 +112,11 @@ export default function Navbar() {
                 Go back to the home <span className="navbar__arrow">↗</span>
               </Link>
             ) : (
-              <Link href="/article" className="navbar__link" onClick={handleLinkClick}>
+              <Link
+                href="/article"
+                className="navbar__link"
+                onClick={handleLinkClick}
+              >
                 Check my blog <span className="navbar__arrow">↗</span>
               </Link>
             )}
@@ -121,7 +125,11 @@ export default function Navbar() {
                 Go back to the home <span className="navbar__arrow">↗</span>
               </Link>
             ) : (
-              <Link href="/archive" className="navbar__link" onClick={handleLinkClick}>
+              <Link
+                href="/archive"
+                className="navbar__link"
+                onClick={handleLinkClick}
+              >
                 Check my random life <span className="navbar__arrow">↗</span>
               </Link>
             )}

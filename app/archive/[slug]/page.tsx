@@ -83,7 +83,7 @@ export default async function Archive({
         />
       </div>
       <div className="archive-detail-gallery">
-        <DocumentGallery documents={archive.documents} />
+        <DocumentGallery documents={archive.documents} columns={3} />
       </div>
     </div>
   );

@@ -1,0 +1,40 @@
+/* Curseur personnalisé */
+.custom-cursor {
+  cursor: none;
+}
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background: transparent;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+}
+
+.cursor-dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: #000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Curseur blanc au hover */
+.cursor-dot.hover {
+  border-color: white;
+}
+
+.cursor-dot.hover::after {
+  background: white;
+}

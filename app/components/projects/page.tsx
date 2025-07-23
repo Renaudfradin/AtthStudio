@@ -2,11 +2,13 @@ import Link from 'next/link';
 import React from 'react';
 import { callApi } from '@/utils/api';
 import localFont from 'next/font/local';
+import CustomCursor from './CustomCursor';
 import './projects.css';
 
 type ProjectType = {
   id: string;
   title: string;
+  title_home: string;
   slug: string;
   content: string;
 };
@@ -48,14 +50,15 @@ export default async function Projects() {
   ];
 
   return (
-    <div className="projects-grid-wrapper">
+    <div className="projects-grid-wrapper custom-cursor">
+      <CustomCursor />
       <div className="projects-grid">
         {gridProjects.map((project, idx) => (
           <div
             className={`project-grid-item ${colors[idx % colors.length]}`}
             key={project.id}
           >
-            <span className="project-grid-title">{project.title}</span>
+            <span className="project-grid-title">{project.title_home}</span>
 
             <Link
               href={`/project/${project.slug}`}
