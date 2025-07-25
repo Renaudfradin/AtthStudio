@@ -1,3 +1,105 @@
+.who-i-am {
+  padding: 0px 24px;
+  padding-top: 3%;
+  padding-right: 60px;
+  background: #f7f2e7;
+}
+
+.who-i-am__content {
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  display: flex;
+}
+
+.who-i-am__left {
+  flex: 0 0 auto;
+}
+
+.who-i-am__title {
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
+  font-style: Black;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin: 0;
+}
+
+.who-i-am__name {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 32px;
+  line-height: 140%;
+  letter-spacing: 0px;
+  margin: 0;
+}
+
+.who-i-am__right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.who-i-am__intro p,
+.who-i-am__description p {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+
+.who-i-am__email {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 32px;
+  line-height: 140%;
+  letter-spacing: 0px;
+  text-decoration: none;
+  color: #000;
+}
+
+.who-i-am__email:hover {
+  color: #7c3aed;
+}
+
+.who-i-am__description p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+  line-height: 140%;
+  font-weight: 400;
+}
+
+/* Responsive design pour Who I am */
+@media (max-width: 768px) {
+  .who-i-am {
+    padding: 40px 20px;
+  }
+
+  .who-i-am__content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .who-i-am__name {
+    font-size: 36px;
+  }
+
+  .who-i-am__intro p {
+    font-size: 18px;
+  }
+
+  .who-i-am__email {
+    font-size: 20px;
+  }
+}
+
 .footer {
   background: #f5efe3;
   padding: 32px 24px 18px;

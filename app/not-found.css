@@ -1,0 +1,52 @@
+.not-found-container {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-code {
+  font-size: 10rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.error-code span {
+  color: #ff4757;
+}
+
+.not-found-actions {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+  font-family: 'Merriweather', serif;
+  background: #201e30;
+  color: #fff;
+  border-radius: 18px;
+  padding: 6px 18px;
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: 8px;
+  text-decoration: none;
+  box-shadow: 0 1px 5px rgb(60 40 100 / 7%);
+  transition:
+    background 0.18s,
+    color 0.18s;
+  display: inline-block;
+}
