@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="logo ATTH Studio" src="./app/assets/img/logo.svg" width="100" />
+  <img alt="logo ATTH Studio" src="./app/assets/img/readme/logo.jpg" width="100" />
 </div>
 <h1 align="center">
   ATTH Studio
@@ -7,7 +7,7 @@
 <p>Design : <a href="https://www.behance.net/annietran8">Annie Tran</a></p>
 <p>Development : <a href="https://github.com/Renaudfradin">Renaud Fradin</a></p>
 
-![folio](app/assets/img/portfolio.png)
+![folio](app/assets/img/readme/portfolio.png)
 
 ## 🛠 Installation & Set Up
 
