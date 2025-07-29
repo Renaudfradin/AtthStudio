@@ -98,7 +98,7 @@ export default function Navbar() {
               Instagram <span className="navbar__arrow">↗</span>
             </Link>
             <Link
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/annietth/"
               className="navbar__link"
               rel="noopener noreferrer"
               onClick={handleLinkClick}
@@ -140,14 +140,14 @@ export default function Navbar() {
       <div className="navbar__right">
         <div className="navbar__links-group">
           <Link
-            href="https://instagram.com"
+            href="https://www.instagram.com/atth.studio"
             className="navbar__link"
             rel="noopener noreferrer"
           >
             Instagram <span className="navbar__arrow">↗</span>
           </Link>
           <Link
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/annietth"
             className="navbar__link"
             rel="noopener noreferrer"
           >

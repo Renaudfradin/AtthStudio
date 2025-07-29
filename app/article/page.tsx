@@ -4,8 +4,8 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { callApi } from '@/utils/api';
 import CategoryFilter from '@/app/components/categoryFilter/CategoryFilter';
-import './article.css';
 import Image from 'next/image';
+import './article.css';
 
 type ArticleType = {
   id: string;
@@ -30,6 +30,7 @@ export default function Article() {
   const [articles, setArticles] = useState<ArticleType[]>([]);
   const [categories, setCategories] = useState<CategoryType[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [gridColumns, setGridColumns] = useState<number>(3);
 
   useEffect(() => {
     async function fetchArticles() {
@@ -76,12 +77,50 @@ export default function Article() {
           Terminados.<span className="articles-title-sub"> find my topic</span>
         </h1>
       </div>
-      <CategoryFilter
-        categories={categories}
-        selectedCategory={selectedCategory}
-        onSelectCategory={setSelectedCategory}
-      />
-      <div className="articles-grid">
+      <div className="articles-controls-row">
+        <CategoryFilter
+          categories={categories}
+          selectedCategory={selectedCategory}
+          onSelectCategory={setSelectedCategory}
+        />
+        <div className="grid-layout-buttons">
+          <button
+            className={`grid-layout-btn ${gridColumns === 1 ? 'active' : ''}`}
+            onClick={() => setGridColumns(1)}
+            title="1 colonne"
+          >
+            <div className="grid-icon">
+              <div className="grid-square single"></div>
+            </div>
+          </button>
+          <button
+            className={`grid-layout-btn ${gridColumns === 2 ? 'active' : ''}`}
+            onClick={() => setGridColumns(2)}
+            title="2 colonnes"
+          >
+            <div className="grid-icon">
+              <div className="grid-square left"></div>
+              <div className="grid-square right"></div>
+            </div>
+          </button>
+          <button
+            className={`grid-layout-btn ${gridColumns === 3 ? 'active' : ''}`}
+            onClick={() => setGridColumns(3)}
+            title="3 colonnes"
+          >
+            <div className="grid-icon">
+              <div className="grid-square top-left"></div>
+              <div className="grid-square top-right"></div>
+              <div className="grid-square bottom-left"></div>
+              <div className="grid-square bottom-right"></div>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div
+        className="articles-grid"
+        style={{ gridTemplateColumns: `repeat(${gridColumns}, 1fr)` }}
+      >
         {filteredArticles.map((article: ArticleType) => (
           <div className="article-card" key={article.id}>
             <div className="article-card-img-wrapper">

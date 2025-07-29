@@ -15,8 +15,10 @@ export default function Footer() {
             </div>
             <div className="who-i-am__intro">
               <p>
-                Hello, I&apos;m Annie Tran, Welcome, Stay as long as you wish,<br />
-              Find your dream</p>
+                Hello, I&apos;m Annie Tran, Welcome, Stay as long as you wish,
+                <br />
+                Find your dream
+              </p>
             </div>
             <div className="who-i-am__contact">
               <a
@@ -68,7 +70,10 @@ export default function Footer() {
             <Link href="/legal" className="footer__link">
               Mention Légale
             </Link>
-            <Link href="/book" className="footer__link">
+            <Link
+              href="https://www.behance.net/annietran8"
+              className="footer__link"
+            >
               Mon book
             </Link>
             <a href="tel:+33123456789" className="footer__call-btn">
