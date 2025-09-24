@@ -1,6 +1,6 @@
 .who-i-am {
   padding: 0px 24px;
-  padding-top: 3%;
+  padding-top: 2%;
   padding-right: 60px;
   background: #f7f2e7;
 }
@@ -76,7 +76,6 @@
   font-weight: 400;
 }
 
-/* Responsive design pour Who I am */
 @media (max-width: 768px) {
   .who-i-am {
     padding: 40px 20px;
@@ -97,6 +96,10 @@
 
   .who-i-am__email {
     font-size: 20px;
+  }
+
+  .who-i-am__title {
+    text-align: center;
   }
 }
 

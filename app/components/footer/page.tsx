@@ -5,7 +5,6 @@ import './footer.css';
 export default function Footer() {
   return (
     <>
-      {/* Section Who I am */}
       <section className="who-i-am">
         <div className="who-i-am__container">
           <div className="who-i-am__content">

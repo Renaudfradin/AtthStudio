@@ -1,6 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 import React from 'react';
-import { callApi } from '@/utils/api';
+import { useApiCache } from '@/hooks/useApiCache';
+import { PERFORMANCE_CONFIG } from '@/lib/performance';
 import Image from 'next/image';
 import './archive.css';
 
@@ -14,18 +17,22 @@ type ArchiveType = {
 
 type ArchivesApiResponse = ArchiveType[] | { data: ArchiveType[] };
 
-export default async function Archive() {
+export default function Archive() {
+  // Cache intelligent pour les archives
+  const { data } = useApiCache<ArchivesApiResponse>('/api/archives', {
+    ttl: PERFORMANCE_CONFIG.CACHE_DURATIONS.ARTICLES,
+    enabled: true,
+    enablePolling: true,
+  });
+
+  // Traitement des données
   let archives: ArchiveType[] = [];
-  try {
-    const response: ArchivesApiResponse = await callApi('/api/archives');
-    if (Array.isArray(response)) {
-      archives = response;
-    } else if (response && 'data' in response) {
-      archives = response.data;
+  if (data) {
+    if (Array.isArray(data)) {
+      archives = data;
+    } else if ('data' in data) {
+      archives = data.data;
     }
-  } catch (e) {
-    console.error(e);
-    archives = [];
   }
 
   return (
