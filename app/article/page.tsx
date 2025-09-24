@@ -1,8 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
-import { callApi } from '@/utils/api';
+import React, { useState } from 'react';
+import { useApiCache } from '@/hooks/useApiCache';
+import { PERFORMANCE_CONFIG } from '@/lib/performance';
 import CategoryFilter from '@/app/components/categoryFilter/CategoryFilter';
 import Image from 'next/image';
 import './article.css';
@@ -27,42 +28,48 @@ type ArticlesApiResponse = ArticleType[] | { data: ArticleType[] };
 type CategoriesApiResponse = CategoryType[] | { data: CategoryType[] };
 
 export default function Article() {
-  const [articles, setArticles] = useState<ArticleType[]>([]);
-  const [categories, setCategories] = useState<CategoryType[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [gridColumns, setGridColumns] = useState<number>(3);
 
-  useEffect(() => {
-    async function fetchArticles() {
-      try {
-        const response: ArticlesApiResponse = await callApi('/api/articles');
-        if (Array.isArray(response)) {
-          setArticles(response);
-        } else if (response && 'data' in response) {
-          setArticles(response.data);
-        }
-      } catch (e) {
-        console.error(e);
-        setArticles([]);
-      }
+  // Cache intelligent pour les articles
+  const { data: articlesData } = useApiCache<ArticlesApiResponse>(
+    '/api/articles',
+    {
+      ttl: PERFORMANCE_CONFIG.CACHE_DURATIONS.ARTICLES,
+      enabled: true,
+      enablePolling: true,
+    },
+  );
+
+  // Cache intelligent pour les catégories
+  const { data: categoriesData } = useApiCache<CategoriesApiResponse>(
+    '/api/categories',
+    {
+      ttl: PERFORMANCE_CONFIG.CACHE_DURATIONS.ARTICLES,
+      enabled: true,
+      enablePolling: true,
+    },
+  );
+
+  // Traitement des données articles
+  let articles: ArticleType[] = [];
+  if (articlesData) {
+    if (Array.isArray(articlesData)) {
+      articles = articlesData;
+    } else if ('data' in articlesData) {
+      articles = articlesData.data;
     }
-    async function fetchCategories() {
-      try {
-        const response: CategoriesApiResponse =
-          await callApi('/api/categories');
-        if (Array.isArray(response)) {
-          setCategories(response);
-        } else if (response && 'data' in response) {
-          setCategories(response.data);
-        }
-      } catch (e) {
-        console.error(e);
-        setCategories([]);
-      }
+  }
+
+  // Traitement des données catégories
+  let categories: CategoryType[] = [];
+  if (categoriesData) {
+    if (Array.isArray(categoriesData)) {
+      categories = categoriesData;
+    } else if ('data' in categoriesData) {
+      categories = categoriesData.data;
     }
-    fetchArticles();
-    fetchCategories();
-  }, []);
+  }
 
   const filteredArticles = selectedCategory
     ? articles.filter(

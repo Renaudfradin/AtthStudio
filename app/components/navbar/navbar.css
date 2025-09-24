@@ -201,6 +201,13 @@
   height: -webkit-fill-available;
 }
 
+.navbar__group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  gap: 10px;
+}
+
 .navbar__mobile-menu::before {
   content: '';
   position: fixed;

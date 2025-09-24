@@ -1,6 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 import React from 'react';
-import { callApi } from '@/utils/api';
+import { useApiCache } from '@/hooks/useApiCache';
+import { PERFORMANCE_CONFIG } from '@/lib/performance';
 import localFont from 'next/font/local';
 import CustomCursor from './CustomCursor';
 import './projects.css';
@@ -19,18 +22,20 @@ const HV_Weist_Havanah_Trial = localFont({
 
 type ProjectsApiResponse = ProjectType[] | { data: ProjectType[] };
 
-export default async function Projects() {
+export default function Projects() {
+  const { data } = useApiCache<ProjectsApiResponse>('/api/projects', {
+    ttl: PERFORMANCE_CONFIG.CACHE_DURATIONS.PROJECTS,
+    enabled: true,
+    enablePolling: true, // Vérification automatique des changements
+  });
+
   let projects: ProjectType[] = [];
-  try {
-    const response: ProjectsApiResponse = await callApi('/api/projects');
-    if (Array.isArray(response)) {
-      projects = response;
-    } else if (response && 'data' in response) {
-      projects = response.data;
+  if (data) {
+    if (Array.isArray(data)) {
+      projects = data;
+    } else if ('data' in data) {
+      projects = data.data;
     }
-  } catch (e) {
-    console.error(e);
-    projects = [];
   }
 
   const gridProjects = projects.slice(0, 12);
@@ -64,9 +69,8 @@ export default async function Projects() {
               href={`/project/${project.slug}`}
               className="project-grid-link"
             >
-              <span className="project-grid-btn project-grid-btn-mobile">
-                See work
-              </span>
+              <span className="project-grid-btn">See work</span>
+              <span className="project-grid-btn-mobile">See work</span>
             </Link>
           </div>
         ))}

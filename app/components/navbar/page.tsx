@@ -88,51 +88,63 @@ export default function Navbar() {
             <br />
             based in France
           </div>
-          <div className="navbar__links-group">
-            <Link
-              href="https://instagram.com"
-              className="navbar__link"
-              rel="noopener noreferrer"
-              onClick={handleLinkClick}
-            >
-              Instagram <span className="navbar__arrow">↗</span>
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/annietth/"
-              className="navbar__link"
-              rel="noopener noreferrer"
-              onClick={handleLinkClick}
-            >
-              Linkdin <span className="navbar__arrow">↗</span>
-            </Link>
-          </div>
-          <div className="navbar__links-group">
-            {pathname === '/article' || pathname.startsWith('/article/') ? (
-              <Link href="/" className="navbar__link" onClick={handleLinkClick}>
-                Go back to the home <span className="navbar__arrow">↗</span>
-              </Link>
-            ) : (
+          <div className="navbar__group">
+            <div className="navbar__links-group">
               <Link
-                href="/article"
+                href="https://instagram.com"
                 className="navbar__link"
+                rel="noopener noreferrer"
+                target="_blank"
                 onClick={handleLinkClick}
               >
-                Check my blog <span className="navbar__arrow">↗</span>
+                Instagram <span className="navbar__arrow">↗</span>
               </Link>
-            )}
-            {pathname === '/archive' || pathname.startsWith('/archive/') ? (
-              <Link href="/" className="navbar__link" onClick={handleLinkClick}>
-                Go back to the home <span className="navbar__arrow">↗</span>
-              </Link>
-            ) : (
               <Link
-                href="/archive"
+                href="https://www.linkedin.com/in/annietth/"
                 className="navbar__link"
+                rel="noopener noreferrer"
+                target="_blank"
                 onClick={handleLinkClick}
               >
-                Check my random life <span className="navbar__arrow">↗</span>
+                Linkdin <span className="navbar__arrow">↗</span>
               </Link>
-            )}
+            </div>
+            <div className="navbar__links-group">
+              {pathname === '/article' || pathname.startsWith('/article/') ? (
+                <Link
+                  href="/"
+                  className="navbar__link"
+                  onClick={handleLinkClick}
+                >
+                  Go back to the home <span className="navbar__arrow">↗</span>
+                </Link>
+              ) : (
+                <Link
+                  href="/article"
+                  className="navbar__link"
+                  onClick={handleLinkClick}
+                >
+                  Check my blog <span className="navbar__arrow">↗</span>
+                </Link>
+              )}
+              {pathname === '/archive' || pathname.startsWith('/archive/') ? (
+                <Link
+                  href="/"
+                  className="navbar__link"
+                  onClick={handleLinkClick}
+                >
+                  Go back to the home <span className="navbar__arrow">↗</span>
+                </Link>
+              ) : (
+                <Link
+                  href="/archive"
+                  className="navbar__link"
+                  onClick={handleLinkClick}
+                >
+                  Check my random life <span className="navbar__arrow">↗</span>
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       )}
@@ -143,6 +155,7 @@ export default function Navbar() {
             href="https://www.instagram.com/atth.studio"
             className="navbar__link"
             rel="noopener noreferrer"
+            target="_blank"
           >
             Instagram <span className="navbar__arrow">↗</span>
           </Link>
@@ -150,6 +163,7 @@ export default function Navbar() {
             href="https://www.linkedin.com/in/annietth"
             className="navbar__link"
             rel="noopener noreferrer"
+            target="_blank"
           >
             Linkdin <span className="navbar__arrow">↗</span>
           </Link>

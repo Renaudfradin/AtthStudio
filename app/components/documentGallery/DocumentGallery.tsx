@@ -11,7 +11,7 @@ interface DocumentGalleryProps {
   columns?: 2 | 3;
 }
 
-export default async function DocumentGallery({
+export default function DocumentGallery({
   documents,
   columns = 2,
 }: DocumentGalleryProps) {
