@@ -37,9 +37,9 @@ export const PERFORMANCE_CONFIG = {
       '/api/project/[slug]': ['project-detail', 'related-projects'],
       '/api/article/[slug]': ['article-detail', 'related-articles'],
       '/api/archive/[slug]': ['archive-detail', 'related-archives'],
-    },
+    } as Record<string, string[]>,
     // Polling pour vérifier les changements (en millisecondes)
-    POLLING_INTERVAL: 30000, // 30 secondes
+    POLLING_INTERVAL: 30000,
   },
 };
 

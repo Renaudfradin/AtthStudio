@@ -26,7 +26,7 @@ export function useApiCache<T>(
 
       // Vérifier le cache d'abord
       if (!force) {
-        const cachedData = apiCache.get(endpoint);
+        const cachedData = apiCache.get<T>(endpoint);
         if (cachedData) {
           setData(cachedData);
           return cachedData;
@@ -39,7 +39,7 @@ export function useApiCache<T>(
       try {
         const result = await callApi<T>(endpoint);
         // Utiliser le nouveau gestionnaire de cache avec headers
-        apiCache.set(endpoint, result);
+        apiCache.set<T>(endpoint, result);
         setData(result);
         return result;
       } catch (err) {

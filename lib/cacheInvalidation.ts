@@ -1,8 +1,7 @@
 import { PERFORMANCE_CONFIG } from './performance';
 
-// Types pour la gestion du cache
-interface CacheEntry {
-  data: any;
+interface CacheEntry<T = unknown> {
+  data: T;
   timestamp: number;
   lastModified?: string;
   etag?: string;
@@ -22,9 +21,8 @@ class CacheInvalidationManager {
   private subscribers = new Map<string, Set<() => void>>();
   private pollingIntervals = new Map<string, NodeJS.Timeout>();
 
-  // Ajouter une entrée au cache avec métadonnées
-  set(key: string, data: any, headers?: Headers): void {
-    const entry: CacheEntry = {
+  set<T>(key: string, data: T, headers?: Headers): void {
+    const entry: CacheEntry<T> = {
       data,
       timestamp: Date.now(),
       lastModified: headers?.get('last-modified') || undefined,
@@ -36,12 +34,10 @@ class CacheInvalidationManager {
     console.log(`📦 Cache mis à jour: ${key}`);
   }
 
-  // Récupérer une entrée du cache
-  get(key: string): any | null {
+  get<T>(key: string): T | null {
     const entry = this.cache.get(key);
     if (!entry) return null;
 
-    // Vérifier si le cache est encore valide
     const ttl = this.getTTLForKey(key);
     if (Date.now() - entry.timestamp > ttl) {
       this.cache.delete(key);
@@ -49,22 +45,19 @@ class CacheInvalidationManager {
       return null;
     }
 
-    return entry.data;
+    return entry.data as T;
   }
 
-  // Invalider le cache pour une clé spécifique
   invalidate(key: string, reason = 'manual'): void {
     this.cache.delete(key);
     console.log(`🗑️ Cache invalidé: ${key} (${reason})`);
 
-    // Notifier les abonnés
     const callbacks = this.subscribers.get(key);
     if (callbacks) {
       callbacks.forEach((callback) => callback());
     }
   }
 
-  // Invalider plusieurs clés liées
   invalidateRelated(
     endpoint: string,
     type: 'update' | 'delete' | 'create' = 'update',
@@ -82,7 +75,6 @@ class CacheInvalidationManager {
 
     this.invalidationQueue.push(event);
 
-    // Invalider immédiatement les caches liés
     dependencies.forEach((key) => {
       this.invalidate(key, `${type} on ${endpoint}`);
     });
@@ -90,7 +82,6 @@ class CacheInvalidationManager {
     console.log(`🔄 Invalidation en cascade pour ${endpoint}:`, dependencies);
   }
 
-  // S'abonner aux changements d'une clé
   subscribe(key: string, callback: () => void): () => void {
     if (!this.subscribers.has(key)) {
       this.subscribers.set(key, new Set());
@@ -98,7 +89,6 @@ class CacheInvalidationManager {
 
     this.subscribers.get(key)!.add(callback);
 
-    // Retourner une fonction de désabonnement
     return () => {
       const callbacks = this.subscribers.get(key);
       if (callbacks) {
@@ -110,7 +100,6 @@ class CacheInvalidationManager {
     };
   }
 
-  // Démarrer le polling pour vérifier les changements
   startPolling(endpoint: string): void {
     if (this.pollingIntervals.has(endpoint)) return;
 
@@ -122,7 +111,6 @@ class CacheInvalidationManager {
     console.log(`🔄 Polling démarré pour ${endpoint}`);
   }
 
-  // Arrêter le polling
   stopPolling(endpoint: string): void {
     const interval = this.pollingIntervals.get(endpoint);
     if (interval) {
@@ -132,13 +120,11 @@ class CacheInvalidationManager {
     }
   }
 
-  // Vérifier s'il y a des changements sur le serveur
   private async checkForChanges(endpoint: string): Promise<void> {
     try {
       const cachedEntry = this.cache.get(endpoint);
       if (!cachedEntry) return;
 
-      // Faire une requête HEAD pour vérifier les changements
       const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
       if (!baseUrl) return;
 
@@ -150,13 +136,11 @@ class CacheInvalidationManager {
         },
       });
 
-      // Si le serveur retourne 304, pas de changement
       if (response.status === 304) {
         console.log(`✅ Pas de changement détecté pour ${endpoint}`);
         return;
       }
 
-      // Si différent, invalider le cache
       if (response.status === 200) {
         console.log(`🔄 Changement détecté pour ${endpoint}`);
         this.invalidateRelated(endpoint, 'update');
@@ -166,7 +150,6 @@ class CacheInvalidationManager {
     }
   }
 
-  // Obtenir le TTL pour une clé
   private getTTLForKey(key: string): number {
     if (key.includes('project'))
       return PERFORMANCE_CONFIG.CACHE_DURATIONS.PROJECTS;
@@ -175,28 +158,24 @@ class CacheInvalidationManager {
     return PERFORMANCE_CONFIG.CACHE_DURATIONS.PROJECTS; // Par défaut
   }
 
-  // Extraire une version des données pour détecter les changements
-  private getVersionFromData(data: any): number {
+  private getVersionFromData<T>(data: T): number {
     if (!data) return 0;
 
-    // Créer un hash simple basé sur le contenu
     const str = JSON.stringify(data);
     let hash = 0;
     for (let i = 0; i < str.length; i++) {
       const char = str.charCodeAt(i);
       hash = (hash << 5) - hash + char;
-      hash = hash & hash; // Convertir en 32bit integer
+      hash = hash & hash;
     }
     return Math.abs(hash);
   }
 
-  // Nettoyer tous les caches
   clear(): void {
     this.cache.clear();
     this.invalidationQueue = [];
 
-    // Arrêter tous les pollings
-    this.pollingIntervals.forEach((interval, endpoint) => {
+    this.pollingIntervals.forEach((interval) => {
       clearInterval(interval);
     });
     this.pollingIntervals.clear();
@@ -204,7 +183,6 @@ class CacheInvalidationManager {
     console.log('🧹 Cache complètement nettoyé');
   }
 
-  // Obtenir des statistiques du cache
   getStats(): {
     cacheSize: number;
     activePolling: number;
@@ -223,10 +201,8 @@ class CacheInvalidationManager {
   }
 }
 
-// Instance globale du gestionnaire de cache
 export const cacheManager = new CacheInvalidationManager();
 
-// Hook pour utiliser le cache avec invalidation automatique
 export function useCacheInvalidation() {
   return {
     invalidate: (key: string) => cacheManager.invalidate(key),
