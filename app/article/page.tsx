@@ -29,9 +29,7 @@ type CategoriesApiResponse = CategoryType[] | { data: CategoryType[] };
 
 export default function Article() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [gridColumns, setGridColumns] = useState<number>(3);
-
-  // Cache intelligent pour les articles
+  const [gridColumns, setGridColumns] = useState<number>(1);
   const { data: articlesData } = useApiCache<ArticlesApiResponse>(
     '/api/articles',
     {
@@ -41,7 +39,6 @@ export default function Article() {
     },
   );
 
-  // Cache intelligent pour les catégories
   const { data: categoriesData } = useApiCache<CategoriesApiResponse>(
     '/api/categories',
     {
@@ -51,7 +48,6 @@ export default function Article() {
     },
   );
 
-  // Traitement des données articles
   let articles: ArticleType[] = [];
   if (articlesData) {
     if (Array.isArray(articlesData)) {
@@ -61,7 +57,6 @@ export default function Article() {
     }
   }
 
-  // Traitement des données catégories
   let categories: CategoryType[] = [];
   if (categoriesData) {
     if (Array.isArray(categoriesData)) {

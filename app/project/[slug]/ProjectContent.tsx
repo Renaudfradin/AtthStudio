@@ -27,17 +27,15 @@ interface ProjectContentProps {
 export default function ProjectContent({ slug }: ProjectContentProps) {
   const [contentHtml, setContentHtml] = useState<string>('');
 
-  // Cache intelligent pour le projet spécifique
   const { data, loading, error } = useApiCache<ProjectDetailResponse>(
     `/api/project/${slug}`,
     {
       ttl: PERFORMANCE_CONFIG.CACHE_DURATIONS.SINGLE_PROJECT,
       enabled: true,
-      enablePolling: true, // Vérification automatique des changements
+      enablePolling: true,
     },
   );
 
-  // Traitement du contenu Markdown
   useEffect(() => {
     const processContent = async () => {
       if (data) {
@@ -60,7 +58,6 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
     processContent();
   }, [data]);
 
-  // Traitement des données
   let project: ProjectDetailType | null = null;
   if (data) {
     if ('data' in data) {
@@ -70,7 +67,6 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
     }
   }
 
-  // État de chargement (inclut le cas où on n'a pas encore de données)
   if (loading || (!data && !error)) {
     return (
       <div className="project-detail-container">
@@ -84,7 +80,6 @@ export default function ProjectContent({ slug }: ProjectContentProps) {
     );
   }
 
-  // Vérification de sécurité finale
   if (!project) {
     return (
       <div className="project-detail-container">

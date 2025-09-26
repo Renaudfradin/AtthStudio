@@ -72,6 +72,7 @@ export default function Footer() {
             <Link
               href="https://www.behance.net/annietran8"
               className="footer__link"
+              target="_blank"
             >
               Mon book
             </Link>

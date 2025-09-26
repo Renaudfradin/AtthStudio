@@ -18,14 +18,12 @@ type ArchiveType = {
 type ArchivesApiResponse = ArchiveType[] | { data: ArchiveType[] };
 
 export default function Archive() {
-  // Cache intelligent pour les archives
   const { data } = useApiCache<ArchivesApiResponse>('/api/archives', {
     ttl: PERFORMANCE_CONFIG.CACHE_DURATIONS.ARTICLES,
     enabled: true,
     enablePolling: true,
   });
 
-  // Traitement des données
   let archives: ArchiveType[] = [];
   if (data) {
     if (Array.isArray(data)) {
