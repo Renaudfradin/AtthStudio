@@ -25,8 +25,6 @@ interface ArchiveContentProps {
 
 export default function ArchiveContent({ slug }: ArchiveContentProps) {
   const [contentHtml, setContentHtml] = useState<string>('');
-
-  // Cache intelligent pour l'archive spécifique
   const { data, loading, error } = useApiCache<ArchiveDetailResponse>(
     `/api/archive/${slug}`,
     {

@@ -165,7 +165,6 @@
   }
 }
 
-/* États de chargement pour le cache intelligent */
 .archive-loading,
 .loading-content {
   display: flex;

@@ -29,7 +29,6 @@ interface SuggestArticleClientProps {
 export default function SuggestArticleClient({
   article,
 }: SuggestArticleClientProps) {
-  // Cache intelligent pour les suggestions d'articles
   const { data } = useApiCache<SuggestArticlesResponse>(
     `/api/suggest-articles/${article.category_id}`,
     {

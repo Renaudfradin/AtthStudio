@@ -198,7 +198,6 @@
   }
 }
 
-/* États de chargement et d'erreur pour le cache intelligent */
 .projects-loading,
 .projects-error {
   display: flex;

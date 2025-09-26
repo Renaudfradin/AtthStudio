@@ -7,7 +7,11 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Annie Tran',
-  description: 'Annie Tran - Product Designer',
+  description: 'Annie Tran - Product Designer - AtthStudio',
+  keywords: ['Annie Tran', 'Product Designer', 'Portfolio', 'AtthStudio'],
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({

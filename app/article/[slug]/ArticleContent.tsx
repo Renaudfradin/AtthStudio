@@ -29,7 +29,6 @@ interface ArticleContentProps {
 export default function ArticleContent({ slug }: ArticleContentProps) {
   const [contentHtml, setContentHtml] = useState<string>('');
 
-  // Cache intelligent pour l'article spécifique
   const { data, loading, error } = useApiCache<ArticleDetailResponse>(
     `/api/article/${slug}`,
     {
