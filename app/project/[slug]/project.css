@@ -1,0 +1,154 @@
+.project-detail-container {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  margin: 2% 5%;
+}
+
+.project-detail-top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 30%;
+}
+
+.project-detail-gallery {
+  width: 70%;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem 0.7rem 0.7rem;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: none;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-image-wrapper {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+}
+
+.project-image {
+  border-radius: 12px;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.project-title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+  color: #000;
+  letter-spacing: 0.01em;
+  word-break: break-word;
+}
+
+.project-detail-content {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.project-detail-title {
+  font-size: 35px;
+  font-weight: 700;
+  font-style: Bold;
+}
+
+@media (width <= 600px) {
+  .project-card {
+    padding: 0.7rem 0.3rem 0.5rem;
+  }
+
+  .project-title {
+    font-size: 0.97rem;
+  }
+}
+
+@media (width <= 430px) {
+  .project-detail-container {
+    flex-direction: column;
+    gap: 3rem;
+    margin: 1% 5%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+  }
+
+  .project-detail-top {
+    width: 100%;
+  }
+
+  .project-detail-gallery {
+    width: 100%;
+  }
+}
+
+@media (width >= 430px) and (width <= 900px) {
+  .project-detail-container {
+    flex-direction: column;
+    gap: 3rem;
+    margin: 1% 5%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+  }
+
+  .project-detail-top {
+    width: 100%;
+  }
+
+  .project-detail-gallery {
+    width: 100%;
+  }
+}
+
+.back-btn {
+  background: #6c757d;
+  box-shadow: 0 2px 4px rgba(108, 117, 125, 0.2);
+}
+
+.retry-btn:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+.back-btn:hover {
+  background: #5a6268;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
+}
+
+.retry-btn:active,
+.back-btn:active {
+  transform: translateY(0);
+}
+
+/* Animation d'apparition pour le contenu du projet */
+.project-detail-container {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

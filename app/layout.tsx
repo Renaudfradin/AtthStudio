@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
-import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/next';
+import Navbar from './components/navbar/page';
+import Footer from './components/footer/page';
 import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Annie Tran',
-  description: 'Portfolio Annie Tran ATTH Studio',
+  description: 'Annie Tran - Product Designer',
 };
 
 export default function RootLayout({
@@ -16,9 +18,18 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
-        <body suppressHydrationWarning={true}>
-          {children}
+        <body
+          suppressHydrationWarning={true}
+          style={{
+            minHeight: '100vh',
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
+          <Navbar />
+          <main className="main-layout">{children}</main>
           <SpeedInsights />
+          <Footer />
         </body>
       </html>
       <Analytics />

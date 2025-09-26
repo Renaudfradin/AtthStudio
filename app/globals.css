@@ -1,200 +1,43 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
 :root {
-  --background-color: #000000;
-  --primary-color: white;
-  --secondary-color: #232c1b;
-  --third-color: #812228;
-  --fourth-color: #000000;
-  --fifth-color: #f3b7f9;
-  --sixth-color: #1e242b;
-  --first-font: 'MuseoModerno', sans-serif;
-  --color-progress: #0123ff;
-  --color_not_progress: #d9d9d9;
-  --space-left: 4.5%;
-  --space-right: 4.5%;
-  --space-top: 5%;
-  --space-bottom: 5%;
-  --height: 75vh;
+  --background: #fdf7e9;
+  --foreground: #000;
 }
 
 body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 20px;
   margin: 0%;
   padding: 0%;
+
+  /* height: 100vh;
+  max-height: 100vh; */
   box-sizing: border-box;
-  background-color: var(--background-color);
-  color: var(--primary-color);
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-.hero {
-  width: 100%;
-  height: var(--height);
+/* html.fullvh,
+body.fullvh {
+  height: 100vh !important;
+  max-height: 100vh !important;
+  overflow-y: hidden;
 }
 
-.scroll-section-outer {
-  overflow: hidden;
-}
-
-.scroll-section-inner {
-  height: var(--height);
-  width: 400vw;
+.main-layout {
+  flex: 1 0 auto;
+  min-height: 0;
   display: flex;
-  flex-direction: row;
-}
-
-.scroll-section {
-  width: 100%;
-  height: var(--height);
-  flex: 1;
-}
-
-.content-section {
-  width: 100%;
-  height: 70vh;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.content-section img {
-  color: transparent;
-  position: absolute !important;
-  z-index: -1 !important;
-  width: auto;
-}
-
-.imgSalamender {
-  height: 800px;
-}
-
-.content-section a {
-  color: var(--primary-color);
-  font-size: 100px;
-  font-weight: 400;
-}
-
-.notFound {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 80vh;
-}
-
-.notFound h2 {
-  color: var(--primary-color);
-  font-size: 65px;
-  font-weight: 400;
-  line-height: 76px;
-}
-
-.allproject {
-  width: auto;
-  padding-left: var(--space-left);
-  padding-right: var(--space-right);
-  display: flex;
-  justify-content: flex-end;
-}
-
-.hidden {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.supermood {
-  color: #000000 !important;
-}
-
-@media (min-width: 1000px) and (max-width: 1439px) {
-  .content-section {
-    height: 70vh;
-  }
-}
-
-@media (min-width: 1440px) and (max-width: 1600px) {
-  .content-section {
-    height: 70vh;
-  }
-}
-
-@media (max-width: 430px) {
-  .content-section {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .content-section a {
-    color: var(--primary-color);
-    font-size: 50px;
-    font-weight: 400;
-  }
-
-  .content-section img {
-    color: transparent;
-    position: absolute !important;
-    z-index: -1 !important;
-    height: auto;
-    width: 18%;
-  }
-
-  .scroll-section {
-    width: 100%;
-    height: 90vh;
-  }
-
-  .scroll-section-inner {
-    height: 90vh;
-  }
-}
-
-@media (min-width: 431px) and (max-width: 770px) {
-  .content-section {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .content-section a {
-    color: var(--primary-color);
-    font-size: 50px;
-    font-weight: 400;
-  }
-
-  .content-section img {
-    color: transparent;
-    position: absolute !important;
-    z-index: -1 !important;
-    height: auto;
-    width: 18%;
-  }
-
-  .scroll-section {
-    width: 100%;
-    height: 90vh;
-  }
-
-  .scroll-section-inner {
-    height: 85vh;
-  }
-
-  .progress_bar {
-    width: 35% !important;
-  }
-}
+  flex-direction: column;
+} */

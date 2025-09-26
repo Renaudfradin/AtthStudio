@@ -1,24 +1,22 @@
-import { Metadata } from 'next';
-import Top from './components/top/top';
-import localFont from 'next/font/local';
-import './globals.css';
-
-export const metadata: Metadata = {
-  title: 'Annie Tran',
-  description: 'Portfolio Annie Tran ATTH Studio',
-};
-
-const monumentExtended = localFont({
-  src: './MonumentExtended-Regular.otf',
-});
+import React from 'react';
+import Link from 'next/link';
+import './not-found.css';
 
 export default function NotFound() {
   return (
-    <>
-      <Top />
-      <div className="notFound">
-        <h2 className={`${monumentExtended.className}`}>404</h2>
+    <div className="not-found-container">
+      <div className="not-found-content">
+        <div className="error-code">404</div>
+        <h1>Page non trouvée</h1>
+        <div className="not-found-actions">
+          <Link href="/" className="btn-primary">
+            Retour à l&apos;accueil
+          </Link>
+          <Link href="/article" className="btn-secondary">
+            Voir mon blog
+          </Link>
+        </div>
       </div>
-    </>
+    </div>
   );
 }
